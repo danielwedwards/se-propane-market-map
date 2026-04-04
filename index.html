@@ -611,6 +611,9 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <th style="width:38px" onclick="sortBy('county')" data-col="county" title="County market quality score based on propane consumption data">Cnty <span class="sort-arrow">&#9660;</span></th>
 <th style="width:40px" onclick="sortBy('total')" data-col="total" title="Total score = Proximity + County. Higher is more attractive.">Total <span class="sort-arrow">&#9660;</span></th>
 <th style="width:38px" onclick="sortBy('mkt')" data-col="mkt" title="Estimated SE market share based on county coverage within 25mi">Mkt% <span class="sort-arrow">&#9660;</span></th>
+<!-- === PRODUCT SPRINT: Research data columns === -->
+<th style="width:42px" onclick="sortBy('rev')" data-col="rev" title="Estimated annual revenue ($M)">Rev$M <span class="sort-arrow">&#9660;</span></th>
+<th style="width:38px" onclick="sortBy('emp')" data-col="emp" title="Estimated employee count">Emp <span class="sort-arrow">&#9660;</span></th>
 <th style="width:50px" onclick="sortBy('states')" data-col="states" title="States where this company has locations">States <span class="sort-arrow">&#9660;</span></th>
 </tr></thead><tbody id="tb"></tbody></table>
 <!-- SPRINT 6: Empty platform CTA -->
@@ -921,7 +924,7 @@ function fil(){
     if(ownerFilter.size>0&&!ownerFilter.has(c.ownership))return false;
     if(stateFilter.size>0&&!c.states.some(s=>stateFilter.has(s)))return false;
     if(hideEx&&c.excluded)return false;
-    if(searchQuery){let q=searchQuery.toLowerCase(),s=[c.name,c.hqCity,c.hqState,c.ownerDetail,c.parentGroup,...c.states].filter(Boolean).join(' ').toLowerCase();if(!s.includes(q))return false}
+    if(searchQuery){let q=searchQuery.toLowerCase(),s=[c.name,c.hqCity,c.hqState,c.ownerDetail,c.parentGroup,c.description,c.phone,...c.states,...(c.keyPersonnel||[]).map(function(p){return p.name}),...(c.serviceTypes||[])].filter(Boolean).join(' ').toLowerCase();if(!s.includes(q))return false}
     return true
   });
   companies.sort((a,b)=>{
@@ -933,6 +936,8 @@ function fil(){
     if(sortCol==='county'){va=countyScores[a.id]||0;vb=countyScores[b.id]||0;return sortDir==='desc'?vb-va:va-vb}
     if(sortCol==='total'){va=totalScores[a.id]||0;vb=totalScores[b.id]||0;return sortDir==='desc'?vb-va:va-vb}
     if(sortCol==='mkt'){va=(marketShare[a.id]||{}).se||0;vb=(marketShare[b.id]||{}).se||0;return sortDir==='desc'?vb-va:va-vb}
+    if(sortCol==='rev'){va=a.estRevenue||0;vb=b.estRevenue||0;return sortDir==='desc'?vb-va:va-vb}
+    if(sortCol==='emp'){va=a.employeeCount||0;vb=b.employeeCount||0;return sortDir==='desc'?vb-va:va-vb}
     if(sortCol==='states'){va=a.states.length;vb=b.states.length;return sortDir==='desc'?vb-va:va-vb}
     return 0;
   });
@@ -1006,7 +1011,7 @@ function render(){try{
   let tb=document.getElementById('tb');
   updateFilterBar();
   if(companies.length===0){
-    tb.innerHTML='<tr><td colspan="11"><div class="empty-state">No companies match your filters<br><span style="font-size:10px;color:var(--slate);font-weight:400">Try removing ownership or state filters, or clear your search</span></div></td></tr>';
+    tb.innerHTML='<tr><td colspan="13"><div class="empty-state">No companies match your filters<br><span style="font-size:10px;color:var(--slate);font-weight:400">Try removing ownership or state filters, or clear your search</span></div></td></tr>';
     return;
   }
   let prevScores={};
@@ -1038,6 +1043,9 @@ function render(){try{
     '<td class="num'+cPulse+'" onmouseenter="showScoreTip(event,\''+c.id+'\',\'county\')" onmouseleave="hideScoreTip()"><span class="'+scoreCls(cys)+'">'+(cys||'\u2014')+'</span></td>'+
     '<td class="num'+tPulse+'" style="font-weight:700" onmouseenter="showScoreTip(event,\''+c.id+'\',\'total\')" onmouseleave="hideScoreTip()"><span class="'+scoreCls(ts)+'">'+(ts||'\u2014')+'</span></td>'+
     '<td class="num" style="font-size:10px;color:var(--blue)">'+(ms.se?ms.se+'%':'\u2014')+'</td>'+
+    /* === PRODUCT SPRINT: Research data cells === */
+    '<td class="num" style="font-size:10px;color:var(--green)">'+(c.estRevenue?'$'+c.estRevenue+'M':'\u2014')+'</td>'+
+    '<td class="num" style="font-size:10px">'+(c.employeeCount||'\u2014')+'</td>'+
     '<td style="font-size:9px;color:var(--slate)">'+c.states.join(', ')+'</td>'+
   '</tr>'}).join('');
   // Show/hide map hint
@@ -1281,30 +1289,83 @@ function op(id){try{
   document.getElementById('pb').innerHTML=
     (canAdd?'<button class="pp-add'+(inPF?' added':'')+'" onclick="togglePlatform(\''+c.id+'\');op(\''+c.id+'\')">'+(inPF?'&#10005; Remove from Platform':'+ Add to Pro Forma Platform')+'</button>':'')+
 
-    // === Company Overview ===
+    /* === PRODUCT SPRINT: Enhanced Company Overview with research data === */
     (function(){
-      let founded=FOUNDED[c.id]||null;
+      let founded=c.yearFounded||FOUNDED[c.id]||null;
       let age=founded?(new Date().getFullYear()-founded):null;
       let web=c.website||'';
       let webDomain=web?web.replace(/^https?:\/\//,'').replace(/\/.*$/,''):'';
-      return '<div class="ps"><h3>Company Overview</h3><div class="pnarr">'+
-      '<b>'+esc(c.name)+'</b> is a <b>'+OL[c.ownership].toLowerCase()+'</b> propane distributor'+
+      let desc=c.description||'';
+      let phone=c.phone||'';
+      let rev=c.estRevenue;
+      let gal=c.estAnnualGallons;
+      let emp=c.employeeCount;
+      let personnel=c.keyPersonnel||[];
+      let services=c.serviceTypes||[];
+      let lastAcq=c.lastAcquisition;
+      let confidence=c.dataConfidence;
+      return '<div class="ps"><h3>Company Overview</h3>'+
+      /* Research description or generated narrative */
+      '<div class="pnarr">'+(desc||
+      ('<b>'+esc(c.name)+'</b> is a <b>'+OL[c.ownership].toLowerCase()+'</b> propane distributor'+
       (c.hqCity?' headquartered in <b>'+esc(c.hqCity)+', '+esc(c.hqState)+'</b>':'')+
       (founded?', founded in <b>'+founded+'</b> ('+age+' years in operation)':'')+
       '. The company operates <b>'+c.seLocs+' branch location'+(c.seLocs>1?'s':'')+'</b> across <b>'+c.states.length+' state'+(c.states.length>1?'s':'')+'</b> ('+c.states.join(', ')+').'+
-      (c.parentGroup&&c.parentGroup!==c.name?' It operates under the <b>'+esc(c.parentGroup)+'</b> parent organization.':'')+
+      (c.parentGroup&&c.parentGroup!==c.name?' It operates under the <b>'+esc(c.parentGroup)+'</b> parent organization.':'')))+
       '</div>'+
-      // Website + Founded row
-      '<div style="display:flex;gap:12px;margin-top:10px;flex-wrap:wrap">'+
-      '<div style="flex:1;min-width:150px;padding:8px 12px;background:var(--light-bg);border-radius:var(--radius);border-left:3px solid var(--blue)">'+
+      /* Key metrics row */
+      '<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;margin-top:10px">'+
+      '<div style="padding:8px 12px;background:var(--light-bg);border-radius:var(--radius-sm);border-left:3px solid var(--gold)">'+
+      '<div style="font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--slate);margin-bottom:2px">Founded</div>'+
+      (founded?'<span style="font-size:13px;font-weight:600">'+founded+'</span> <span style="font-size:10px;color:var(--slate)">('+age+'yr)</span>':'<span style="font-size:12px;color:var(--slate)">N/A</span>')+
+      '</div>'+
+      '<div style="padding:8px 12px;background:var(--light-bg);border-radius:var(--radius-sm);border-left:3px solid var(--green)">'+
+      '<div style="font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--slate);margin-bottom:2px">Est. Revenue</div>'+
+      (rev?'<span style="font-size:13px;font-weight:600;color:var(--green)">$'+rev+'M</span>':'<span style="font-size:12px;color:var(--slate)">N/A</span>')+
+      '</div>'+
+      '<div style="padding:8px 12px;background:var(--light-bg);border-radius:var(--radius-sm);border-left:3px solid var(--blue)">'+
+      '<div style="font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--slate);margin-bottom:2px">Est. Gallons/Yr</div>'+
+      (gal?'<span style="font-size:13px;font-weight:600;color:var(--blue)">'+gal+'M</span>':'<span style="font-size:12px;color:var(--slate)">N/A</span>')+
+      '</div>'+
+      '<div style="padding:8px 12px;background:var(--light-bg);border-radius:var(--radius-sm);border-left:3px solid var(--purple)">'+
+      '<div style="font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--slate);margin-bottom:2px">Employees</div>'+
+      (emp?'<span style="font-size:13px;font-weight:600">'+emp+'</span>':'<span style="font-size:12px;color:var(--slate)">N/A</span>')+
+      '</div>'+
+      '</div>'+
+      /* Contact row */
+      '<div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap">'+
+      '<div style="flex:1;min-width:140px;padding:8px 12px;background:var(--light-bg);border-radius:var(--radius-sm);border-left:3px solid var(--blue)">'+
       '<div style="font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--slate);margin-bottom:2px">Website</div>'+
-      (web?'<a href="'+esc(web)+'" target="_blank" rel="noopener" style="font-size:12px;color:var(--blue);text-decoration:none;font-weight:500">'+esc(webDomain)+' &#8599;</a>':'<span style="font-size:12px;color:var(--slate)">N/A</span>')+
+      (web?'<a href="'+esc(web)+'" target="_blank" rel="noopener" style="font-size:11px;color:var(--blue);text-decoration:none;font-weight:500">'+esc(webDomain)+' &#8599;</a>':'<span style="font-size:11px;color:var(--slate)">N/A</span>')+
       '</div>'+
-      '<div style="flex:1;min-width:150px;padding:8px 12px;background:var(--light-bg);border-radius:var(--radius);border-left:3px solid var(--gold)">'+
-      '<div style="font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--slate);margin-bottom:2px">Year Founded</div>'+
-      (founded?'<span style="font-size:12px;font-weight:600">'+founded+'</span> <span style="font-size:10px;color:var(--slate)">('+age+' yrs)</span>':'<span style="font-size:12px;color:var(--slate)">N/A</span>')+
+      (phone?'<div style="flex:1;min-width:140px;padding:8px 12px;background:var(--light-bg);border-radius:var(--radius-sm);border-left:3px solid var(--slate)">'+
+      '<div style="font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--slate);margin-bottom:2px">Phone</div>'+
+      '<span style="font-size:11px;font-weight:500">'+esc(phone)+'</span></div>':'')+
       '</div>'+
-      '</div>'+
+      /* Key Personnel */
+      (personnel.length>0?
+      '<div style="margin-top:10px"><div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--slate);margin-bottom:6px">Key Personnel</div>'+
+      '<div style="display:flex;flex-wrap:wrap;gap:6px">'+
+      personnel.map(function(p){return '<div style="padding:4px 10px;background:var(--light-bg);border:1px solid var(--border);border-radius:var(--radius-full);font-size:10px"><b>'+esc(p.name)+'</b> <span style="color:var(--slate)">\u2014 '+esc(p.title)+'</span></div>'}).join('')+
+      '</div></div>':'')+
+      /* Service Types */
+      (services.length>0?
+      '<div style="margin-top:8px"><div style="font-size:9px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--slate);margin-bottom:4px">Services</div>'+
+      '<div style="display:flex;flex-wrap:wrap;gap:4px">'+
+      services.map(function(s){return '<span style="padding:2px 8px;background:var(--green-light);color:var(--green);border-radius:var(--radius-full);font-size:9px;font-weight:500">'+esc(s)+'</span>'}).join('')+
+      '</div></div>':'')+
+      /* Last Acquisition */
+      (lastAcq?
+      '<div style="margin-top:8px;padding:8px 12px;background:rgba(21,101,192,0.06);border-radius:var(--radius-sm);border-left:3px solid var(--blue)">'+
+      '<div style="font-size:9px;text-transform:uppercase;letter-spacing:0.5px;color:var(--blue);margin-bottom:2px">Last M&amp;A Activity</div>'+
+      '<span style="font-size:11px"><b>'+esc(lastAcq.target)+'</b> ('+lastAcq.year+')</span>'+
+      (lastAcq.details?' <span style="font-size:10px;color:var(--slate)">\u2014 '+esc(lastAcq.details)+'</span>':'')+
+      '</div>':'')+
+      /* Data Confidence */
+      (confidence?
+      '<div style="margin-top:6px;text-align:right"><span style="font-size:9px;color:var(--slate)" title="Research data confidence: 1=benchmark only, 5=public filings">Data confidence: '+
+      '\u2B50'.repeat(Math.min(confidence,5))+'\u2606'.repeat(Math.max(5-confidence,0))+
+      '</span></div>':'')+
       '</div>';
     })()+
 
@@ -1532,9 +1593,10 @@ function toggleHelp(){let hm=document.getElementById('helpModal');hm.classList.t
 function exportCSV(){
   let companies=fil();
   if(companies.length===0){showToast('No data to export');return}
-  let rows=[['Rank','Company','Parent','HQ City','HQ State','Type','SE Locations','Proximity Score','County Score','Total Score','States']];
+  /* === PRODUCT SPRINT: Enhanced CSV with research data === */
+  let rows=[['Rank','Company','Parent','HQ City','HQ State','Type','SE Locations','Proximity Score','County Score','Total Score','Est Revenue ($M)','Est Gallons (M)','Employees','Year Founded','Phone','States','Description']];
   companies.forEach((c,i)=>{
-    rows.push([(i+1),'"'+c.name.replace(/"/g,'""')+'"','"'+(c.parentGroup||'').replace(/"/g,'""')+'"','"'+(c.hqCity||'')+'"',c.hqState||'',c.ownership,c.seLocs,proxScores[c.id]||0,countyScores[c.id]||0,totalScores[c.id]||0,'"'+c.states.join(', ')+'"']);
+    rows.push([(i+1),'"'+c.name.replace(/"/g,'""')+'"','"'+(c.parentGroup||'').replace(/"/g,'""')+'"','"'+(c.hqCity||'')+'"',c.hqState||'',c.ownership,c.seLocs,proxScores[c.id]||0,countyScores[c.id]||0,totalScores[c.id]||0,c.estRevenue||'',c.estAnnualGallons||'',c.employeeCount||'',c.yearFounded||'','"'+(c.phone||'')+'"','"'+c.states.join(', ')+'"','"'+(c.description||'').replace(/"/g,'""')+'"']);
   });
   let csv=rows.map(r=>r.join(',')).join('\n');
   let blob=new Blob([csv],{type:'text/csv'});
