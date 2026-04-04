@@ -128,7 +128,7 @@ body{font-family:'DM Sans',sans-serif;background:var(--light-bg);color:var(--nav
 .header{background:linear-gradient(135deg,#0a1220 0%,#0D1B2A 40%,#162436 100%);color:var(--white);padding:0 var(--space-xl);height:56px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);z-index:1000;position:relative}
 .header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),rgba(200,169,81,0.3),var(--gold))}
 .header h1{font-family:'DM Serif Display',Georgia,serif;font-size:var(--text-xl);font-weight:400;letter-spacing:0.3px}
-.header h1 span{color:var(--gold)}
+/* span color removed — title is now all white */
 .header .sep{width:2px;height:24px;background:var(--gold);margin:0 var(--space-lg);opacity:0.4}
 .header .sub{font-size:var(--text-xs);color:rgba(255,255,255,0.5);letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
 .header-left{display:flex;align-items:center}
@@ -158,9 +158,13 @@ select.fsel{padding:5px 8px;border:1px solid var(--border);border-radius:var(--r
 .main.pf-active{height:calc(100vh - 52px - 42px - 38px)}
 .main.pf-expanded{height:calc(100vh - 52px - 42px - 340px)}
 .left{width:480px;min-width:340px;border-right:1px solid var(--border);display:flex;flex-direction:column;background:var(--white);overflow:hidden}
-.ph{padding:10px 14px;background:var(--light-bg);border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between}
-.ph h2{font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--navy-mid)}
-.ph .cnt{font-size:11px;color:var(--slate)}
+/* === PRODUCT SPRINT B: Elevated League Table header === */
+.ph{padding:10px 16px;background:linear-gradient(180deg,var(--light-bg),#eef0f3);border-bottom:2px solid var(--gold);display:flex;align-items:center;justify-content:space-between}
+.ph h2{font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;color:var(--navy);font-family:'DM Serif Display',Georgia,serif}
+.ph .cnt{font-size:11px;color:var(--slate);font-weight:500;background:rgba(0,0,0,0.04);padding:2px 10px;border-radius:var(--radius-full)}
+[data-theme="dark"] .ph{background:linear-gradient(180deg,#0e1620,#0a1018);border-bottom-color:var(--gold)}
+[data-theme="dark"] .ph h2{color:#e0e4ea}
+[data-theme="dark"] .ph .cnt{background:rgba(255,255,255,0.06)}
 .ph .help-btn{width:22px;height:22px;border-radius:50%;border:1px solid var(--border);background:var(--white);color:var(--slate);font-size:11px;font-weight:700;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;margin-left:8px;vertical-align:middle;transition:all var(--tr);flex-shrink:0}
 .ph .help-btn:hover{border-color:var(--gold);color:var(--gold)}
 /* === SPRINT 4: Table scroll container with transition === */
@@ -204,7 +208,8 @@ table.lt tbody tr.kb-sel{outline:2px solid var(--gold);outline-offset:-2px}
 .cm{width:7px;height:7px;border-radius:50%;border:1px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.3)}
 .cm-platform{box-shadow:0 0 0 3px rgba(21,101,192,0.6),0 1px 3px rgba(0,0,0,0.3)}
 .cm-ll{width:9px;height:9px;box-shadow:0 0 6px rgba(200,169,81,0.8),0 0 0 2px rgba(200,169,81,0.5)}
-.legend{position:absolute;bottom:20px;left:20px;background:var(--white);border-radius:var(--radius);padding:10px 14px;box-shadow:var(--shadow);z-index:800;font-size:10px;max-width:210px}
+/* === PRODUCT SPRINT B: Legend repositioned to avoid cutoff === */
+.legend{position:absolute;bottom:20px;left:20px;background:var(--white);border-radius:var(--radius);padding:10px 14px;box-shadow:var(--shadow);z-index:800;font-size:10px;max-width:200px;max-height:calc(100% - 80px);overflow-y:auto}
 .legend h4{font-size:9px;text-transform:uppercase;letter-spacing:0.7px;color:var(--slate);margin-bottom:6px}
 .legend .li{display:flex;align-items:center;gap:7px;margin-bottom:3px}
 .legend .d{width:9px;height:9px;border-radius:50%;border:1px solid rgba(0,0,0,0.1);flex-shrink:0}
@@ -262,7 +267,8 @@ table.lt tbody tr.kb-sel{outline:2px solid var(--gold);outline-offset:-2px}
 .pf-act{padding:5px 12px;border:1px solid rgba(255,255,255,0.2);border-radius:4px;background:transparent;color:var(--gold);font-size:10px;font-family:inherit;cursor:pointer;display:flex;align-items:center;gap:4px;transition:all var(--tr)}
 .pf-act:hover{background:rgba(200,169,81,0.2);border-color:var(--gold)}
 .pf-act svg{width:12px;height:12px}
-.saves-dropdown{position:absolute;top:100%;left:0;margin-top:4px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);min-width:300px;max-height:350px;overflow-y:auto;z-index:1600;display:none;padding:8px 0}
+/* === PRODUCT SPRINT B: Fixed dropdown positioning === */
+.saves-dropdown{position:absolute;top:100%;right:0;left:auto;margin-top:4px;background:var(--white);border:1px solid var(--border);border-radius:var(--radius);box-shadow:var(--shadow-lg);min-width:280px;max-width:calc(100vw - 40px);max-height:350px;overflow-y:auto;z-index:1600;display:none;padding:8px 0}
 .saves-dropdown.open{display:block}
 .saves-dropdown .sd-title{font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--slate);padding:6px 14px;border-bottom:1px solid var(--border)}
 .saves-dropdown .sd-item{padding:8px 14px;cursor:pointer;font-size:11px;display:flex;justify-content:space-between;align-items:center;transition:background var(--tr)}
@@ -445,6 +451,21 @@ button:focus-visible,input:focus-visible,.state-pill:focus-visible,.fbtn:focus-v
 table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 .filter-chip .chip-x{width:var(--touch-min);height:var(--touch-min);min-width:24px;min-height:24px}
 }
+/* === PRODUCT SPRINT B: Desktop view toggle (table/both/map) === */
+.view-toggle{display:flex;background:var(--white);border-bottom:1px solid var(--border);padding:4px 8px;gap:4px;justify-content:center}
+.vtog-btn{padding:5px 14px;border:1px solid var(--border);border-radius:var(--radius-sm);background:transparent;font-family:inherit;font-size:11px;font-weight:500;color:var(--slate);cursor:pointer;transition:all var(--tr)}
+.vtog-btn:hover{border-color:var(--gold);color:var(--navy)}
+.vtog-btn.active{background:var(--navy);color:var(--white);border-color:var(--navy)}
+[data-theme="dark"] .view-toggle{background:#16202e;border-color:#2a3a4e}
+[data-theme="dark"] .vtog-btn{color:#8899AA;border-color:#2a3a4e}
+[data-theme="dark"] .vtog-btn:hover{border-color:var(--gold);color:#e0e4ea}
+[data-theme="dark"] .vtog-btn.active{background:var(--gold);color:#0e1620;border-color:var(--gold)}
+/* View states */
+.main.view-table .map-wrap{display:none}
+.main.view-table .left{width:100%;border-right:none}
+.main.view-map .left{display:none}
+.main.view-map .map-wrap{flex:1}
+@media(max-width:768px){.view-toggle{display:none}}
 /* === SPRINT 8: Mobile tab navigation === */
 .mobile-tabs{display:none;background:var(--white);border-bottom:1px solid var(--border);padding:0}
 .mobile-tabs button{flex:1;padding:var(--space-sm) 0;border:none;background:transparent;font-family:inherit;font-size:var(--text-sm);font-weight:600;color:var(--slate);cursor:pointer;border-bottom:2px solid transparent;transition:all var(--tr)}
@@ -541,9 +562,10 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <div class="row-preview" id="rowPreview"></div>
 <div class="header">
 <div class="header-left">
-<h1>Southeast <span>Propane</span> Market Map</h1>
+<!-- === PRODUCT SPRINT B: Title all white, Ergon gold === -->
+<h1>Southeast Propane Market Map</h1>
 <div class="sep"></div>
-<span class="sub">Ergon Corporate Development</span>
+<span class="sub" style="color:var(--gold);opacity:1;font-weight:600;letter-spacing:2px">Ergon Corporate Development</span>
 </div>
 <div class="header-stats">
 <span><b id="hc">0</b>Companies</span>
@@ -589,7 +611,13 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 </div>
 <!-- SPRINT 6: Print info -->
 <div class="print-info" id="printInfo">Southeast Propane Market Map &mdash; Ergon Corporate Development &mdash; Confidential</div>
-<!-- SPRINT 8: Mobile tabs -->
+<!-- === PRODUCT SPRINT B: View toggle (table/both/map) === -->
+<div class="view-toggle" id="viewToggle" role="tablist">
+<button class="vtog-btn active" data-view="table" role="tab" aria-selected="true" onclick="setView('table')" title="Table only">&#128202; Table</button>
+<button class="vtog-btn" data-view="both" role="tab" aria-selected="false" onclick="setView('both')" title="Split view">&#9638; Both</button>
+<button class="vtog-btn" data-view="map" role="tab" aria-selected="false" onclick="setView('map')" title="Map only">&#127760; Map</button>
+</div>
+<!-- SPRINT 8: Mobile tabs (hidden on desktop, shown on mobile) -->
 <div class="mobile-tabs" id="mobileTabs" role="tablist">
 <button class="active" role="tab" aria-selected="true" onclick="setMobileView('table')">&#128202; Table</button>
 <button role="tab" aria-selected="false" onclick="setMobileView('map')">&#127760; Map</button>
@@ -598,7 +626,8 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <div class="filter-bar" id="filterBar"></div>
 <div class="main" id="mainArea">
 <div class="left">
-<div class="ph"><h2>League Table</h2><button class="help-btn" onclick="toggleHelp()" title="Scoring methodology &amp; keyboard shortcuts" aria-label="Help and keyboard shortcuts">?</button><span class="cnt" id="tc" aria-live="polite">0 companies</span></div>
+<!-- === PRODUCT SPRINT B: Polished League Table header === -->
+<div class="ph"><div style="display:flex;align-items:center;gap:8px"><h2 style="margin:0">League Table</h2><button class="help-btn" onclick="toggleHelp()" title="Scoring methodology &amp; keyboard shortcuts" aria-label="Help and keyboard shortcuts">?</button></div><span class="cnt" id="tc" aria-live="polite">0 companies</span></div>
 <div class="tscroll" id="tscrollWrap">
 <table class="lt" id="lt"><thead><tr>
 <th style="width:22px" title="Spotlight: isolate this company on the map">&#128065;</th>
@@ -729,6 +758,21 @@ function setMobileView(view){
   let tabs=document.querySelectorAll('#mobileTabs button');
   if(view==='map'){main.classList.add('show-map');tabs[0].classList.remove('active');tabs[0].setAttribute('aria-selected','false');tabs[1].classList.add('active');tabs[1].setAttribute('aria-selected','true');setTimeout(()=>map&&map.invalidateSize(),100)}
   else{main.classList.remove('show-map');tabs[1].classList.remove('active');tabs[1].setAttribute('aria-selected','false');tabs[0].classList.add('active');tabs[0].setAttribute('aria-selected','true')}
+}
+/* === PRODUCT SPRINT B: Desktop view toggle === */
+function setView(view){
+  let main=document.getElementById('mainArea');
+  main.classList.remove('view-table','view-map');
+  if(view==='table')main.classList.add('view-table');
+  else if(view==='map')main.classList.add('view-map');
+  // Update toggle buttons
+  document.querySelectorAll('.vtog-btn').forEach(btn=>{
+    let isActive=btn.dataset.view===view;
+    btn.classList.toggle('active',isActive);
+    btn.setAttribute('aria-selected',isActive?'true':'false');
+  });
+  // Invalidate map size after layout change
+  setTimeout(()=>{if(typeof map!=='undefined'&&map)map.invalidateSize()},150);
 }
 
 /* === SPRINT 8: DOM cache === */
