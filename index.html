@@ -742,7 +742,7 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <th onclick="sortBy('prox')" data-col="prox" title="Proximity score"><span class="th-full">Proximity</span><span class="th-abbr">Prox</span> <span class="sort-arrow">&#9660;</span></th>
 <th onclick="sortBy('county')" data-col="county" title="County market quality score"><span class="th-full">County</span><span class="th-abbr">Cnty</span> <span class="sort-arrow">&#9660;</span></th>
 <th onclick="sortBy('total')" data-col="total" title="Total score = Proximity + County"><span class="th-full">Total</span><span class="th-abbr">Total</span> <span class="sort-arrow">&#9660;</span></th>
-<th onclick="sortBy('mkt')" data-col="mkt" title="Estimated SE market share"><span class="th-full">Market %</span><span class="th-abbr">Mkt%</span> <span class="sort-arrow">&#9660;</span></th>
+<th onclick="sortBy('mkt')" data-col="mkt" title="Estimated market share based on county propane consumption (dynamic with filters)"><span class="th-full">Market %</span><span class="th-abbr">Mkt%</span> <span class="sort-arrow">&#9660;</span></th>
 <th onclick="sortBy('rev')" data-col="rev" title="Estimated annual revenue ($M)"><span class="th-full">Revenue</span><span class="th-abbr">Rev</span> <span class="sort-arrow">&#9660;</span></th>
 <th onclick="sortBy('emp')" data-col="emp" title="Estimated employee count"><span class="th-full">Employees</span><span class="th-abbr">Emp</span> <span class="sort-arrow">&#9660;</span></th>
 <th onclick="sortBy('states')" data-col="states" title="States"><span class="th-full">States</span><span class="th-abbr">States</span> <span class="sort-arrow">&#9660;</span></th>
@@ -983,16 +983,20 @@ let stateGallons={};  // {ST: total gallons}
 function computeMarketShare(){
   marketShare={};
   if(!CD||!CD.length)return;
-  // Pre-compute total gallons per state and SE-wide
+  /* SPRINT M: Dynamic market share — recalculates based on active state filter.
+     When states are filtered, denominator = only counties in those states.
+     Company locations outside filtered states are excluded from numerator. */
+  var filteredCD=stateFilter.size>0?CD.filter(function(d){var st=d.n.split(', ').pop();return stateFilter.has(st)}):CD;
   totalSEGallons=0;stateGallons={};
-  CD.forEach(d=>{let st=d.n.split(', ').pop();stateGallons[st]=(stateGallons[st]||0)+d.g;totalSEGallons+=d.g});
-  // For each company, estimate covered gallons (counties within 25mi of any location)
+  filteredCD.forEach(d=>{let st=d.n.split(', ').pop();stateGallons[st]=(stateGallons[st]||0)+d.g;totalSEGallons+=d.g});
   DATA.forEach(c=>{
     let coveredG=0,stCovG={};
     let coveredCounties=new Set();
-    c.locations.forEach(loc=>{
+    var locs=stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}):c.locations;
+    locs.forEach(loc=>{
       let nearby=getGridNeighbors(loc.lat,loc.lng);
       nearby.forEach(d=>{
+        if(stateFilter.size>0){var cSt=d.n.split(', ').pop();if(!stateFilter.has(cSt))return}
         if(!coveredCounties.has(d.n)&&haversine(loc.lat,loc.lng,d.lat,d.lng)<CONFIG.COUNTY_R){
           coveredCounties.add(d.n);
           coveredG+=d.g;
@@ -1077,7 +1081,7 @@ function sortBy(col){
   selectedRow=-1;
   render();
 }
-function go(){searchQuery=document.getElementById('si').value;hideEx=document.getElementById('exToggle').checked;isoMode=document.getElementById('isoToggle').checked;selectedRow=-1;render();updateMap();updateH();updateStateMask();if(document.getElementById('mainArea').classList.contains('view-charts'))renderCharts()}
+function go(){searchQuery=document.getElementById('si').value;hideEx=document.getElementById('exToggle').checked;isoMode=document.getElementById('isoToggle').checked;selectedRow=-1;computeMarketShare();computeProxScores();render();updateMap();updateH();updateStateMask();if(document.getElementById('mainArea').classList.contains('view-charts'))renderCharts()}
 
 function fil(){
   let companies=DATA.filter(c=>{
