@@ -654,6 +654,7 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <span><b id="hl">0</b>Locations</span>
 <span><b id="hs">0</b>States</span>
 <span style="font-size:9px;color:var(--slate);opacity:0.7">Updated: April 2026</span>
+<button class="logout-btn" onclick="resetApp()" title="Reset all filters and clear state" aria-label="Reset">&#x21bb; Reset</button>
 <button class="logout-btn" onclick="doLogout()" title="Sign out" aria-label="Sign out">Sign Out</button>
 </div>
 </div>
@@ -1275,6 +1276,9 @@ function updateMapLegend(companies){
 }
 
 function updateMap(){
+  /* SPRINT P: Close popup and destroy tippy instances before clearing markers */
+  if(map)map.closePopup();
+  document.querySelectorAll('[data-tippy-root]').forEach(function(el){el.remove()});
   mcg.clearLayers();
   let allPFIds=[LL_ID,...platform];
   let companies=fil();
@@ -1295,7 +1299,10 @@ function updateMap(){
       let iconHtml='<div class="'+cls+'" style="background:'+col+'"></div>';
       let mk=L.marker([l.lat,l.lng],{icon:L.divIcon({className:'',html:iconHtml,iconSize:sz,iconAnchor:anch})});
       let ps=proxScores[c.id]||0;
-      mk.bindPopup('<div class="mp"><h3>'+esc(c.name)+'</h3><div class="sub">'+esc(l.name)+' &mdash; '+esc(l.city)+', '+esc(l.state)+'</div><div class="g"><div class="s"><div class="sl">Locations</div><div class="sv">'+c.seLocs+'</div></div><div class="s"><div class="sl">Ownership</div><div class="sv"><span class="badge '+BC[c.ownership]+'">'+OL[c.ownership]+'</span></div></div><div class="s"><div class="sl">Proximity</div><div class="sv '+scoreCls(ps)+'">'+ps+'</div></div><div class="s"><div class="sl">States</div><div class="sv" style="font-size:10px">'+c.states.join(', ')+'</div></div></div><button class="vf" onclick="op(\''+c.id+'\')">View Full Profile &rarr;</button></div>',{maxWidth:280,minWidth:220});
+      var msPct=marketShare[c.id]?marketShare[c.id].se:0;
+      var covStates=stateFilter.size>0?[...stateFilter]:c.states;
+      var filtLocs=stateFilter.size>0?c.locations.filter(function(ll){return stateFilter.has(ll.state)}).length:c.seLocs;
+      mk.bindPopup('<div class="mp"><h3>'+esc(c.name)+'</h3><div class="sub">'+esc(l.name)+' &mdash; '+esc(l.city)+', '+esc(l.state)+'</div><div class="g"><div class="s"><div class="sl">Locations</div><div class="sv">'+filtLocs+'</div></div><div class="s"><div class="sl">Market Share</div><div class="sv" style="color:var(--blue)">'+msPct+'%</div></div><div class="s"><div class="sl">Ownership</div><div class="sv"><span class="badge '+BC[c.ownership]+'">'+OL[c.ownership]+'</span></div></div><div class="s"><div class="sl">Coverage</div><div class="sv" style="font-size:9px">'+covStates.slice(0,6).map(function(st){return st+':'+c.locations.filter(function(ll){return ll.state===st}).length}).join(' ')+'</div></div></div><button class="vf" onclick="op(\''+c.id+'\')">View Full Profile &rarr;</button></div>',{maxWidth:300,minWidth:220,autoClose:true,closeOnClick:true});
       mk.on('add',function(){var el=mk.getElement();if(el){try{tippy(el,{content:'<div style="font-family:DM Sans,sans-serif;font-size:11px"><b>'+esc(c.name)+'</b><br><span style="color:#8899AA">'+c.seLocs+' locations &middot; '+OL[c.ownership]+'</span>'+(c.estRevenue?'<br><span style="color:#2E7D32">$'+c.estRevenue+'M rev</span>':'')+'</div>',allowHTML:true,placement:'top',animation:'shift-away',theme:'propane',delay:[200,0],touch:false})}catch(e){}}});
       mcg.addLayer(mk);
     })
@@ -1801,7 +1808,7 @@ function updateH(){
 
 // === KEYBOARD SHORTCUTS ===
 document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){cp();closeSavesDropdown();document.getElementById('helpModal').classList.remove('open');document.getElementById('sourcesModal').classList.remove('open');return}
+  if(e.key==='Escape'){cp();closeSavesDropdown();document.getElementById('helpModal').classList.remove('open');document.getElementById('sourcesModal').classList.remove('open');if(map)map.closePopup();document.querySelectorAll('[data-tippy-root]').forEach(function(el){el.remove()});return}
   // Ignore shortcuts when typing in inputs
   let tag=document.activeElement.tagName;
   if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'){
@@ -1899,6 +1906,34 @@ function doLogin(){
   }
 }
 
+/* SPRINT P: Reset app to clean state */
+function resetApp(){
+  /* Close all popups, panels, modals */
+  if(map)map.closePopup();
+  document.querySelectorAll('[data-tippy-root]').forEach(function(el){el.remove()});
+  cp(); /* close profile panel */
+  closeSavesDropdown();
+  document.getElementById('helpModal').classList.remove('open');
+  document.getElementById('sourcesModal').classList.remove('open');
+  var pfBar=document.getElementById('pfBar');
+  if(pfBar){pfBar.classList.remove('fullscreen','expanded');pfExpanded=false}
+  /* Clear all filters */
+  searchQuery='';document.getElementById('si').value='';
+  ownerFilter.clear();document.querySelectorAll('[data-ow]').forEach(function(p){p.classList.toggle('on',p.dataset.ow==='ALL')});
+  stateFilter.clear();document.querySelectorAll('#statePills .state-pill').forEach(function(p){p.classList.toggle('on',p.dataset.st==='ALL')});
+  hideEx=false;document.getElementById('exToggle').checked=false;
+  isoMode=false;document.getElementById('isoToggle').checked=false;
+  spotlight.clear();
+  /* Reset view and sort */
+  setView('both');
+  sortCol='total';sortDir='desc';
+  /* Reset map */
+  if(map)map.setView(CONFIG.CENTER,CONFIG.ZOOM);
+  mapColorMode='company';
+  /* Recompute and re-render */
+  computeProxScores();computeMarketShare();render();updateMap();updateH();updatePF();
+  showToast('All filters and state cleared');
+}
 function doLogout(){
   sessionStorage.removeItem('propane_auth');
   document.getElementById('loginOverlay').style.display='flex';
@@ -2132,6 +2167,8 @@ window.addEventListener('load',()=>{
   loadFromURL();
   // Hide loading overlay
   document.getElementById('loadingOverlay').classList.add('hidden');
+  // SPRINT P: Safety timeout — force-hide loading overlay after 15s
+  setTimeout(function(){document.getElementById('loadingOverlay').classList.add('hidden')},15000);
 });
 </script>
 </body>
