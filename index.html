@@ -129,15 +129,14 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:'DM Sans',sans-serif;background:var(--light-bg);color:var(--navy);line-height:1.5;overflow:auto;min-height:100vh;height:100vh;display:flex;flex-direction:column;transition:background .3s,color .3s}
 /* === SPRINT 3: Elevated header === */
-.header{background:linear-gradient(135deg,#0a1220 0%,#0D1B2A 40%,#162436 100%);color:var(--white);padding:0 var(--space-xl);height:56px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);z-index:1000;position:relative}
+.header{background:linear-gradient(135deg,#0a1220 0%,#0D1B2A 40%,#162436 100%);color:var(--white);padding:0 var(--space-lg);min-height:48px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);z-index:1000;position:relative;flex-shrink:0;gap:12px}
 .header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),rgba(200,169,81,0.3),var(--gold))}
-.header h1{font-family:'DM Serif Display',Georgia,serif;font-size:var(--text-xl);font-weight:400;letter-spacing:0.3px}
-/* span color removed — title is now all white */
-.header .sep{width:2px;height:24px;background:var(--gold);margin:0 var(--space-lg);opacity:0.4}
-.header .sub{font-size:13px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;font-weight:600}
-.header-left{display:flex;align-items:center}
-.header-stats{display:flex;gap:var(--space-md);font-size:var(--text-sm);color:rgba(255,255,255,0.5);align-items:center}
-.header-stats span{display:flex;align-items:center;gap:4px;padding:3px 10px;background:rgba(255,255,255,0.06);border-radius:var(--radius-full);border:1px solid rgba(255,255,255,0.08)}
+.header h1{font-family:'DM Serif Display',Georgia,serif;font-size:16px;font-weight:400;letter-spacing:0.3px;white-space:nowrap}
+.header .sep{width:1px;height:20px;background:var(--gold);margin:0 10px;opacity:0.3;flex-shrink:0}
+.header .sub{font-size:11px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;font-weight:600;white-space:nowrap}
+.header-left{display:flex;align-items:center;flex-shrink:0}
+.header-stats{display:flex;gap:6px;font-size:var(--text-sm);color:rgba(255,255,255,0.5);align-items:center;flex-shrink:0}
+.header-stats span{display:flex;align-items:center;gap:3px;padding:2px 8px;background:rgba(255,255,255,0.06);border-radius:var(--radius-full);border:1px solid rgba(255,255,255,0.08);font-size:11px;white-space:nowrap}
 .header-stats b{color:var(--gold);font-size:var(--text-base);margin-right:1px;font-variant-numeric:tabular-nums}
 /* === SPRINT 7: Logout button class === */
 .logout-btn{padding:var(--space-sm) var(--space-lg);border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius-sm);background:transparent;color:rgba(255,255,255,0.5);font-size:var(--text-sm);font-family:inherit;cursor:pointer;margin-left:var(--space-sm);transition:all var(--tr)}
@@ -646,7 +645,7 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <!-- === PRODUCT SPRINT B: Title all white, Ergon gold === -->
 <h1>Southeast Propane Market Map</h1>
 <div class="sep"></div>
-<span class="sub" style="color:var(--gold);opacity:1;font-weight:700;letter-spacing:2.5px;font-size:14px">Ergon Corporate Development</span>
+<span class="sub" style="color:var(--gold);opacity:1;font-weight:600">Ergon Corporate Development</span>
 </div>
 <div class="header-stats">
 <span><b id="hc">0</b>Companies</span>
