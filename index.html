@@ -886,7 +886,7 @@ function setView(view){
   main.classList.remove('view-table','view-map','view-charts');
   if(view==='table')main.classList.add('view-table');
   else if(view==='map')main.classList.add('view-map');
-  else if(view==='charts'){main.classList.add('view-charts');renderCharts()}
+  else if(view==='charts'){main.classList.add('view-charts');setTimeout(function(){renderCharts();chartInstances.forEach(function(c){c.resize()})},100)}
   // Update toggle buttons
   document.querySelectorAll('.vtog-btn').forEach(btn=>{
     let isActive=btn.dataset.view===view;
@@ -1906,15 +1906,18 @@ function doLogin(){
 
 /* SPRINT P: Reset app to clean state */
 function resetApp(){
-  /* Close all popups, panels, modals */
-  if(map)map.closePopup();
+  try{
+  /* Close all popups, panels, modals, tooltips */
+  if(map){try{map.closePopup()}catch(e){}}
   document.querySelectorAll('[data-tippy-root]').forEach(function(el){el.remove()});
   cp(); /* close profile panel */
-  closeSavesDropdown();
+  try{closeSavesDropdown()}catch(e){}
   document.getElementById('helpModal').classList.remove('open');
   document.getElementById('sourcesModal').classList.remove('open');
   var pfBar=document.getElementById('pfBar');
-  if(pfBar){pfBar.classList.remove('fullscreen','expanded');pfExpanded=false}
+  if(pfBar){pfBar.classList.remove('fullscreen','expanded','active');pfExpanded=false;document.getElementById('pfBody').style.display=''}
+  /* Clear platform */
+  platform=[];
   /* Clear all filters */
   searchQuery='';document.getElementById('si').value='';
   ownerFilter.clear();document.querySelectorAll('[data-ow]').forEach(function(p){p.classList.toggle('on',p.dataset.ow==='ALL')});
@@ -1922,15 +1925,27 @@ function resetApp(){
   hideEx=false;document.getElementById('exToggle').checked=false;
   isoMode=false;document.getElementById('isoToggle').checked=false;
   spotlight.clear();
-  /* Reset view and sort */
-  setView('both');
+  /* Reset sort */
   sortCol='total';sortDir='desc';
-  /* Reset map */
-  if(map)map.setView(CONFIG.CENTER,CONFIG.ZOOM);
+  selectedRow=-1;
+  /* Reset map: view, color mode, county layer, state mask */
   mapColorMode='company';
-  /* Recompute and re-render */
+  if(typeof setMapColorMode==='function')setMapColorMode('company');
+  if(countyVisible){try{toggleCounty()}catch(e){}}
+  if(typeof stateMaskLayer!=='undefined'&&stateMaskLayer&&map){map.removeLayer(stateMaskLayer);stateMaskLayer=null}
+  /* Reset view to both */
+  setView('both');
+  /* Recompute everything */
   computeProxScores();computeMarketShare();render();updateMap();updateH();updatePF();
-  showToast('All filters and state cleared');
+  /* Reset map position last (after updateMap so markers are placed) */
+  if(map){map.setView(CONFIG.CENTER,CONFIG.ZOOM);setTimeout(function(){map.invalidateSize()},200)}
+  /* Clear filter bar chips */
+  var fb=document.getElementById('filterBar');if(fb)fb.innerHTML='';
+  /* Reset mainArea classes */
+  var main=document.getElementById('mainArea');
+  if(main)main.classList.remove('pf-active','pf-expanded');
+  showToast('Reset complete — all filters, platform, and map cleared');
+  }catch(e){console.error('[resetApp]',e);showToast('Reset encountered an error — try refreshing the page')}
 }
 function doLogout(){
   sessionStorage.removeItem('propane_auth');
@@ -2120,8 +2135,11 @@ function renderCharts(){
   ch2.setOption({tooltip:{trigger:'axis',formatter:function(p){var co=locCos[locCos.length-1-p[0].dataIndex];return '<b>'+p[0].name+'</b><br>'+p[0].value+' locations'+(stateFilter.size>0?' in '+[...stateFilter].join(', '):' (SE total)')+(co&&co.estRevenue?'<br>$'+co.estRevenue+'M est. revenue':'')+(co?'<br><span style="color:#8899AA;font-size:10px">Click to view profile</span>':'')}},grid:{left:140,right:30,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:9}},yAxis:{type:'category',data:locCos.map(function(c){return c.name}).reverse(),axisLabel:{fontSize:9,width:130,overflow:'truncate'}},series:[{type:'bar',data:locCos.map(function(c){return c.filtLocs}).reverse(),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#C8A951'},{offset:1,color:'#2E7D32'}]),borderRadius:[0,4,4,0]},barWidth:12,cursor:'pointer'}]});
   ch2.on('click',function(params){var idx=locCos.length-1-params.dataIndex;if(locCos[idx]){op(locCos[idx].id)}});
   chartInstances.push(ch2);
-  window.addEventListener('resize',function(){chartInstances.forEach(function(c){c.resize()})});
+  /* Ensure charts resize to fit container after render */
+  setTimeout(function(){chartInstances.forEach(function(c){c.resize()})},50);
 }
+/* Single resize listener (not inside renderCharts to avoid duplicates) */
+window.addEventListener('resize',function(){chartInstances.forEach(function(c){try{c.resize()}catch(e){}})});
 
 // Keep share message updated as user types
 document.addEventListener('DOMContentLoaded',()=>{
