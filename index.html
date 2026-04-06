@@ -213,7 +213,7 @@ table.lt td:nth-child(4){text-align:left}
 .score-h{color:var(--green);font-weight:700;background:var(--green-light);padding:1px 5px;border-radius:3px}
 .score-m{color:var(--amber);font-weight:600;background:var(--amber-light);padding:1px 5px;border-radius:3px}
 .score-l{color:var(--slate);font-weight:400}
-.add-btn{width:22px;height:22px;border-radius:50%;border:1px solid var(--border);background:var(--white);color:var(--navy);font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);line-height:1}
+.add-btn{width:22px;height:22px;border-radius:50%;border:1px solid var(--border);background:var(--white);color:var(--navy);font-size:13px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);line-height:1;margin:0 auto}
 .add-btn:hover{background:var(--gold);color:var(--navy);border-color:var(--gold)}.add-btn:active{transform:scale(0.9)}
 .add-btn.added{background:var(--blue);color:var(--white);border-color:var(--blue)}
 .map-wrap{flex:1;position:relative}
@@ -261,7 +261,7 @@ table.lt td:nth-child(4){text-align:left}
 .ploc-addr{display:block;font-size:9px;color:var(--blue);cursor:pointer;margin-top:2px;text-decoration:none}
 .ploc-addr:hover{text-decoration:underline;color:var(--navy)}
 .iso-toggle{font-size:10px;color:var(--slate);cursor:pointer;display:flex;align-items:center;gap:3px}
-.spot-btn{width:18px;height:18px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--white);color:var(--slate);font-size:var(--text-xs);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr)}
+.spot-btn{width:18px;height:18px;border-radius:var(--radius-sm);border:1px solid var(--border);background:var(--white);color:var(--slate);font-size:var(--text-xs);cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all var(--tr);margin:0 auto}
 .spot-btn:hover{border-color:var(--gold);color:var(--gold)}.spot-btn:active{transform:scale(0.9)}
 .spot-btn.on{background:#E3F2FD;color:var(--blue);border-color:var(--blue)}
 .pp-add{display:block;width:100%;padding:10px;margin-bottom:16px;border:2px dashed var(--gold);border-radius:var(--radius);background:var(--gold-muted);color:var(--navy);font-size:12px;font-weight:600;font-family:inherit;cursor:pointer;text-align:center;transition:all var(--tr)}
@@ -1720,8 +1720,15 @@ function animateCounter(el,target,duration){
 }
 let firstUpdate=true;
 function updateH(){
-  let companies=fil(),tl=companies.reduce((s,c)=>s+c.locations.length,0);
-  let stCount=new Set(companies.flatMap(c=>c.states)).size;
+  let companies=fil();
+  let tl,stCount;
+  if(stateFilter.size>0){
+    tl=companies.reduce((s,c)=>s+c.locations.filter(l=>stateFilter.has(l.state)).length,0);
+    stCount=new Set(companies.flatMap(c=>c.locations.filter(l=>stateFilter.has(l.state)).map(l=>l.state))).size;
+  } else {
+    tl=companies.reduce((s,c)=>s+c.seLocs,0);
+    stCount=new Set(companies.flatMap(c=>c.states)).size;
+  }
   if(firstUpdate){
     animateCounter(document.getElementById('hc'),companies.length,600);
     animateCounter(document.getElementById('hl'),tl,800);
@@ -2005,19 +2012,28 @@ var chartInstances=[];
 function renderCharts(){
   chartInstances.forEach(function(c){c.dispose()});
   chartInstances=[];
-  var companies=fil();
+  /* Use fil() for state/type/search filtering but do NOT exclude companies based on excluded flag */
+  var allCompanies=DATA.filter(function(c){
+    if(ownerFilter.size>0&&!ownerFilter.has(c.ownership))return false;
+    if(stateFilter.size>0&&!c.states.some(function(s){return stateFilter.has(s)}))return false;
+    if(searchQuery){var q=searchQuery.toLowerCase(),s=[c.name,c.hqCity,c.hqState,c.ownerDetail,c.parentGroup,...c.states].filter(Boolean).join(' ').toLowerCase();if(!s.includes(q))return false}
+    return true;
+  });
   var isDark=document.documentElement.dataset.theme==='dark';
   var theme=isDark?'dark':null;
-  // 1. Ownership Type Pie
+  // 1. Ownership Type Pie — clickable to filter by type
   var ownerCounts={};
-  companies.forEach(function(c){ownerCounts[OL[c.ownership]]=(ownerCounts[OL[c.ownership]]||0)+1});
+  var ownerKeys={};
+  allCompanies.forEach(function(c){var label=OL[c.ownership];ownerCounts[label]=(ownerCounts[label]||0)+1;ownerKeys[label]=c.ownership});
   var ch1=echarts.init(document.getElementById('chartOwnership'),theme);
-  ch1.setOption({tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},series:[{type:'pie',radius:['40%','70%'],itemStyle:{borderRadius:6,borderColor:isDark?'#16202e':'#fff',borderWidth:2},label:{show:true,fontSize:11},data:Object.entries(ownerCounts).map(function(e){return{name:e[0],value:e[1]}})}],color:['#1565C0','#F57F17','#2E7D32','#7B1FA2','#546E7A','#C8A951']});
+  ch1.setOption({tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},series:[{type:'pie',radius:['40%','70%'],itemStyle:{borderRadius:6,borderColor:isDark?'#16202e':'#fff',borderWidth:2},label:{show:true,fontSize:11},data:Object.entries(ownerCounts).map(function(e){return{name:e[0],value:e[1]}}),cursor:'pointer'}],color:['#1565C0','#F57F17','#2E7D32','#7B1FA2','#546E7A','#C8A951']});
+  ch1.on('click',function(params){var owKey=ownerKeys[params.name];if(owKey){toggleOwner(owKey);setView('table')}});
   chartInstances.push(ch1);
-  // 2. Top 25 by Locations Bar
-  var locCos=companies.filter(function(c){return !c.excluded}).sort(function(a,b){return(b.seLocs||0)-(a.seLocs||0)}).slice(0,25);
+  // 2. Top 25 by Locations Bar — ALL companies, clickable to open profile
+  var locCos=allCompanies.sort(function(a,b){return(b.seLocs||0)-(a.seLocs||0)}).slice(0,25);
   var ch2=echarts.init(document.getElementById('chartLocations'),theme);
-  ch2.setOption({tooltip:{trigger:'axis',formatter:function(p){return p[0].name+': '+p[0].value+' locations'}},grid:{left:140,right:30,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:9}},yAxis:{type:'category',data:locCos.map(function(c){return c.name}).reverse(),axisLabel:{fontSize:9,width:130,overflow:'truncate'}},series:[{type:'bar',data:locCos.map(function(c){return c.seLocs}).reverse(),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#C8A951'},{offset:1,color:'#2E7D32'}]),borderRadius:[0,4,4,0]},barWidth:12}]});
+  ch2.setOption({tooltip:{trigger:'axis',formatter:function(p){var co=locCos[locCos.length-1-p[0].dataIndex];return '<b>'+p[0].name+'</b><br>'+p[0].value+' SE locations'+(co&&co.estRevenue?'<br>$'+co.estRevenue+'M est. revenue':'')+(co?'<br><span style="color:#8899AA;font-size:10px">Click to view profile</span>':'')}},grid:{left:140,right:30,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:9}},yAxis:{type:'category',data:locCos.map(function(c){return c.name}).reverse(),axisLabel:{fontSize:9,width:130,overflow:'truncate'}},series:[{type:'bar',data:locCos.map(function(c){return c.seLocs}).reverse(),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#C8A951'},{offset:1,color:'#2E7D32'}]),borderRadius:[0,4,4,0]},barWidth:12,cursor:'pointer'}]});
+  ch2.on('click',function(params){var idx=locCos.length-1-params.dataIndex;if(locCos[idx]){op(locCos[idx].id)}});
   chartInstances.push(ch2);
   window.addEventListener('resize',function(){chartInstances.forEach(function(c){c.resize()})});
 }
