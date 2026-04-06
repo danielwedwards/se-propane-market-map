@@ -126,14 +126,14 @@
 .theme-tog .sw input:checked+.sl{background:var(--gold)}
 .theme-tog .sw input:checked+.sl::before{transform:translateX(14px)}
 *{margin:0;padding:0;box-sizing:border-box}
-body{font-family:'DM Sans',sans-serif;background:var(--light-bg);color:var(--navy);line-height:1.5;overflow:hidden;height:100vh;display:flex;flex-direction:column;transition:background .3s,color .3s}
+body{font-family:'DM Sans',sans-serif;background:var(--light-bg);color:var(--navy);line-height:1.5;overflow:auto;min-height:100vh;height:100vh;display:flex;flex-direction:column;transition:background .3s,color .3s}
 /* === SPRINT 3: Elevated header === */
 .header{background:linear-gradient(135deg,#0a1220 0%,#0D1B2A 40%,#162436 100%);color:var(--white);padding:0 var(--space-xl);height:56px;display:flex;align-items:center;justify-content:space-between;border-bottom:3px solid var(--gold);z-index:1000;position:relative}
 .header::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),rgba(200,169,81,0.3),var(--gold))}
 .header h1{font-family:'DM Serif Display',Georgia,serif;font-size:var(--text-xl);font-weight:400;letter-spacing:0.3px}
 /* span color removed — title is now all white */
 .header .sep{width:2px;height:24px;background:var(--gold);margin:0 var(--space-lg);opacity:0.4}
-.header .sub{font-size:var(--text-xs);color:rgba(255,255,255,0.5);letter-spacing:1.5px;text-transform:uppercase;font-weight:500}
+.header .sub{font-size:13px;color:rgba(255,255,255,0.5);letter-spacing:2px;text-transform:uppercase;font-weight:600}
 .header-left{display:flex;align-items:center}
 .header-stats{display:flex;gap:var(--space-md);font-size:var(--text-sm);color:rgba(255,255,255,0.5);align-items:center}
 .header-stats span{display:flex;align-items:center;gap:4px;padding:3px 10px;background:rgba(255,255,255,0.06);border-radius:var(--radius-full);border:1px solid rgba(255,255,255,0.08)}
@@ -161,7 +161,7 @@ select.fsel{padding:5px 8px;border:1px solid var(--border);border-radius:var(--r
 .vtog{display:flex;gap:3px;background:var(--light-bg);border-radius:var(--radius);padding:2px}
 .vtog button{padding:4px 10px;border:none;border-radius:4px;font-size:10px;font-family:inherit;cursor:pointer;background:transparent;color:var(--slate);transition:all var(--tr)}
 .vtog button.on{background:var(--white);color:var(--navy);box-shadow:0 1px 3px rgba(0,0,0,0.1)}
-.main{display:flex;flex:1;overflow:hidden;min-height:0}
+.main{display:flex;flex:1;overflow:auto;min-height:400px}
 .main.pf-active{flex:1;min-height:0}
 .main.pf-expanded{flex:1;min-height:0}
 .left{width:480px;min-width:340px;border-right:1px solid var(--border);display:flex;flex-direction:column;background:var(--white);overflow:hidden}
@@ -177,13 +177,13 @@ select.fsel{padding:5px 8px;border:1px solid var(--border);border-radius:var(--r
 /* === SPRINT 4: Table scroll container with transition === */
 .tscroll{flex:1;overflow-y:auto;scrollbar-width:thin;scrollbar-color:var(--border) transparent;transition:opacity 0.12s ease}
 /* === SPRINT E: Responsive table layout — percentage widths fit any panel size === */
-table.lt{width:100%;border-collapse:collapse;font-size:11px;table-layout:fixed}
-table.lt col.col-eye{width:4%}table.lt col.col-add{width:4%}table.lt col.col-rank{width:4%}
-table.lt col.col-name{width:22%}
-table.lt col.col-type{width:10%}table.lt col.col-locs{width:6%}
-table.lt col.col-prox{width:7%}table.lt col.col-cnty{width:7%}table.lt col.col-total{width:7%}
-table.lt col.col-mkt{width:7%}table.lt col.col-rev{width:8%}table.lt col.col-emp{width:6%}
-table.lt col.col-states{width:8%}
+table.lt{width:100%;border-collapse:collapse;font-size:11px;table-layout:auto}
+table.lt col.col-eye{width:3%}table.lt col.col-add{width:3%}table.lt col.col-rank{width:3%}
+table.lt col.col-name{width:18%}
+table.lt col.col-type{width:9%}table.lt col.col-locs{width:7%}
+table.lt col.col-prox{width:7%}table.lt col.col-cnty{width:7%}table.lt col.col-total{width:8%}
+table.lt col.col-mkt{width:7%}table.lt col.col-rev{width:8%}table.lt col.col-emp{width:7%}
+table.lt col.col-states{width:13%}
 table.lt thead{position:sticky;top:0;z-index:10}
 /* === SPRINT 3: Elevated table header === */
 table.lt th{background:linear-gradient(180deg,#0f1f30,#0D1B2A);color:rgba(255,255,255,0.7);padding:7px 3px;text-align:center;font-weight:600;font-size:8px;letter-spacing:0.3px;text-transform:uppercase;cursor:pointer;user-select:none;white-space:nowrap;border-right:1px solid rgba(255,255,255,0.06);position:relative}
@@ -648,7 +648,7 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <!-- === PRODUCT SPRINT B: Title all white, Ergon gold === -->
 <h1>Southeast Propane Market Map</h1>
 <div class="sep"></div>
-<span class="sub" style="color:var(--gold);opacity:1;font-weight:600;letter-spacing:2px">Ergon Corporate Development</span>
+<span class="sub" style="color:var(--gold);opacity:1;font-weight:700;letter-spacing:2.5px;font-size:14px">Ergon Corporate Development</span>
 </div>
 <div class="header-stats">
 <span><b id="hc">0</b>Companies</span>
@@ -781,7 +781,7 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <div class="charts-wrap" id="chartsWrap">
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
 <div style="background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:12px">Companies by Ownership Type</h3><div id="chartOwnership" style="height:400px"></div></div>
-<div style="background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:12px">Top 25 Companies by Locations</h3><div id="chartLocations" style="height:400px"></div></div>
+<div style="background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)"><h3 id="chartLocTitle" style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:12px">Top 25 Companies by Locations</h3><div id="chartLocations" style="height:400px"></div></div>
 </div>
 </div>
 </div>
@@ -1092,7 +1092,7 @@ function fil(){
     let va,vb;
     if(sortCol==='name'){va=a.name.toLowerCase();vb=b.name.toLowerCase();return sortDir==='asc'?va.localeCompare(vb):vb.localeCompare(va)}
     if(sortCol==='type'){va=a.ownership;vb=b.ownership;return sortDir==='asc'?va.localeCompare(vb):vb.localeCompare(va)}
-    if(sortCol==='locs'){va=a.seLocs||0;vb=b.seLocs||0;return sortDir==='desc'?vb-va:va-vb}
+    if(sortCol==='locs'){va=stateFilter.size>0?a.locations.filter(function(l){return stateFilter.has(l.state)}).length:(a.seLocs||0);vb=stateFilter.size>0?b.locations.filter(function(l){return stateFilter.has(l.state)}).length:(b.seLocs||0);return sortDir==='desc'?vb-va:va-vb}
     if(sortCol==='prox'){va=proxScores[a.id]||0;vb=proxScores[b.id]||0;return sortDir==='desc'?vb-va:va-vb}
     if(sortCol==='county'){va=countyScores[a.id]||0;vb=countyScores[b.id]||0;return sortDir==='desc'?vb-va:va-vb}
     if(sortCol==='total'){va=totalScores[a.id]||0;vb=totalScores[b.id]||0;return sortDir==='desc'?vb-va:va-vb}
@@ -1200,7 +1200,7 @@ function render(){try{
     '<td class="num" style="color:var(--slate);font-size:10px">'+(i+1)+'</td>'+
     '<td><span class="cn">'+highlightText(c.name,searchQuery)+'<small>'+(c.parentGroup&&c.parentGroup!==c.name?highlightText(c.parentGroup,searchQuery)+' \u00b7 ':'')+esc(c.hqCity?c.hqCity+', ':'')+esc(c.hqState)+'</small></span></td>'+
     '<td><span class="badge '+BC[c.ownership]+'">'+OL[c.ownership]+'</span></td>'+
-    '<td class="num">'+c.seLocs+'</td>'+
+    '<td class="num">'+(stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}).length:c.seLocs)+'</td>'+
     '<td class="num'+pPulse+'" onmouseenter="showScoreTip(event,\''+c.id+'\',\'prox\')" onmouseleave="hideScoreTip()"><span class="'+scoreCls(ps)+'">'+(ps||'\u2014')+'</span></td>'+
     '<td class="num'+cPulse+'" onmouseenter="showScoreTip(event,\''+c.id+'\',\'county\')" onmouseleave="hideScoreTip()"><span class="'+scoreCls(cys)+'">'+(cys||'\u2014')+'</span></td>'+
     '<td class="num'+tPulse+'" style="font-weight:700" onmouseenter="showScoreTip(event,\''+c.id+'\',\'total\')" onmouseleave="hideScoreTip()"><span class="'+scoreCls(ts)+'">'+(ts||'\u2014')+'</span></td>'+
@@ -2030,9 +2030,10 @@ function renderCharts(){
   ch1.on('click',function(params){var owKey=ownerKeys[params.name];if(owKey){toggleOwner(owKey);setView('table')}});
   chartInstances.push(ch1);
   // 2. Top 25 by Locations Bar — ALL companies, clickable to open profile
-  var locCos=allCompanies.sort(function(a,b){return(b.seLocs||0)-(a.seLocs||0)}).slice(0,25);
+  var locCos=allCompanies.map(function(c){var filtLocs=stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}).length:c.seLocs;return Object.assign({},c,{filtLocs:filtLocs})}).sort(function(a,b){return(b.filtLocs||0)-(a.filtLocs||0)}).slice(0,25);
+  var titleEl=document.getElementById('chartLocTitle');if(titleEl)titleEl.textContent='Top 25 Companies by Locations'+(stateFilter.size>0?' in '+[...stateFilter].join(', '):'');
   var ch2=echarts.init(document.getElementById('chartLocations'),theme);
-  ch2.setOption({tooltip:{trigger:'axis',formatter:function(p){var co=locCos[locCos.length-1-p[0].dataIndex];return '<b>'+p[0].name+'</b><br>'+p[0].value+' SE locations'+(co&&co.estRevenue?'<br>$'+co.estRevenue+'M est. revenue':'')+(co?'<br><span style="color:#8899AA;font-size:10px">Click to view profile</span>':'')}},grid:{left:140,right:30,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:9}},yAxis:{type:'category',data:locCos.map(function(c){return c.name}).reverse(),axisLabel:{fontSize:9,width:130,overflow:'truncate'}},series:[{type:'bar',data:locCos.map(function(c){return c.seLocs}).reverse(),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#C8A951'},{offset:1,color:'#2E7D32'}]),borderRadius:[0,4,4,0]},barWidth:12,cursor:'pointer'}]});
+  ch2.setOption({tooltip:{trigger:'axis',formatter:function(p){var co=locCos[locCos.length-1-p[0].dataIndex];return '<b>'+p[0].name+'</b><br>'+p[0].value+' locations'+(stateFilter.size>0?' in '+[...stateFilter].join(', '):' (SE total)')+(co&&co.estRevenue?'<br>$'+co.estRevenue+'M est. revenue':'')+(co?'<br><span style="color:#8899AA;font-size:10px">Click to view profile</span>':'')}},grid:{left:140,right:30,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:9}},yAxis:{type:'category',data:locCos.map(function(c){return c.name}).reverse(),axisLabel:{fontSize:9,width:130,overflow:'truncate'}},series:[{type:'bar',data:locCos.map(function(c){return c.filtLocs}).reverse(),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#C8A951'},{offset:1,color:'#2E7D32'}]),borderRadius:[0,4,4,0]},barWidth:12,cursor:'pointer'}]});
   ch2.on('click',function(params){var idx=locCos.length-1-params.dataIndex;if(locCos[idx]){op(locCos[idx].id)}});
   chartInstances.push(ch2);
   window.addEventListener('resize',function(){chartInstances.forEach(function(c){c.resize()})});
