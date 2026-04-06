@@ -227,7 +227,7 @@ table.lt td:nth-child(4){text-align:left}
 .cm-platform{box-shadow:0 0 0 3px rgba(21,101,192,0.6),0 1px 3px rgba(0,0,0,0.3)}
 .cm-ll{width:9px;height:9px;box-shadow:0 0 6px rgba(200,169,81,0.8),0 0 0 2px rgba(200,169,81,0.5)}
 /* === SPRINT E: Legend positioned bottom-right, collapsible, fully visible === */
-.legend{position:absolute;bottom:8px;right:8px;left:auto;background:var(--white);border-radius:var(--radius);padding:6px 10px;box-shadow:var(--shadow);z-index:800;font-size:9px;max-width:160px;max-height:none;overflow:visible;box-sizing:border-box}
+.legend{position:absolute;bottom:8px;right:8px;left:auto;background:var(--white);border-radius:var(--radius);padding:6px 10px;box-shadow:var(--shadow);z-index:800;font-size:9px;max-width:200px;max-height:calc(100% - 60px);overflow-y:auto;box-sizing:border-box;scrollbar-width:thin}
 .legend-toggle{display:flex;align-items:center;justify-content:space-between;cursor:pointer;margin-bottom:4px}
 .legend-toggle .arrow{font-size:8px;color:var(--slate);transition:transform 0.2s}
 .legend.collapsed .legend-body{display:none}
@@ -758,14 +758,22 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <div id="map"></div>
 <div class="map-empty-hint" id="mapHint">Click &#128065; to spotlight companies on the map</div>
 <div class="legend" id="legendBox">
-<div class="legend-toggle" onclick="this.parentElement.classList.toggle('collapsed')"><h4 style="margin:0">Ownership Type</h4><span class="arrow">&#9660;</span></div>
-<div class="legend-body">
+<div class="legend-toggle" onclick="this.parentElement.classList.toggle('collapsed')"><h4 style="margin:0" id="legendTitle">By Company</h4><span class="arrow">&#9660;</span></div>
+<div style="margin-bottom:6px;display:flex;gap:2px">
+<button class="fbtn" style="font-size:8px;padding:2px 6px" onclick="setMapColorMode('company')" id="legendModeCompany"><b>By Company</b></button>
+<button class="fbtn" style="font-size:8px;padding:2px 6px" onclick="setMapColorMode('ownership')" id="legendModeOwnership">By Ownership</button>
+</div>
+<div class="legend-body" id="legendCompanyList">
+<!-- Dynamically populated by updateMapLegend() -->
+</div>
+<div class="legend-body" id="legendOwnershipList" style="display:none">
 <div class="li"><div class="d" style="background:#C8A951"></div>Lampton Love / Ergon</div>
 <div class="li"><div class="d" style="background:#1565C0"></div>Public Company</div>
 <div class="li"><div class="d" style="background:#F57F17"></div>PE-Backed</div>
 <div class="li"><div class="d" style="background:#2E7D32"></div>Family-Owned</div>
 <div class="li"><div class="d" style="background:#7B1FA2"></div>Cooperative</div>
 <div class="li"><div class="d" style="background:#546E7A"></div>Private / Other</div>
+</div>
 <div class="county-legend" id="countyLegend" style="display:none">
 <h4>County Data</h4>
 <div class="mode-label" id="countyModeLabel">Total Consumption</div>
@@ -902,7 +910,18 @@ function cacheDOM(){
 }
 let shareProvider='outlook';
 // Company color palette for individual distinction (12 distinct hues)
-const CO_COLORS=['#1565C0','#C62828','#2E7D32','#F57F17','#6A1B9A','#00838F','#D84315','#283593','#558B2F','#AD1457','#00695C','#4E342E','#37474F','#E65100','#1B5E20','#880E4F'];
+const CO_COLORS=['#1565C0','#C62828','#2E7D32','#F57F17','#6A1B9A','#00838F','#D84315','#283593','#558B2F','#AD1457','#00695C','#4E342E','#37474F','#E65100','#1B5E20','#880E4F','#0277BD','#BF360C','#33691E','#FF6F00','#4A148C','#006064','#E53935','#3949AB','#689F38','#C2185B','#00796B','#5D4037','#455A64','#EF6C00','#2E7D32','#9C27B0'];
+/* SPRINT O: Generate a stable unique color for each company based on its id */
+var companyColorCache={};
+function getCompanyColor(companyId){
+  if(companyColorCache[companyId])return companyColorCache[companyId];
+  var hash=0;for(var i=0;i<companyId.length;i++){hash=((hash<<5)-hash)+companyId.charCodeAt(i);hash|=0}
+  companyColorCache[companyId]=CO_COLORS[Math.abs(hash)%CO_COLORS.length];
+  return companyColorCache[companyId];
+}
+/* Pre-assign LL its gold color */
+companyColorCache['lampton_love']='#C8A951';
+let mapColorMode='company'; /* 'company' or 'ownership' */
 let proxScores={},countyScores={},totalScores={};
 let sortCol='total',sortDir='desc';
 let stateMaskLayer=null;
@@ -1235,6 +1254,26 @@ function initMap(){
   updateMap();
 }
 
+/* SPRINT O: Map color mode toggle and dynamic legend */
+function setMapColorMode(mode){
+  mapColorMode=mode;
+  document.getElementById('legendTitle').textContent=mode==='company'?'By Company':'By Ownership';
+  document.getElementById('legendModeCompany').innerHTML=mode==='company'?'<b>By Company</b>':'By Company';
+  document.getElementById('legendModeOwnership').innerHTML=mode==='ownership'?'<b>By Ownership</b>':'By Ownership';
+  document.getElementById('legendCompanyList').style.display=mode==='company'?'':'none';
+  document.getElementById('legendOwnershipList').style.display=mode==='ownership'?'':'none';
+  updateMap();
+}
+function updateMapLegend(companies){
+  var el=document.getElementById('legendCompanyList');
+  if(!el||mapColorMode!=='company')return;
+  /* Show visible companies sorted by location count, max 30 */
+  var sorted=companies.slice().sort(function(a,b){return(b.seLocs||0)-(a.seLocs||0)}).slice(0,30);
+  el.innerHTML=sorted.map(function(c){
+    return '<div class="li" style="cursor:pointer" onclick="op(\''+c.id+'\')" title="'+esc(c.name)+' — '+c.seLocs+' locations"><div class="d" style="background:'+getCompanyColor(c.id)+'"></div><span style="overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:120px;display:inline-block;vertical-align:middle">'+esc(c.name)+'</span> <span style="color:var(--slate);font-size:8px">('+c.seLocs+')</span></div>';
+  }).join('')+(companies.length>30?'<div style="font-size:8px;color:var(--slate);margin-top:4px">+' +(companies.length-30)+' more</div>':'');
+}
+
 function updateMap(){
   mcg.clearLayers();
   let allPFIds=[LL_ID,...platform];
@@ -1247,8 +1286,8 @@ function updateMap(){
     spotArr.forEach((id,i)=>{spotColors[id]=CO_COLORS[i%CO_COLORS.length]});
   }
   companies.forEach(c=>{let isInPF=allPFIds.includes(c.id);let isLL=c.id===LL_ID;
-    // Use individual color when spotlighted, otherwise ownership color
-    let col=spotColors[c.id]||OC[c.ownership];
+    // SPRINT O: Per-company color by default, ownership color as option
+    let col=spotColors[c.id]||(mapColorMode==='company'?getCompanyColor(c.id):OC[c.ownership]);
     let cls=isLL?'cm cm-ll':isInPF?'cm cm-platform':'cm';
     let sz=isLL?[9,9]:(spotlight.size>0?[9,9]:[7,7]);
     let anch=isLL?[4.5,4.5]:(spotlight.size>0?[4.5,4.5]:[3.5,3.5]);
@@ -1261,6 +1300,8 @@ function updateMap(){
       mcg.addLayer(mk);
     })
   });
+  // Update company color legend
+  updateMapLegend(companies);
   // Update spotlight legend if companies are spotlighted
   let spotLeg=document.getElementById('spotlightLegend');
   if(spotLeg){
