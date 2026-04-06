@@ -141,12 +141,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--light-bg);color:var(--nav
 /* === SPRINT 7: Logout button class === */
 .logout-btn{padding:var(--space-sm) var(--space-lg);border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius-sm);background:transparent;color:rgba(255,255,255,0.5);font-size:var(--text-sm);font-family:inherit;cursor:pointer;margin-left:var(--space-sm);transition:all var(--tr)}
 .logout-btn:hover{border-color:var(--gold);color:var(--gold)}
-.bar{background:var(--white);border-bottom:1px solid var(--border);padding:6px 16px;display:flex;flex-direction:column;gap:4px;z-index:999;position:relative;overflow:visible;flex-shrink:0}
-.bar-row{display:flex;align-items:center;gap:6px;width:100%;flex-shrink:0;overflow-x:auto;scrollbar-width:none}
+.bar{background:var(--white);border-bottom:1px solid var(--border);padding:8px 20px;display:flex;flex-direction:column;gap:6px;z-index:999;position:relative;overflow:visible;flex-shrink:0}
+.bar-row{display:flex;align-items:center;gap:10px;width:100%;flex-shrink:0;overflow-x:auto;scrollbar-width:none}
 .bar-row::-webkit-scrollbar{display:none}
-.bar-group{display:flex;align-items:center;gap:4px;padding:0 4px}
-.bar-group+.bar-group{border-left:1px solid var(--border);padding-left:8px}
-.bar-label{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--slate);opacity:0.6;margin-right:-4px}
+.bar-group{display:flex;align-items:center;gap:6px;padding:0 6px;white-space:nowrap}
+.bar-group+.bar-group{border-left:1px solid var(--border);padding-left:12px;margin-left:2px}
+.bar-label{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--slate);opacity:0.6;margin-right:2px}
 .bar input[type=text]{flex:1;max-width:300px;padding:7px 12px 7px 32px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px;font-family:inherit;outline:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%238899AA' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") 10px center no-repeat}
 .bar input:focus{border-color:var(--gold)}
 .fbtn{padding:5px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--white);font-size:11px;font-family:inherit;cursor:pointer;color:var(--navy-mid);transition:all var(--tr)}
@@ -695,9 +695,9 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <div style="position:relative;display:inline-block"><button class="fbtn" onclick="toggleSavesDropdown()" id="savedScenariosBtn">&#128190; Saved<span class="saved-count" id="savedCount" style="display:none">0</span></button><div class="saves-dropdown" id="savesDD"></div></div>
 <button class="fbtn" id="csvBtn" onclick="exportCSV()" title="Export current filtered table to CSV">Export CSV</button>
 </div>
-<div class="bar-group">
-<label class="iso-toggle"><input type="checkbox" id="isoToggle" onchange="go()" style="margin-right:3px">Platform only</label>
-<label style="font-size:10px;color:var(--slate);cursor:pointer"><input type="checkbox" id="exToggle" onchange="go()" style="margin-right:3px">Hide excluded</label>
+<div class="bar-group" style="gap:10px">
+<label class="iso-toggle"><input type="checkbox" id="isoToggle" onchange="go()" style="margin-right:4px;vertical-align:middle">Platform only</label>
+<label class="iso-toggle"><input type="checkbox" id="exToggle" onchange="go()" style="margin-right:4px;vertical-align:middle">Hide excluded</label>
 </div>
 <div class="bar-group" style="margin-left:auto">
 <label class="theme-tog"><div class="sw"><input type="checkbox" id="themeSwitch" onchange="toggleTheme()"><span class="sl"></span></div><span id="themeLabel">Light Mode</span></label>
@@ -780,10 +780,8 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 </div>
 <div class="charts-wrap" id="chartsWrap">
 <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-<div style="background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:12px">Companies by Ownership Type</h3><div id="chartOwnership" style="height:280px"></div></div>
-<div style="background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:12px">Top 15 Companies by Revenue</h3><div id="chartRevenue" style="height:280px"></div></div>
-<div style="background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:12px">Locations by State</h3><div id="chartStates" style="height:280px"></div></div>
-<div style="background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:12px">Revenue Distribution</h3><div id="chartRevDist" style="height:280px"></div></div>
+<div style="background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:12px">Companies by Ownership Type</h3><div id="chartOwnership" style="height:400px"></div></div>
+<div style="background:var(--white);border-radius:var(--radius);padding:16px;box-shadow:var(--shadow)"><h3 style="font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--slate);margin-bottom:12px">Top 25 Companies by Locations</h3><div id="chartLocations" style="height:400px"></div></div>
 </div>
 </div>
 </div>
@@ -1079,7 +1077,7 @@ function sortBy(col){
   selectedRow=-1;
   render();
 }
-function go(){searchQuery=document.getElementById('si').value;hideEx=document.getElementById('exToggle').checked;isoMode=document.getElementById('isoToggle').checked;selectedRow=-1;render();updateMap();updateH();updateStateMask()}
+function go(){searchQuery=document.getElementById('si').value;hideEx=document.getElementById('exToggle').checked;isoMode=document.getElementById('isoToggle').checked;selectedRow=-1;render();updateMap();updateH();updateStateMask();if(document.getElementById('mainArea').classList.contains('view-charts'))renderCharts()}
 
 function fil(){
   let companies=DATA.filter(c=>{
@@ -1221,7 +1219,7 @@ function render(){try{
 function initMap(){
   map=L.map('map',{center:CONFIG.CENTER,zoom:CONFIG.ZOOM});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OSM &copy; CARTO',maxZoom:19}).addTo(map);
-  mcg=L.markerClusterGroup({maxClusterRadius:40,spiderfyOnMaxZoom:true,showCoverageOnHover:false,zoomToBoundsOnClick:true,iconCreateFunction:function(cluster){var count=cluster.getChildCount();var size=count>50?'lg':count>20?'md':'sm';return L.divIcon({html:'<div class="cluster-icon cluster-'+size+'">'+count+'</div>',className:'',iconSize:[36,36]})}});map.addLayer(mcg);
+  mcg=L.layerGroup();map.addLayer(mcg);
   [{n:'MS',la:32.7,lo:-89.7},{n:'AL',la:32.8,lo:-86.8},{n:'LA',la:31,lo:-92},{n:'TN',la:35.8,lo:-86.4},{n:'AR',la:34.8,lo:-92.4},{n:'GA',la:32.7,lo:-83.5},{n:'SC',la:33.9,lo:-80.9},{n:'NC',la:35.5,lo:-79.8},{n:'VA',la:37.5,lo:-79},{n:'FL',la:28.5,lo:-82.5},{n:'KY',la:37.8,lo:-85.7}]
   .forEach(s=>L.marker([s.la,s.lo],{icon:L.divIcon({className:'slbl',html:s.n,iconSize:[30,15]}),interactive:false}).addTo(map));
   updateMap();
@@ -2014,27 +2012,13 @@ function renderCharts(){
   var ownerCounts={};
   companies.forEach(function(c){ownerCounts[OL[c.ownership]]=(ownerCounts[OL[c.ownership]]||0)+1});
   var ch1=echarts.init(document.getElementById('chartOwnership'),theme);
-  ch1.setOption({tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},series:[{type:'pie',radius:['40%','70%'],itemStyle:{borderRadius:6,borderColor:isDark?'#16202e':'#fff',borderWidth:2},label:{show:true,fontSize:10},data:Object.entries(ownerCounts).map(function(e){return{name:e[0],value:e[1]}})}],color:['#1565C0','#F57F17','#2E7D32','#7B1FA2','#546E7A','#C8A951']});
+  ch1.setOption({tooltip:{trigger:'item',formatter:'{b}: {c} ({d}%)'},series:[{type:'pie',radius:['40%','70%'],itemStyle:{borderRadius:6,borderColor:isDark?'#16202e':'#fff',borderWidth:2},label:{show:true,fontSize:11},data:Object.entries(ownerCounts).map(function(e){return{name:e[0],value:e[1]}})}],color:['#1565C0','#F57F17','#2E7D32','#7B1FA2','#546E7A','#C8A951']});
   chartInstances.push(ch1);
-  // 2. Top 15 by Revenue Bar
-  var revCos=companies.filter(function(c){return c.estRevenue&&!c.excluded}).sort(function(a,b){return(b.estRevenue||0)-(a.estRevenue||0)}).slice(0,15);
-  var ch2=echarts.init(document.getElementById('chartRevenue'),theme);
-  ch2.setOption({tooltip:{trigger:'axis'},grid:{left:120,right:20,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:9,formatter:'${value}M'}},yAxis:{type:'category',data:revCos.map(function(c){return c.name}).reverse(),axisLabel:{fontSize:9,width:110,overflow:'truncate'}},series:[{type:'bar',data:revCos.map(function(c){return c.estRevenue}).reverse(),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#C8A951'},{offset:1,color:'#1565C0'}]),borderRadius:[0,4,4,0]},barWidth:14}]});
+  // 2. Top 25 by Locations Bar
+  var locCos=companies.filter(function(c){return !c.excluded}).sort(function(a,b){return(b.seLocs||0)-(a.seLocs||0)}).slice(0,25);
+  var ch2=echarts.init(document.getElementById('chartLocations'),theme);
+  ch2.setOption({tooltip:{trigger:'axis',formatter:function(p){return p[0].name+': '+p[0].value+' locations'}},grid:{left:140,right:30,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:9}},yAxis:{type:'category',data:locCos.map(function(c){return c.name}).reverse(),axisLabel:{fontSize:9,width:130,overflow:'truncate'}},series:[{type:'bar',data:locCos.map(function(c){return c.seLocs}).reverse(),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#C8A951'},{offset:1,color:'#2E7D32'}]),borderRadius:[0,4,4,0]},barWidth:12}]});
   chartInstances.push(ch2);
-  // 3. Locations by State
-  var stateLocs={};
-  companies.forEach(function(c){c.locations.forEach(function(l){stateLocs[l.state]=(stateLocs[l.state]||0)+1})});
-  var stateArr=Object.entries(stateLocs).sort(function(a,b){return b[1]-a[1]});
-  var ch3=echarts.init(document.getElementById('chartStates'),theme);
-  ch3.setOption({tooltip:{trigger:'axis'},grid:{left:40,right:20,top:10,bottom:30},xAxis:{type:'category',data:stateArr.map(function(e){return e[0]}),axisLabel:{fontSize:10}},yAxis:{type:'value',axisLabel:{fontSize:9}},series:[{type:'bar',data:stateArr.map(function(e){return e[1]}),itemStyle:{color:'#2E7D32',borderRadius:[4,4,0,0]},barWidth:20}]});
-  chartInstances.push(ch3);
-  // 4. Revenue Distribution Histogram
-  var revBuckets={'$0-5M':0,'$5-15M':0,'$15-30M':0,'$30-50M':0,'$50-100M':0,'$100M+':0};
-  companies.filter(function(c){return c.estRevenue&&!c.excluded}).forEach(function(c){var r=c.estRevenue;if(r<=5)revBuckets['$0-5M']++;else if(r<=15)revBuckets['$5-15M']++;else if(r<=30)revBuckets['$15-30M']++;else if(r<=50)revBuckets['$30-50M']++;else if(r<=100)revBuckets['$50-100M']++;else revBuckets['$100M+']++});
-  var ch4=echarts.init(document.getElementById('chartRevDist'),theme);
-  ch4.setOption({tooltip:{trigger:'axis'},grid:{left:40,right:20,top:10,bottom:30},xAxis:{type:'category',data:Object.keys(revBuckets),axisLabel:{fontSize:9}},yAxis:{type:'value',axisLabel:{fontSize:9}},series:[{type:'bar',data:Object.values(revBuckets),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,0,1,[{offset:0,color:'#C8A951'},{offset:1,color:'#F57F17'}]),borderRadius:[4,4,0,0]},barWidth:30}]});
-  chartInstances.push(ch4);
-  // Resize handler
   window.addEventListener('resize',function(){chartInstances.forEach(function(c){c.resize()})});
 }
 
