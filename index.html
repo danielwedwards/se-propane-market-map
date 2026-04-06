@@ -1694,14 +1694,14 @@ function updatePF(){
   let totalLocs=allCos.reduce((s,c)=>s+c.seLocs,0);
   let allStates=[...new Set(allCos.flatMap(c=>c.states))].sort();
   let allLocs=allCos.flatMap(c=>c.locations);
-  let coveredG=0,totalG=0,stateG={},statePG={};
-  if(CD&&CD.length){
-    CD.forEach(d=>{let st=d.n.split(', ').pop();stateG[st]=(stateG[st]||0)+d.g;totalG+=d.g;
-      let near=allLocs.some(l=>haversine(d.lat,d.lng,l.lat,l.lng)<CONFIG.COUNTY_R);
-      if(near){coveredG+=d.g;statePG[st]=(statePG[st]||0)+d.g}
-    });
-  }
-  document.getElementById('pfStats').textContent=allCos.length+' companies | '+totalLocs+' locations | '+allStates.length+' states | ~'+(coveredG/1e6).toFixed(1)+'M est. gal';
+  /* SPRINT Q: Location-based market share for Pro Forma */
+  var totalMarketLocs=DATA.reduce(function(s,c){return s+c.seLocs},0);
+  var pfMarketPct=totalMarketLocs?Math.round(totalLocs/totalMarketLocs*1000)/10:0;
+  /* Per-state: platform locs vs total locs in each state */
+  var pfStateLocs={},allStateLocs={};
+  allCos.forEach(function(c){c.locations.forEach(function(l){pfStateLocs[l.state]=(pfStateLocs[l.state]||0)+1})});
+  DATA.forEach(function(c){c.locations.forEach(function(l){allStateLocs[l.state]=(allStateLocs[l.state]||0)+1})});
+  document.getElementById('pfStats').textContent=allCos.length+' companies | '+totalLocs+' locations | '+allStates.length+' states | '+pfMarketPct+'% market share';
   // Build bulk-add buttons for each filtered state
   let bulkBtns='';
   if(stateFilter.size>0){
@@ -1714,8 +1714,8 @@ function updatePF(){
     '<div class="pf-grid">'+
     '<div class="pf-metric"><div class="l">Companies</div><div class="v">'+allCos.length+'</div><div class="n">LL + '+acqs.length+' acquisitions</div></div>'+
     '<div class="pf-metric"><div class="l">Total Locations</div><div class="v">'+totalLocs+'</div><div class="n">Across '+allStates.length+' states</div></div>'+
-    '<div class="pf-metric"><div class="l">Est. Gallons Covered</div><div class="v">'+(coveredG/1e6).toFixed(1)+'M</div><div class="n">Counties within '+CONFIG.COUNTY_R+'mi</div></div>'+
-    '<div class="pf-metric"><div class="l">SE Market Share</div><div class="v">'+(totalG?(coveredG/totalG*100).toFixed(1):'0')+'%</div><div class="n">Of mapped county consumption</div></div></div>'+
+    '<div class="pf-metric"><div class="l">SE Market Share</div><div class="v" style="color:var(--blue)">'+pfMarketPct+'%</div><div class="n">'+totalLocs+' of '+totalMarketLocs+' SE locations</div></div>'+
+    '<div class="pf-metric"><div class="l">Avg. Locs / Company</div><div class="v">'+Math.round(totalLocs/allCos.length)+'</div><div class="n">Platform density</div></div></div>'+
     (bulkBtns?'<div style="margin-bottom:10px">'+bulkBtns+'</div>':'')+
     /* === SPRINT E: Enhanced acquisition impact table with per-company analysis === */
     (function(){
@@ -1744,8 +1744,8 @@ function updatePF(){
       '<div><div style="font-size:8px;text-transform:uppercase;color:var(--slate);letter-spacing:0.5px">States Added</div><div style="font-size:14px;font-weight:700;color:var(--navy)">+'+(allStates.length-(ll?ll.states.length:0))+'</div></div>'+
       '</div>';
     })()+
-    '<div style="margin-top:14px"><span style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--slate)">State Market Share</span></div>'+
-    '<div class="pf-shares">'+allStates.map(st=>{let pct=(stateG[st]&&stateG[st]>0)?((statePG[st]||0)/stateG[st]*100):0;return '<div class="pf-share"><div class="st">'+st+'</div><div class="pct">'+(isNaN(pct)?0:pct).toFixed(1)+'%</div></div>'}).join('')+'</div>';
+    '<div style="margin-top:14px"><span style="font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:0.8px;color:var(--slate)">State Market Share (by locations)</span></div>'+
+    '<div class="pf-shares">'+allStates.map(function(st){var pfLocs=pfStateLocs[st]||0;var totLocs=allStateLocs[st]||0;var pct=totLocs?Math.round(pfLocs/totLocs*1000)/10:0;return '<div class="pf-share"><div class="st">'+st+'</div><div class="pct">'+pct+'%</div><div style="font-size:8px;color:var(--slate)">'+pfLocs+'/'+totLocs+'</div></div>'}).join('')+'</div>';
   setTimeout(()=>map.invalidateSize(),50);
 }
 
