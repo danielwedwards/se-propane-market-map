@@ -141,13 +141,12 @@ body{font-family:'DM Sans',sans-serif;background:var(--light-bg);color:var(--nav
 /* === SPRINT 7: Logout button class === */
 .logout-btn{padding:var(--space-sm) var(--space-lg);border:1px solid rgba(255,255,255,0.15);border-radius:var(--radius-sm);background:transparent;color:rgba(255,255,255,0.5);font-size:var(--text-sm);font-family:inherit;cursor:pointer;margin-left:var(--space-sm);transition:all var(--tr)}
 .logout-btn:hover{border-color:var(--gold);color:var(--gold)}
-.bar{background:var(--white);border-bottom:1px solid var(--border);padding:8px 20px;display:flex;flex-direction:column;gap:6px;z-index:999;position:relative;overflow:visible;flex-shrink:0}
-.bar-row{display:flex;align-items:center;gap:10px;width:100%;flex-shrink:0;overflow-x:auto;scrollbar-width:none}
-.bar-row::-webkit-scrollbar{display:none}
-.bar-group{display:flex;align-items:center;gap:6px;padding:0 6px;white-space:nowrap}
-.bar-group+.bar-group{border-left:1px solid var(--border);padding-left:12px;margin-left:2px}
-.bar-label{font-size:8px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--slate);opacity:0.6;margin-right:2px}
-.bar input[type=text]{flex:1;max-width:300px;padding:7px 12px 7px 32px;border:1px solid var(--border);border-radius:var(--radius);font-size:12px;font-family:inherit;outline:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%238899AA' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") 10px center no-repeat}
+.bar{background:var(--white);border-bottom:1px solid var(--border);padding:6px 16px;display:flex;flex-direction:column;gap:5px;z-index:999;position:relative;overflow:visible;flex-shrink:0}
+.bar-row{display:flex;align-items:center;gap:8px;width:100%;flex-shrink:0}
+.bar-group{display:flex;align-items:center;gap:5px;white-space:nowrap;flex-shrink:0}
+.bar-group+.bar-group{border-left:1px solid var(--border);padding-left:10px;margin-left:2px}
+.bar-label{font-size:7px;font-weight:700;text-transform:uppercase;letter-spacing:0.8px;color:var(--slate);opacity:0.5;margin-right:1px;flex-shrink:0}
+.bar input[type=text]{width:200px;min-width:120px;flex-shrink:1;padding:6px 10px 6px 30px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px;font-family:inherit;outline:none;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='%238899AA' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242.156a5 5 0 1 1 0-10 5 5 0 0 1 0 10z'/%3E%3C/svg%3E") 8px center no-repeat}
 .bar input:focus{border-color:var(--gold)}
 .fbtn{padding:5px 12px;border:1px solid var(--border);border-radius:var(--radius);background:var(--white);font-size:11px;font-family:inherit;cursor:pointer;color:var(--navy-mid);transition:all var(--tr)}
 /* === SPRINT 4: Press micro-interaction === */
@@ -660,9 +659,10 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 </div>
 <div class="bar">
 <!-- Row 1: Search + Filters -->
+<!-- Row 1: Search + Type + States -->
 <div class="bar-row">
-<input type="text" id="si" placeholder="Search companies, cities, states..." aria-label="Search companies" style="max-width:220px">
-<div class="bar-group">
+<input type="text" id="si" placeholder="Search companies..." aria-label="Search companies">
+<div class="bar-group" style="border-left:none">
 <span class="bar-label">Type</span>
 <div class="state-pills" id="ownerPills">
 <span class="state-pill on" data-ow="ALL" onclick="toggleOwner('ALL')">All</span>
@@ -679,10 +679,9 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <div class="state-pills" id="statePills"></div>
 </div>
 </div>
-<!-- Row 2: Layers + Tools + Options -->
+<!-- Row 2: Layers + Tools + Checkboxes + Theme (single unified row) -->
 <div class="bar-row">
-<div class="bar-group" style="border-left:none;padding-left:0">
-<span class="bar-label">Layers</span>
+<div class="bar-group" style="border-left:none">
 <button class="fbtn" id="countyToggle" onclick="toggleCounty()">&#127760; County Data</button>
 <select class="fsel" id="countyMode" onchange="updateCountyLayer()" style="display:none">
 <option value="consumption">Total Consumption</option>
@@ -691,15 +690,14 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 </select>
 </div>
 <div class="bar-group">
-<span class="bar-label">Tools</span>
 <div style="position:relative;display:inline-block"><button class="fbtn" onclick="toggleSavesDropdown()" id="savedScenariosBtn">&#128190; Saved<span class="saved-count" id="savedCount" style="display:none">0</span></button><div class="saves-dropdown" id="savesDD"></div></div>
 <button class="fbtn" id="csvBtn" onclick="exportCSV()" title="Export current filtered table to CSV">Export CSV</button>
 </div>
-<div class="bar-group" style="gap:10px">
-<label class="iso-toggle"><input type="checkbox" id="isoToggle" onchange="go()" style="margin-right:4px;vertical-align:middle">Platform only</label>
-<label class="iso-toggle"><input type="checkbox" id="exToggle" onchange="go()" style="margin-right:4px;vertical-align:middle">Hide excluded</label>
+<div class="bar-group" style="gap:8px">
+<label class="iso-toggle"><input type="checkbox" id="isoToggle" onchange="go()" style="margin-right:3px;vertical-align:middle">Platform only</label>
+<label class="iso-toggle"><input type="checkbox" id="exToggle" onchange="go()" style="margin-right:3px;vertical-align:middle">Hide excluded</label>
 </div>
-<div class="bar-group" style="margin-left:auto">
+<div class="bar-group">
 <label class="theme-tog"><div class="sw"><input type="checkbox" id="themeSwitch" onchange="toggleTheme()"><span class="sl"></span></div><span id="themeLabel">Light Mode</span></label>
 </div>
 </div>
@@ -982,35 +980,43 @@ let stateGallons={};  // {ST: total gallons}
 
 function computeMarketShare(){
   marketShare={};
-  if(!CD||!CD.length)return;
-  /* SPRINT M: Dynamic market share — recalculates based on active state filter.
-     When states are filtered, denominator = only counties in those states.
-     Company locations outside filtered states are excluded from numerator. */
-  var filteredCD=stateFilter.size>0?CD.filter(function(d){var st=d.n.split(', ').pop();return stateFilter.has(st)}):CD;
-  totalSEGallons=0;stateGallons={};
-  filteredCD.forEach(d=>{let st=d.n.split(', ').pop();stateGallons[st]=(stateGallons[st]||0)+d.g;totalSEGallons+=d.g});
-  DATA.forEach(c=>{
-    let coveredG=0,stCovG={};
-    let coveredCounties=new Set();
-    var locs=stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}):c.locations;
-    locs.forEach(loc=>{
-      let nearby=getGridNeighbors(loc.lat,loc.lng);
-      nearby.forEach(d=>{
-        if(stateFilter.size>0){var cSt=d.n.split(', ').pop();if(!stateFilter.has(cSt))return}
-        if(!coveredCounties.has(d.n)&&haversine(loc.lat,loc.lng,d.lat,d.lng)<CONFIG.COUNTY_R){
-          coveredCounties.add(d.n);
-          coveredG+=d.g;
-          let st=d.n.split(', ').pop();
-          stCovG[st]=(stCovG[st]||0)+d.g;
+  /* SPRINT N: Location-based market share.
+     Market share = company locations in area / total locations of ALL companies in area.
+     When state filter is active, only count locations in filtered states. */
+  var totalLocs=0;
+  var stateTotals={};
+  // Count total locations across ALL companies (including excluded — they're part of the market)
+  DATA.forEach(function(c){
+    if(stateFilter.size>0){
+      c.locations.forEach(function(l){
+        if(stateFilter.has(l.state)){totalLocs++;stateTotals[l.state]=(stateTotals[l.state]||0)+1}
+      });
+    } else {
+      totalLocs+=c.seLocs;
+      c.locations.forEach(function(l){stateTotals[l.state]=(stateTotals[l.state]||0)+1});
+    }
+  });
+  // Compute each company's share
+  DATA.forEach(function(c){
+    var companyLocs=stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}).length:c.seLocs;
+    var stShares={};
+    if(stateFilter.size>0){
+      stateFilter.forEach(function(st){
+        var coStLocs=c.locations.filter(function(l){return l.state===st}).length;
+        if(stateTotals[st])stShares[st]=Math.round(coStLocs/stateTotals[st]*1000)/10;
+      });
+    } else {
+      c.locations.forEach(function(l){
+        if(!stShares[l.state]){
+          var coStLocs=c.locations.filter(function(ll){return ll.state===l.state}).length;
+          if(stateTotals[l.state])stShares[l.state]=Math.round(coStLocs/stateTotals[l.state]*1000)/10;
         }
       });
-    });
-    let stShares={};
-    Object.entries(stCovG).forEach(([st,g])=>{if(stateGallons[st])stShares[st]=Math.round(g/stateGallons[st]*1000)/10});
+    }
     marketShare[c.id]={
-      se:totalSEGallons?Math.round(coveredG/totalSEGallons*1000)/10:0,
-      gallons:Math.round(coveredG),
-      counties:coveredCounties.size,
+      se:totalLocs?Math.round(companyLocs/totalLocs*1000)/10:0,
+      locs:companyLocs,
+      totalLocs:totalLocs,
       states:stShares
     };
   });
@@ -1545,10 +1551,10 @@ function op(id){try{
 
     // === Market Presence ===
     '<div class="ps"><h3>Market Presence</h3><div class="pg">'+
-    '<div class="pst"><div class="l">SE Market Share</div><div class="v" style="color:var(--blue)">'+ms.se+'%</div><div class="n">Of total SE consumption</div></div>'+
-    '<div class="pst"><div class="l">Est. Gallons Covered</div><div class="v">'+(ms.gallons>1e6?(ms.gallons/1e6).toFixed(1)+'M':ms.gallons>1e3?Math.round(ms.gallons/1e3)+'K':ms.gallons)+'</div><div class="n">Counties within 25mi</div></div>'+
-    '<div class="pst"><div class="l">Counties Served</div><div class="v">'+ms.counties+'</div><div class="n">Within 25mi radius</div></div>'+
-    '<div class="pst"><div class="l">SE Locations</div><div class="v">'+c.seLocs+'</div><div class="n">Branch locations</div></div>'+
+    '<div class="pst"><div class="l">Market Share</div><div class="v" style="color:var(--blue)">'+ms.se+'%</div><div class="n">'+(ms.locs||0)+' of '+(ms.totalLocs||0)+' locations'+(stateFilter.size>0?' in '+[...stateFilter].join(', '):' (SE)')+'</div></div>'+
+    '<div class="pst"><div class="l">Locations'+(stateFilter.size>0?' (Filtered)':'')+'</div><div class="v">'+(ms.locs||c.seLocs)+'</div><div class="n">'+(stateFilter.size>0?'In '+[...stateFilter].join(', '):'SE total')+'</div></div>'+
+    '<div class="pst"><div class="l">Total SE Locations</div><div class="v">'+c.seLocs+'</div><div class="n">All SE branches</div></div>'+
+    '<div class="pst"><div class="l">States</div><div class="v">'+c.states.length+'</div><div class="n">Operating footprint</div></div>'+
     '</div>'+
     // State-level market share breakdown
     (Object.keys(ms.states).length>0?
