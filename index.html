@@ -928,19 +928,39 @@ function cacheDOM(){
 let shareProvider='outlook';
 // Company color palette for individual distinction (12 distinct hues)
 const CO_COLORS=['#1565C0','#C62828','#2E7D32','#F57F17','#6A1B9A','#00838F','#D84315','#283593','#558B2F','#AD1457','#00695C','#4E342E','#37474F','#E65100','#1B5E20','#880E4F','#0277BD','#BF360C','#33691E','#FF6F00','#4A148C','#006064','#E53935','#3949AB','#689F38','#C2185B','#00796B','#5D4037','#455A64','#EF6C00','#2E7D32','#9C27B0'];
-/* Generate truly unique color for every company using golden angle HSL distribution */
+/* Generate visually distinct color for every company.
+   Strategy: divide companies into tiers by size. Top tier gets hand-picked
+   maximally-distinct colors. Remaining tiers use HSL with wide S/L variation
+   across 3 lightness bands so no two nearby-hue companies look alike. */
 var companyColorCache={};
 function buildUniqueCompanyColors(){
   companyColorCache={};
-  companyColorCache['lampton_love']='#C8A951'; /* LL always gold */
-  /* Sort by seLocs descending so largest companies get the most visually distinct hues */
+  companyColorCache['lampton_love']='#C8A951';
   var sorted=DATA.filter(function(c){return c.id!=='lampton_love'}).sort(function(a,b){return(b.seLocs||0)-(a.seLocs||0)});
-  var goldenAngle=137.508; /* degrees — maximizes hue separation between adjacent assignments */
+  /* Tier 1: Top 30 companies get hand-picked maximally distinct colors */
+  var tier1=['#E53935','#1E88E5','#43A047','#FB8C00','#8E24AA','#00ACC1',
+    '#D81B60','#3949AB','#7CB342','#F4511E','#6D4C41','#00897B',
+    '#C0CA33','#5E35B1','#039BE5','#FFB300','#546E7A','#EC407A',
+    '#00BFA5','#FF7043','#5C6BC0','#9CCC65','#AB47BC','#26A69A',
+    '#EF5350','#42A5F5','#66BB6A','#FFA726','#7E57C2','#26C6DA'];
   sorted.forEach(function(c,i){
-    var hue=(i*goldenAngle)%360;
-    /* Vary saturation (55-80%) and lightness (35-55%) based on index to avoid similar-looking colors */
-    var sat=55+((i*7)%26); /* 55-80 */
-    var lit=35+((i*11)%21); /* 35-55 */
+    if(i<tier1.length){
+      companyColorCache[c.id]=tier1[i];
+      return;
+    }
+    /* Remaining companies: 3-band HSL system for maximum visual separation.
+       Band 0: vivid (S:70-90%, L:40-50%) — bright saturated
+       Band 1: deep  (S:50-70%, L:25-38%) — darker tones
+       Band 2: soft  (S:40-65%, L:55-70%) — lighter pastel-ish
+       Golden angle distributes hue within each band. */
+    var idx=i-tier1.length;
+    var band=idx%3;
+    var posInBand=Math.floor(idx/3);
+    var hue=(posInBand*137.508)%360;
+    var sat,lit;
+    if(band===0){sat=70+((posInBand*13)%21);lit=40+((posInBand*7)%11)}       /* 70-90, 40-50 */
+    else if(band===1){sat=50+((posInBand*11)%21);lit=25+((posInBand*9)%14)}   /* 50-70, 25-38 */
+    else{sat=40+((posInBand*17)%26);lit=55+((posInBand*13)%16)}               /* 40-65, 55-70 */
     companyColorCache[c.id]='hsl('+Math.round(hue)+','+sat+'%,'+lit+'%)';
   });
 }
