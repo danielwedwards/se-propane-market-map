@@ -1117,11 +1117,19 @@ function toggleRegion(region){
   activeRegion=region;
   // Clear state filter
   stateFilter.clear();
-  // Rebuild state pills for the selected region
+  // Rebuild state pills for the selected region and activate region's states as filter
   if(region==='ALL'){
     initStatePills(ALL_STATES);
+    // No state filter = show all
+    document.querySelector('.state-pill[data-st="ALL"]').classList.add('on');
   } else {
     initStatePills(REGIONS[region]);
+    // Activate all states in this region so companies outside are filtered out
+    REGIONS[region].forEach(function(st){stateFilter.add(st)});
+    document.querySelectorAll('#statePills .state-pill').forEach(function(p){
+      if(p.dataset.st && p.dataset.st!=='ALL' && stateFilter.has(p.dataset.st))p.classList.add('on');
+      if(p.dataset.st==='ALL')p.classList.remove('on');
+    });
   }
   // Load region GeoJSON (national for ALL, region-specific otherwise)
   loadRegionGeo(region==='ALL'?'national':region).then(function(ok){
