@@ -1,11 +1,1 @@
-{
-  "version": "0.0.1",
-  "configurations": [
-    {
-      "name": "propane-map",
-      "runtimeExecutable": "npx",
-      "runtimeArgs": ["http-server", "/c/Users/Danie/Downloads/lampton_love_ib_engine/se-propane-market-map", "-p", "8090", "-c-1"],
-      "port": 8090
-    }
-  ]
-}
+{"version":"0.0.1","configurations":[{"name":"site","runtimeExecutable":"npx","runtimeArgs":["serve","-l","3457","."],"port":3457}]}
