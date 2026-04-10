@@ -12742,10 +12742,13 @@
     "ownership": "private",
     "ownerDetail": "Privately Owned",
     "states": [
-      "TN"
+      "NC",
+      "TN",
+      "VA",
+      "WV"
     ],
-    "seLocs": 2,
-    "totalLocs": 2,
+    "seLocs": 7,
+    "totalLocs": 7,
     "excluded": false,
     "optBScore": 185,
     "optBTier": "MONITOR",
@@ -12769,6 +12772,61 @@
         "lat": 36.463,
         "lng": -82.4887,
         "address": "9964 Airport Pkwy, Kingsport, TN 37663, United States"
+      },
+      {
+        "name": "Corporate Headquarters",
+        "city": "Greeneville",
+        "state": "TN",
+        "county": "",
+        "lat": 36.17702,
+        "lng": -82.83197,
+        "address": "253 Baileyton Road",
+        "phone": "(423) 639-7226",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Abingdon",
+        "city": "Abingdon",
+        "state": "VA",
+        "county": "",
+        "lat": 36.72355,
+        "lng": -82.017,
+        "address": "15725 Porterfield Highway",
+        "phone": "(276) 619-2400",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Princeton",
+        "city": "Princeton",
+        "state": "WV",
+        "county": "",
+        "lat": 37.36373,
+        "lng": -81.08423,
+        "address": "102 Roseland Ave",
+        "phone": "(304) 431-3483",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Asheville",
+        "city": "Asheville",
+        "state": "NC",
+        "county": "",
+        "lat": 34.9991,
+        "lng": -79.8771,
+        "address": "929 New Leicester Hwy, Suite 7",
+        "phone": "(828) 515-5500",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Sevierville/Seymour",
+        "city": "Seymour",
+        "state": "TN",
+        "county": "",
+        "lat": 35.88148,
+        "lng": -83.78312,
+        "address": "10490 Chapman Hwy",
+        "phone": "(865) 280-9969",
+        "source": "nominatim_precise"
       }
     ],
     "yearFounded": 1966,
@@ -23326,8 +23384,8 @@
     "states": [
       "TN"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 5,
+    "totalLocs": 5,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -23342,6 +23400,50 @@
         "lat": 35.2733,
         "lng": -85.7466,
         "address": "76 3rd St, Tracy City, TN 37387, United States"
+      },
+      {
+        "name": "Sequatchie County Service Center",
+        "city": "Dunlap",
+        "state": "TN",
+        "county": "",
+        "lat": 35.40239,
+        "lng": -85.37354,
+        "address": "97 Resource Road",
+        "phone": "(423) 949-2198",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Marion County Service Center (HQ)",
+        "city": "South Pittsburg",
+        "state": "TN",
+        "county": "",
+        "lat": 35.0004,
+        "lng": -85.71237,
+        "address": "512 S Cedar Ave",
+        "phone": "",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Bledsoe County Service Center",
+        "city": "Pikeville",
+        "state": "TN",
+        "county": "",
+        "lat": 35.7704,
+        "lng": -86.1014,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Whitwell Service Center",
+        "city": "Whitwell",
+        "state": "TN",
+        "county": "",
+        "lat": 36.0215,
+        "lng": -86.387,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "estRevenue": 2,
@@ -26122,13 +26224,13 @@
     "ownership": "coop",
     "ownerDetail": "Cooperative",
     "states": [
-      "MO",
       "AR",
-      "OK",
-      "KS",
       "IA",
       "IN",
-      "KY"
+      "KS",
+      "KY",
+      "MO",
+      "OK"
     ],
     "seLocs": 91,
     "totalLocs": 91,
@@ -26985,11 +27087,11 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
+      "CT",
+      "MA",
       "ME",
       "NH",
-      "VT",
-      "MA",
-      "CT"
+      "VT"
     ],
     "seLocs": 40,
     "totalLocs": 40,
@@ -27386,12 +27488,12 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "MN",
-      "WI",
-      "MI",
       "IA",
+      "MI",
+      "MN",
+      "ND",
       "SD",
-      "ND"
+      "WI"
     ],
     "seLocs": 57,
     "totalLocs": 57,
@@ -28154,8 +28256,8 @@
     "ownerDetail": "Cooperative",
     "states": [
       "IN",
-      "OH",
-      "MI"
+      "MI",
+      "OH"
     ],
     "seLocs": 54,
     "totalLocs": 54,
@@ -28680,12 +28782,12 @@
     "ownerDetail": "Public (Chesapeake Utilities subsidiary)",
     "states": [
       "DE",
-      "MD",
-      "VA",
-      "PA",
-      "NC",
       "FL",
-      "OH"
+      "MD",
+      "NC",
+      "OH",
+      "PA",
+      "VA"
     ],
     "seLocs": 25,
     "totalLocs": 25,
@@ -28947,15 +29049,15 @@
     "ownership": "private",
     "ownerDetail": "Private (Nippon Sanso subsidiary)",
     "states": [
-      "TX",
       "CA",
-      "NY",
-      "PA",
-      "OH",
-      "IL",
-      "GA",
       "FL",
+      "GA",
+      "IL",
       "NC",
+      "NY",
+      "OH",
+      "PA",
+      "TX",
       "VA"
     ],
     "seLocs": 14,
@@ -29120,11 +29222,11 @@
     "ownerDetail": "Cooperative",
     "states": [
       "ID",
-      "OR",
-      "WA",
-      "NV",
-      "UT",
       "MT",
+      "NV",
+      "OR",
+      "UT",
+      "WA",
       "WY"
     ],
     "seLocs": 15,
@@ -29937,10 +30039,10 @@
     "ownership": "coop",
     "ownerDetail": "Cooperative",
     "states": [
-      "WI",
-      "MN",
       "IA",
-      "IL"
+      "IL",
+      "MN",
+      "WI"
     ],
     "seLocs": 47,
     "totalLocs": 47,
@@ -30401,10 +30503,10 @@
     "ownership": "pe",
     "ownerDetail": "Private Equity",
     "states": [
-      "TX",
-      "OK",
       "KS",
-      "MO"
+      "MO",
+      "OK",
+      "TX"
     ],
     "seLocs": 14,
     "totalLocs": 14,
@@ -30741,8 +30843,8 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "CA",
       "AZ",
+      "CA",
       "NV",
       "OR",
       "WA"
@@ -30863,8 +30965,8 @@
     "ownership": "coop",
     "ownerDetail": "Cooperative",
     "states": [
-      "WI",
-      "MI"
+      "MI",
+      "WI"
     ],
     "seLocs": 6,
     "totalLocs": 6,
@@ -30956,9 +31058,9 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "WA",
+      "ID",
       "OR",
-      "ID"
+      "WA"
     ],
     "seLocs": 11,
     "totalLocs": 11,
@@ -31095,10 +31197,10 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "PA",
+      "NY",
       "OH",
-      "WV",
-      "NY"
+      "PA",
+      "WV"
     ],
     "seLocs": 7,
     "totalLocs": 7,
@@ -31198,8 +31300,8 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "WI",
-      "IL"
+      "IL",
+      "WI"
     ],
     "seLocs": 6,
     "totalLocs": 6,
@@ -31290,10 +31392,10 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "TN",
-      "VA",
+      "KY",
       "NC",
-      "KY"
+      "TN",
+      "VA"
     ],
     "seLocs": 7,
     "totalLocs": 7,
@@ -31393,8 +31495,8 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "TX",
-      "OK"
+      "OK",
+      "TX"
     ],
     "seLocs": 7,
     "totalLocs": 7,
@@ -44247,10 +44349,11 @@
     "ownership": "private",
     "ownerDetail": "Independent",
     "states": [
+      "ID",
       "MT"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -44265,6 +44368,17 @@
         "lat": 45.9983,
         "lng": -112.54,
         "address": ""
+      },
+      {
+        "name": "Fall River Propane HQ",
+        "city": "Ashton",
+        "state": "ID",
+        "county": "",
+        "lat": 45.6474,
+        "lng": -113.7536,
+        "address": "1150 N 3400 E",
+        "phone": "(833) 682-3671",
+        "source": "website_scrape_state_approx"
       }
     ],
     "estRevenue": null,
@@ -52398,10 +52512,12 @@
     "ownership": "independent",
     "ownerDetail": "ThompsonGas - backed by Kelso & Company",
     "states": [
-      "AL"
+      "AL",
+      "GA",
+      "MD"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 9,
+    "totalLocs": 9,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -52418,6 +52534,94 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "ThompsonGas - Corporate HQ Frederick",
+        "city": "Frederick",
+        "state": "MD",
+        "county": "",
+        "lat": 38.7704,
+        "lng": -77.3014,
+        "address": "5260 Westview Dr, Suite 200",
+        "phone": "(800) 768-6612",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "ThompsonGas - Greenville",
+        "city": "Greenville",
+        "state": "AL",
+        "county": "",
+        "lat": 31.8393,
+        "lng": -86.61138,
+        "address": "410 Greenville Byp",
+        "phone": "(334) 383-9077",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "ThompsonGas - Boonsboro",
+        "city": "Boonsboro",
+        "state": "MD",
+        "county": "",
+        "lat": 38.8203,
+        "lng": -77.0014,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "ThompsonGas - Cullman",
+        "city": "Cullman",
+        "state": "AL",
+        "county": "",
+        "lat": 32.9411,
+        "lng": -86.9561,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "ThompsonGas - Andalusia (Cooperative Propane)",
+        "city": "Andalusia",
+        "state": "AL",
+        "county": "",
+        "lat": 32.764,
+        "lng": -86.8584,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "ThompsonGas - Bremen (West Georgia Propane)",
+        "city": "Bremen",
+        "state": "GA",
+        "county": "",
+        "lat": 32.4036,
+        "lng": -83.0934,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "ThompsonGas - Thomaston (Upson Propane)",
+        "city": "Thomaston",
+        "state": "GA",
+        "county": "",
+        "lat": 32.5084,
+        "lng": -83.1678,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "ThompsonGas - Griffin (Quality Companies)",
+        "city": "Griffin",
+        "state": "GA",
+        "county": "",
+        "lat": 33.0011,
+        "lng": -83.4563,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "One of the largest private propane companies in the US; multi-state operator based in Frederick, MD"
@@ -52601,10 +52805,11 @@
     "ownership": "independent",
     "ownerDetail": "O'Nealgas Inc., family-owned",
     "states": [
-      "AR"
+      "AR",
+      "LA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 12,
+    "totalLocs": 12,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -52621,6 +52826,127 @@
         "address": "",
         "source": "gmaps_sweep",
         "needs_geocoding": false
+      },
+      {
+        "name": "Choudrant (Corporate HQ)",
+        "city": "Choudrant",
+        "state": "LA",
+        "county": "",
+        "lat": 31.3722,
+        "lng": -91.3688,
+        "address": "3452 Highway 145 N",
+        "phone": "318-768-2511",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Columbia",
+        "city": "Columbia",
+        "state": "LA",
+        "county": "",
+        "lat": 31.3137,
+        "lng": -91.1685,
+        "address": "7205 Highway 165 S",
+        "phone": "318-649-7336",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Smackover",
+        "city": "Smackover",
+        "state": "AR",
+        "county": "",
+        "lat": 33.34137,
+        "lng": -92.72396,
+        "address": "4404 Smackover Highway",
+        "phone": "870-725-2495",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Farmerville",
+        "city": "Farmerville",
+        "state": "LA",
+        "county": "",
+        "lat": 32.7717,
+        "lng": -92.40573,
+        "address": "406 South Main",
+        "phone": "318-368-9094",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Haughton",
+        "city": "Haughton",
+        "state": "LA",
+        "county": "",
+        "lat": 31.1116,
+        "lng": -91.4568,
+        "address": "5170 Highway 80",
+        "phone": "318-746-8480",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Homer",
+        "city": "Homer",
+        "state": "LA",
+        "county": "",
+        "lat": 32.79942,
+        "lng": -93.05556,
+        "address": "900 West Main",
+        "phone": "318-927-3575",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Many",
+        "city": "Many",
+        "state": "LA",
+        "county": "",
+        "lat": 30.7177,
+        "lng": -91.0352,
+        "address": "25585 Highway 171 N",
+        "phone": "318-256-5522",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Monroe",
+        "city": "Monroe",
+        "state": "LA",
+        "county": "",
+        "lat": 32.50929,
+        "lng": -92.11825,
+        "address": "703 North 5th St",
+        "phone": "318-322-4663",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Winnsboro",
+        "city": "Winnsboro",
+        "state": "LA",
+        "county": "",
+        "lat": 32.1579,
+        "lng": -91.71612,
+        "address": "4030 Front St",
+        "phone": "318-435-6190",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Tallulah",
+        "city": "Tallulah",
+        "state": "LA",
+        "county": "",
+        "lat": 32.39266,
+        "lng": -91.18229,
+        "address": "1600 Felicia Dr",
+        "phone": "318-574-5702",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Stephens",
+        "city": "Stephens",
+        "state": "AR",
+        "county": "",
+        "lat": 33.41547,
+        "lng": -93.06615,
+        "address": "1224 N 1st St",
+        "phone": "870-786-9767",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "Arkansas-based regional propane company"
@@ -52635,10 +52961,11 @@
     "ownership": "independent",
     "ownerDetail": "MFA Oil Company - farmer-owned cooperative since 1929",
     "states": [
-      "AR"
+      "AR",
+      "MO"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 6,
+    "totalLocs": 6,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -52655,6 +52982,61 @@
         "address": "",
         "source": "gmaps_sweep",
         "needs_geocoding": false
+      },
+      {
+        "name": "Rogersville",
+        "city": "Rogersville",
+        "state": "MO",
+        "county": "",
+        "lat": 38.2467,
+        "lng": -92.0031,
+        "address": "7007 E US Hwy 60",
+        "phone": "417-753-9055",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Butler",
+        "city": "Butler",
+        "state": "MO",
+        "county": "",
+        "lat": 38.27467,
+        "lng": -94.34911,
+        "address": "975 Elks Dr",
+        "phone": "660-679-3532",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Eldon",
+        "city": "Eldon",
+        "state": "MO",
+        "county": "",
+        "lat": 38.34488,
+        "lng": -92.56248,
+        "address": "704 Industrial Dr",
+        "phone": "",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Pevely",
+        "city": "Pevely",
+        "state": "MO",
+        "county": "",
+        "lat": 38.29227,
+        "lng": -90.39721,
+        "address": "8647 Commercial Blvd",
+        "phone": "",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Shell Knob",
+        "city": "Shell Knob",
+        "state": "MO",
+        "county": "",
+        "lat": 38.1082,
+        "lng": -92.2958,
+        "address": "20654 FR 1250",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Large multi-state cooperative HQ in Columbia, MO"
@@ -52703,10 +53085,11 @@
     "ownership": "independent",
     "ownerDetail": "Scott Petroleum Corporation",
     "states": [
-      "AR"
+      "AR",
+      "MS"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 4,
+    "totalLocs": 4,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -52723,6 +53106,39 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Scott Petroleum HQ (Itta Bena)",
+        "city": "Itta Bena",
+        "state": "MS",
+        "county": "",
+        "lat": 33.49384,
+        "lng": -90.32104,
+        "address": "102 Main Street",
+        "phone": "",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Scott Petroleum Greenville",
+        "city": "Greenville",
+        "state": "MS",
+        "county": "",
+        "lat": 32.5191,
+        "lng": -90.2481,
+        "address": "3239 Highway 82 E",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Scott Petroleum Canton",
+        "city": "Canton",
+        "state": "MS",
+        "county": "",
+        "lat": 32.4491,
+        "lng": -90.115,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Regional fuels/propane; acquired Anderson's Gas & Propane"
@@ -52737,10 +53153,11 @@
     "ownership": "independent",
     "ownerDetail": "SunGas Propane",
     "states": [
-      "AR"
+      "AR",
+      "GA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -52757,6 +53174,17 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Gas Incorporated / Superior Plus Propane - Newnan",
+        "city": "Newnan",
+        "state": "GA",
+        "county": "",
+        "lat": 32.7437,
+        "lng": -82.8879,
+        "address": "1776 South Highway 29",
+        "phone": "(770) 253-2162",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-location Arkansas propane dealer"
@@ -53349,8 +53777,8 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 3,
+    "totalLocs": 3,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -53367,6 +53795,28 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Titan Propane - Flagstaff",
+        "city": "Flagstaff",
+        "state": "AZ",
+        "county": "",
+        "lat": 34.1989,
+        "lng": -111.9146,
+        "address": "7911 N Hwy 89",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Titan Propane - Camp Verde",
+        "city": "Camp Verde",
+        "state": "AZ",
+        "county": "",
+        "lat": 34.0852,
+        "lng": -112.1625,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Regional AZ/CA operator"
@@ -53820,10 +54270,14 @@
     "ownership": "independent",
     "ownerDetail": "Blue Star Gas - family-owned",
     "states": [
-      "CA"
+      "AZ",
+      "CA",
+      "OR",
+      "UT",
+      "WA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 15,
+    "totalLocs": 15,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -53840,6 +54294,160 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Arcata",
+        "city": "Arcata",
+        "state": "CA",
+        "county": "",
+        "lat": 40.90327,
+        "lng": -124.08992,
+        "address": "1907 Heindon Road",
+        "phone": "(707) 822-4851",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Coast Co. (Crescent City)",
+        "city": "Crescent City",
+        "state": "CA",
+        "county": "",
+        "lat": 41.75243,
+        "lng": -124.19823,
+        "address": "340 H Street",
+        "phone": "(707) 464-7827",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Eugene Co.",
+        "city": "Eugene",
+        "state": "OR",
+        "county": "",
+        "lat": 44.05436,
+        "lng": -123.17823,
+        "address": "61 S. Danebo Avenue",
+        "phone": "(541) 689-3311",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Fortuna",
+        "city": "Fortuna",
+        "state": "CA",
+        "county": "",
+        "lat": 40.59808,
+        "lng": -124.15706,
+        "address": "926 Main Street",
+        "phone": "(707) 725-4465",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Garberville Co.",
+        "city": "Garberville",
+        "state": "CA",
+        "county": "",
+        "lat": 40.11095,
+        "lng": -123.79446,
+        "address": "1333 Redwood Drive",
+        "phone": "(707) 923-7827",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "McMinnville Co.",
+        "city": "Salem",
+        "state": "OR",
+        "county": "",
+        "lat": 44.9753,
+        "lng": -123.00142,
+        "address": "3837 Portland Road NE",
+        "phone": "(503) 472-1571",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Medford Co.",
+        "city": "Central Point",
+        "state": "OR",
+        "county": "",
+        "lat": 44.387,
+        "lng": -120.3864,
+        "address": "6096 Crater Lake Avenue",
+        "phone": "(541) 826-8683",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Mt. Shasta Co.",
+        "city": "Mt. Shasta",
+        "state": "CA",
+        "county": "",
+        "lat": 41.33823,
+        "lng": -122.3244,
+        "address": "3700 Spring Hill Road",
+        "phone": "(530) 926-5862",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Phoenix Co.",
+        "city": "Phoenix",
+        "state": "AZ",
+        "county": "",
+        "lat": 33.9605,
+        "lng": -111.5101,
+        "address": "447 W Watkins Street, Ste. #1",
+        "phone": "(602) 253-7827",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Redding Co.",
+        "city": "Anderson",
+        "state": "CA",
+        "county": "",
+        "lat": 37.4262,
+        "lng": -119.0921,
+        "address": "6775 Eastside Road",
+        "phone": "(530) 365-2131",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Salt Lake City Co.",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "county": "",
+        "lat": 40.74041,
+        "lng": -111.97806,
+        "address": "3625 West California Ave",
+        "phone": "(801) 298-7827",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Santa Rosa Co. (Head Office)",
+        "city": "Santa Rosa",
+        "state": "CA",
+        "county": "",
+        "lat": 38.42575,
+        "lng": -122.76859,
+        "address": "880 N. Wright Road",
+        "phone": "(707) 546-1400",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Seattle Co.",
+        "city": "Tukwila",
+        "state": "WA",
+        "county": "",
+        "lat": 47.50649,
+        "lng": -122.29037,
+        "address": "10802 E. Marginal Way South",
+        "phone": "(206) 762-2583",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Acme Fuel",
+        "city": "Olympia",
+        "state": "WA",
+        "county": "",
+        "lat": 47.04567,
+        "lng": -122.90306,
+        "address": "416 State Ave NW",
+        "phone": "(360) 943-1133",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "Multi-location West Coast propane company based in Santa Rosa, CA"
@@ -54127,8 +54735,8 @@
     "states": [
       "CO"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -54145,6 +54753,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Westcliffe",
+        "city": "Westcliffe",
+        "state": "CO",
+        "county": "",
+        "lat": 38.7524,
+        "lng": -105.7971,
+        "address": "28 Range View Loop",
+        "phone": "(719) 783-9338",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Colorado regional propane dealer"
@@ -54464,10 +55083,17 @@
     "ownership": "independent",
     "ownerDetail": "Sapp Bros. Petroleum - family-owned",
     "states": [
-      "CO"
+      "CO",
+      "IA",
+      "IL",
+      "KS",
+      "MO",
+      "NE",
+      "UT",
+      "WY"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 32,
+    "totalLocs": 32,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -54484,6 +55110,347 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Omaha (HQ)",
+        "city": "Omaha",
+        "state": "NE",
+        "county": "",
+        "lat": 41.1903,
+        "lng": -96.14608,
+        "address": "9915 S 148th St",
+        "phone": "402-895-2202",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Denver",
+        "city": "Denver",
+        "state": "CO",
+        "county": "",
+        "lat": 38.6135,
+        "lng": -105.1805,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Julesburg",
+        "city": "Julesburg",
+        "state": "CO",
+        "county": "",
+        "lat": 39.2138,
+        "lng": -105.5303,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Peru",
+        "city": "Peru",
+        "state": "IL",
+        "county": "",
+        "lat": 39.7357,
+        "lng": -89.2059,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Atlantic",
+        "city": "Atlantic",
+        "state": "IA",
+        "county": "",
+        "lat": 41.9367,
+        "lng": -93.2047,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Carter Lake",
+        "city": "Carter Lake",
+        "state": "IA",
+        "county": "",
+        "lat": 41.871,
+        "lng": -93.5322,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Le Mars",
+        "city": "Le Mars",
+        "state": "IA",
+        "county": "",
+        "lat": 41.5856,
+        "lng": -93.0078,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Shenandoah",
+        "city": "Shenandoah",
+        "state": "IA",
+        "county": "",
+        "lat": 41.5883,
+        "lng": -93.7522,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Sioux City",
+        "city": "Sioux City",
+        "state": "IA",
+        "county": "",
+        "lat": 42.0307,
+        "lng": -93.1401,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Blue Rapids",
+        "city": "Blue Rapids",
+        "state": "KS",
+        "county": "",
+        "lat": 38.1448,
+        "lng": -98.2314,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Hanover",
+        "city": "Hanover",
+        "state": "KS",
+        "county": "",
+        "lat": 38.7755,
+        "lng": -98.1436,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Harrisonville/Kansas City",
+        "city": "Harrisonville",
+        "state": "MO",
+        "county": "",
+        "lat": 38.0559,
+        "lng": -92.2464,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Blair",
+        "city": "Blair",
+        "state": "NE",
+        "county": "",
+        "lat": 41.5521,
+        "lng": -99.8299,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Butte",
+        "city": "Butte",
+        "state": "NE",
+        "county": "",
+        "lat": 41.6456,
+        "lng": -100.0267,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Columbus",
+        "city": "Columbus",
+        "state": "NE",
+        "county": "",
+        "lat": 41.3232,
+        "lng": -99.4755,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Crete",
+        "city": "Crete",
+        "state": "NE",
+        "county": "",
+        "lat": 41.2921,
+        "lng": -99.9685,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Elgin",
+        "city": "Elgin",
+        "state": "NE",
+        "county": "",
+        "lat": 41.3691,
+        "lng": -99.4035,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Filley",
+        "city": "Filley",
+        "state": "NE",
+        "county": "",
+        "lat": 41.2378,
+        "lng": -99.6405,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Fremont",
+        "city": "Fremont",
+        "state": "NE",
+        "county": "",
+        "lat": 41.745,
+        "lng": -99.3573,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Grand Island",
+        "city": "Grand Island",
+        "state": "NE",
+        "county": "",
+        "lat": 41.2948,
+        "lng": -99.6982,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Humboldt",
+        "city": "Humboldt",
+        "state": "NE",
+        "county": "",
+        "lat": 41.3647,
+        "lng": -99.925,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Imperial",
+        "city": "Imperial",
+        "state": "NE",
+        "county": "",
+        "lat": 41.6474,
+        "lng": -99.3036,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Lincoln",
+        "city": "Lincoln",
+        "state": "NE",
+        "county": "",
+        "lat": 41.6195,
+        "lng": -99.5311,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Norfolk",
+        "city": "Norfolk",
+        "state": "NE",
+        "county": "",
+        "lat": 41.3363,
+        "lng": -99.9432,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "North Platte",
+        "city": "North Platte",
+        "state": "NE",
+        "county": "",
+        "lat": 41.4232,
+        "lng": -99.9399,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ogallala",
+        "city": "Ogallala",
+        "state": "NE",
+        "county": "",
+        "lat": 41.2514,
+        "lng": -100.0743,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Sidney",
+        "city": "Sidney",
+        "state": "NE",
+        "county": "",
+        "lat": 41.6115,
+        "lng": -99.597,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "West Point",
+        "city": "West Point",
+        "state": "NE",
+        "county": "",
+        "lat": 41.7461,
+        "lng": -100.0621,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "York",
+        "city": "York",
+        "state": "NE",
+        "county": "",
+        "lat": 41.2165,
+        "lng": -99.7361,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Salt Lake City",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "county": "",
+        "lat": 39.2533,
+        "lng": -111.7727,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cheyenne",
+        "city": "Cheyenne",
+        "state": "WY",
+        "county": "",
+        "lat": 42.7629,
+        "lng": -107.8758,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-state petroleum and propane distributor HQ in Omaha, NE"
@@ -54700,10 +55667,19 @@
     "ownership": "independent",
     "ownerDetail": "Superior Plus Corp (TSX: SPB)",
     "states": [
-      "CT"
+      "CT",
+      "GA",
+      "MA",
+      "MD",
+      "ME",
+      "NC",
+      "NH",
+      "NY",
+      "PA",
+      "VA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 26,
+    "totalLocs": 26,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -54720,6 +55696,281 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Winsted",
+        "city": "Winsted",
+        "state": "CT",
+        "county": "",
+        "lat": 41.3169,
+        "lng": -72.4648,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rochester",
+        "city": "Rochester",
+        "state": "NY",
+        "county": "",
+        "lat": 42.6692,
+        "lng": -75.4971,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Florida",
+        "city": "Florida",
+        "state": "NY",
+        "county": "",
+        "lat": 42.9299,
+        "lng": -75.5371,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rome",
+        "city": "Rome",
+        "state": "NY",
+        "county": "",
+        "lat": 42.9874,
+        "lng": -75.7615,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Gansevoort",
+        "city": "Gansevoort",
+        "state": "NY",
+        "county": "",
+        "lat": 43.1013,
+        "lng": -75.4901,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "St. Johnsville",
+        "city": "St. Johnsville",
+        "state": "NY",
+        "county": "",
+        "lat": 42.8241,
+        "lng": -76.0905,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Marlboro",
+        "city": "Marlboro",
+        "state": "NY",
+        "county": "",
+        "lat": 42.3776,
+        "lng": -75.7259,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Wurtsboro",
+        "city": "Wurtsboro",
+        "state": "NY",
+        "county": "",
+        "lat": 42.8146,
+        "lng": -75.8399,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Tarboro",
+        "city": "Tarboro",
+        "state": "NC",
+        "county": "",
+        "lat": 35.4988,
+        "lng": -79.6488,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Kenansville",
+        "city": "Kenansville",
+        "state": "NC",
+        "county": "",
+        "lat": 35.557,
+        "lng": -79.6691,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Morganton",
+        "city": "Morganton",
+        "state": "NC",
+        "county": "",
+        "lat": 35.4607,
+        "lng": -79.8621,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Shelby",
+        "city": "Shelby",
+        "state": "NC",
+        "county": "",
+        "lat": 35.4987,
+        "lng": -79.7889,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Lumberton",
+        "city": "Lumberton",
+        "state": "NC",
+        "county": "",
+        "lat": 35.4731,
+        "lng": -79.7204,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Southern Pines",
+        "city": "Southern Pines",
+        "state": "NC",
+        "county": "",
+        "lat": 35.3685,
+        "lng": -79.5791,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Dallas",
+        "city": "Dallas",
+        "state": "NC",
+        "county": "",
+        "lat": 35.03,
+        "lng": -79.7316,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cashiers",
+        "city": "Cashiers",
+        "state": "NC",
+        "county": "",
+        "lat": 35.5212,
+        "lng": -80.1415,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Blackshear",
+        "city": "Blackshear",
+        "state": "GA",
+        "county": "",
+        "lat": 32.695,
+        "lng": -83.4677,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Elkton",
+        "city": "Elkton",
+        "state": "MD",
+        "county": "",
+        "lat": 39.045,
+        "lng": -76.8573,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Windham",
+        "city": "Windham",
+        "state": "ME",
+        "county": "",
+        "lat": 44.8738,
+        "lng": -68.7861,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ashburnham",
+        "city": "Ashburnham",
+        "state": "MA",
+        "county": "",
+        "lat": 42.3899,
+        "lng": -71.3411,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Sunderland",
+        "city": "Sunderland",
+        "state": "MA",
+        "county": "",
+        "lat": 42.2302,
+        "lng": -71.3691,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "West Lebanon",
+        "city": "West Lebanon",
+        "state": "NH",
+        "county": "",
+        "lat": 44.0044,
+        "lng": -71.8652,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "West Easton",
+        "city": "West Easton",
+        "state": "PA",
+        "county": "",
+        "lat": 40.6033,
+        "lng": -77.6911,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Perkasie",
+        "city": "Perkasie",
+        "state": "PA",
+        "county": "",
+        "lat": 41.1374,
+        "lng": -77.2481,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Fredericksburg",
+        "city": "Fredericksburg",
+        "state": "VA",
+        "county": "",
+        "lat": 37.9058,
+        "lng": -79.2271,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Canadian public company; one of largest North American propane distributors"
@@ -54902,10 +56153,14 @@
     "ownership": "independent",
     "ownerDetail": "United Propane Gas",
     "states": [
-      "GA"
+      "GA",
+      "IL",
+      "KY",
+      "MO",
+      "TN"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 17,
+    "totalLocs": 17,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -54922,6 +56177,182 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "UPG - Corporate HQ",
+        "city": "Lisle",
+        "state": "IL",
+        "county": "",
+        "lat": 39.441,
+        "lng": -89.0996,
+        "address": "1001 Warrenville Road, Suite 350",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "UPG - Paducah Main Office",
+        "city": "Paducah",
+        "state": "KY",
+        "county": "",
+        "lat": 37.10045,
+        "lng": -88.67363,
+        "address": "4200 Cairo Rd",
+        "phone": "(270) 442-5557",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Calloway County Propane (UPG)",
+        "city": "Murray",
+        "state": "KY",
+        "county": "",
+        "lat": 37.5814,
+        "lng": -85.3802,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Gasper River Propane (UPG)",
+        "city": "Auburn",
+        "state": "KY",
+        "county": "",
+        "lat": 37.8439,
+        "lng": -85.8675,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Green River Propane (UPG)",
+        "city": "Livermore",
+        "state": "KY",
+        "county": "",
+        "lat": 37.9474,
+        "lng": -86.0733,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Graves County Propane (UPG)",
+        "city": "Mayfield",
+        "state": "KY",
+        "county": "",
+        "lat": 38.1411,
+        "lng": -86.0061,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cumberland River Propane (UPG)",
+        "city": "Springfield",
+        "state": "TN",
+        "county": "",
+        "lat": 36.1904,
+        "lng": -86.276,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Highland Rim Propane (UPG)",
+        "city": "Manchester",
+        "state": "TN",
+        "county": "",
+        "lat": 35.8231,
+        "lng": -85.9314,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Natchez Trace Propane (UPG)",
+        "city": "Waynesboro",
+        "state": "TN",
+        "county": "",
+        "lat": 35.6461,
+        "lng": -86.197,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Obion County Propane (UPG)",
+        "city": "Union City",
+        "state": "TN",
+        "county": "",
+        "lat": 35.9762,
+        "lng": -85.7921,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Quality Propane (UPG)",
+        "city": "Lebanon",
+        "state": "TN",
+        "county": "",
+        "lat": 36.1443,
+        "lng": -86.0577,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Southern Propane (UPG)",
+        "city": "Columbia",
+        "state": "TN",
+        "county": "",
+        "lat": 36.1255,
+        "lng": -86.0019,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Stewart County Propane (UPG)",
+        "city": "Dover",
+        "state": "TN",
+        "county": "",
+        "lat": 35.7854,
+        "lng": -85.9344,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Midwest Propane (UPG)",
+        "city": "Trenton",
+        "state": "MO",
+        "county": "",
+        "lat": 38.3649,
+        "lng": -92.6442,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "MO Energy Propane (UPG)",
+        "city": "Unionville",
+        "state": "MO",
+        "county": "",
+        "lat": 38.3176,
+        "lng": -92.1044,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Small Bootheel Propane (UPG)",
+        "city": "Sikeston",
+        "state": "MO",
+        "county": "",
+        "lat": 38.3936,
+        "lng": -92.039,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-state operator based in Paducah, KY"
@@ -54970,10 +56401,11 @@
     "ownership": "independent",
     "ownerDetail": "Blossman Gas, family-owned since 1951",
     "states": [
+      "FL",
       "GA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 6,
+    "totalLocs": 6,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -54990,6 +56422,61 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Canton",
+        "city": "Canton",
+        "state": "GA",
+        "county": "",
+        "lat": 32.9049,
+        "lng": -82.9264,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Douglasville",
+        "city": "Douglasville",
+        "state": "GA",
+        "county": "",
+        "lat": 32.8927,
+        "lng": -83.3049,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Gainesville",
+        "city": "Gainesville",
+        "state": "GA",
+        "county": "",
+        "lat": 33.0447,
+        "lng": -83.5395,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Bowdon",
+        "city": "Bowdon",
+        "state": "GA",
+        "county": "",
+        "lat": 32.2533,
+        "lng": -83.2911,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Alpha Gas (Pensacola)",
+        "city": "Pensacola",
+        "state": "FL",
+        "county": "",
+        "lat": 27.8701,
+        "lng": -84.0782,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "9th largest US propane dealer; 75+ branches across Southeast; HQ in Ocean Springs, MS"
@@ -55071,10 +56558,11 @@
     "ownership": "independent",
     "ownerDetail": "Freeman Gas & Electric, family-owned since 1935",
     "states": [
-      "GA"
+      "GA",
+      "SC"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 3,
+    "totalLocs": 3,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -55091,6 +56579,28 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Spartanburg - Howard Street",
+        "city": "Spartanburg",
+        "state": "SC",
+        "county": "",
+        "lat": 34.96803,
+        "lng": -81.96164,
+        "address": "1450 Howard St",
+        "phone": "864-582-2804",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Roebuck",
+        "city": "Roebuck",
+        "state": "SC",
+        "county": "",
+        "lat": 34.90786,
+        "lng": -81.96037,
+        "address": "113 Peake Rd",
+        "phone": "",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "Multi-state operator based in Spartanburg, SC"
@@ -55443,10 +56953,15 @@
     "ownership": "independent",
     "ownerDetail": "Subsidiary of Chesapeake Utilities Corporation (NYSE: CPK)",
     "states": [
-      "DE"
+      "DE",
+      "FL",
+      "MD",
+      "NC",
+      "PA",
+      "VA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 26,
+    "totalLocs": 26,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -55463,6 +56978,281 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Dover DE",
+        "city": "Dover",
+        "state": "DE",
+        "county": "",
+        "lat": 39.18915,
+        "lng": -75.54071,
+        "address": "5011 North Dupont Hwy",
+        "phone": "(302) 678-2400",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Georgetown DE (HQ)",
+        "city": "Georgetown",
+        "state": "DE",
+        "county": "",
+        "lat": 38.62123,
+        "lng": -75.33936,
+        "address": "22945 E Piney Grove Rd",
+        "phone": "(302) 316-7000",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Newark DE",
+        "city": "Newark",
+        "state": "DE",
+        "county": "",
+        "lat": 39.0852,
+        "lng": -75.6125,
+        "address": "250 Corporate Blvd Suite B",
+        "phone": "(302) 273-7060",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "DeBary FL",
+        "city": "DeBary",
+        "state": "FL",
+        "county": "",
+        "lat": 28.89112,
+        "lng": -81.30652,
+        "address": "450 S Charles Richard Beall Blvd",
+        "phone": "(386) 668-3201",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Hernando FL",
+        "city": "Hernando",
+        "state": "FL",
+        "county": "",
+        "lat": 27.8037,
+        "lng": -83.9677,
+        "address": "PO Box 467",
+        "phone": "(352) 447-2790",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Jacksonville FL",
+        "city": "Jacksonville",
+        "state": "FL",
+        "county": "",
+        "lat": 27.5962,
+        "lng": -83.7376,
+        "address": "4613 Philips Hwy Suite 208B",
+        "phone": "(904) 661-7590",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Lantana FL",
+        "city": "Lantana",
+        "state": "FL",
+        "county": "",
+        "lat": 26.59312,
+        "lng": -80.05652,
+        "address": "360 Hillbrath Drive",
+        "phone": "(561) 838-1814",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Okeechobee FL",
+        "city": "Okeechobee",
+        "state": "FL",
+        "county": "",
+        "lat": 27.9772,
+        "lng": -84.1264,
+        "address": "802 North Parrott Ave",
+        "phone": "(863) 763-2115",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Winter Haven FL",
+        "city": "Winter Haven",
+        "state": "FL",
+        "county": "",
+        "lat": 28.0049,
+        "lng": -81.73509,
+        "address": "1705 7th Street SW",
+        "phone": "(863) 733-7032",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Ahoskie NC",
+        "city": "Ahoskie",
+        "state": "NC",
+        "county": "",
+        "lat": 35.0176,
+        "lng": -80.1899,
+        "address": "1525 US Hwy 13 South",
+        "phone": "(252) 332-3330",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Dunn NC",
+        "city": "Dunn",
+        "state": "NC",
+        "county": "",
+        "lat": 34.8535,
+        "lng": -79.9694,
+        "address": "17220 US Hwy 421 South",
+        "phone": "(910) 892-8111",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Greensboro NC",
+        "city": "McLeansville",
+        "state": "NC",
+        "county": "",
+        "lat": 35.4834,
+        "lng": -79.9408,
+        "address": "400 Kivett Dairy Rd",
+        "phone": "(336) 697-3141",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rich Square NC",
+        "city": "Rich Square",
+        "state": "NC",
+        "county": "",
+        "lat": 36.27301,
+        "lng": -77.28516,
+        "address": "136 S Main St",
+        "phone": "(252) 539-2850",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Sanford NC",
+        "city": "Sanford",
+        "state": "NC",
+        "county": "",
+        "lat": 35.46024,
+        "lng": -79.14652,
+        "address": "2416 S Horner Blvd",
+        "phone": "(252) 539-2850",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Shallotte NC",
+        "city": "Shallotte",
+        "state": "NC",
+        "county": "",
+        "lat": 35.4589,
+        "lng": -79.6872,
+        "address": "6 Red Bug Rd SW",
+        "phone": "(910) 776-6910",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Wallace NC",
+        "city": "Wallace",
+        "state": "NC",
+        "county": "",
+        "lat": 34.75501,
+        "lng": -78.00001,
+        "address": "1525 N Norwood St",
+        "phone": "(910) 285-2471",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Wilmington NC",
+        "city": "Wilmington",
+        "state": "NC",
+        "county": "",
+        "lat": 35.0584,
+        "lng": -79.8678,
+        "address": "3340 US Hwy 421 North Unit B",
+        "phone": "(910) 794-4053",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Easton MD",
+        "city": "Easton",
+        "state": "MD",
+        "county": "",
+        "lat": 38.80436,
+        "lng": -76.0598,
+        "address": "9387 Ocean Gateway",
+        "phone": "(410) 822-8261",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Pocomoke City MD",
+        "city": "Pocomoke City",
+        "state": "MD",
+        "county": "",
+        "lat": 38.01629,
+        "lng": -75.54319,
+        "address": "648 Ocean Hwy",
+        "phone": "(410) 957-1501",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Salisbury MD",
+        "city": "Salisbury",
+        "state": "MD",
+        "county": "",
+        "lat": 38.36708,
+        "lng": -75.59326,
+        "address": "520 Commerce St",
+        "phone": "(410) 749-4147",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Manheim PA",
+        "city": "Manheim",
+        "state": "PA",
+        "county": "",
+        "lat": 40.643,
+        "lng": -77.2776,
+        "address": "236 S Cherry St Suite 101",
+        "phone": "(717) 492-1880",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Orefield PA",
+        "city": "Orefield",
+        "state": "PA",
+        "county": "",
+        "lat": 40.6171,
+        "lng": -75.6436,
+        "address": "7205 Kernsville Rd",
+        "phone": "(610) 530-1535",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Pocono Lake PA",
+        "city": "Pocono Lake",
+        "state": "PA",
+        "county": "",
+        "lat": 41.2836,
+        "lng": -77.2303,
+        "address": "906 Route 940",
+        "phone": "(570) 646-5626",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Belle Haven VA",
+        "city": "Belle Haven",
+        "state": "VA",
+        "county": "",
+        "lat": 38.2118,
+        "lng": -79.6583,
+        "address": "36292 Lankford Hwy Suite 11",
+        "phone": "(757) 442-4328",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Mattaponi VA",
+        "city": "Mattaponi",
+        "state": "VA",
+        "county": "",
+        "lat": 37.53598,
+        "lng": -76.76886,
+        "address": "6560 Lewis B Puller Memorial Hwy",
+        "phone": "(804) 294-7001",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "Multi-state propane subsidiary; HQ in Georgetown, DE"
@@ -56118,10 +57908,12 @@
     "ownership": "independent",
     "ownerDetail": "Consolidated Energy Company",
     "states": [
-      "IA"
+      "IA",
+      "MN",
+      "WI"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 10,
+    "totalLocs": 10,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -56138,6 +57930,105 @@
         "address": "",
         "source": "state_approx",
         "needs_geocoding": false
+      },
+      {
+        "name": "Consolidated Energy - Jesup",
+        "city": "Jesup",
+        "state": "IA",
+        "county": "",
+        "lat": 42.47415,
+        "lng": -92.0613,
+        "address": "910 Main Street",
+        "phone": "(319) 827-1211",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Consolidated Energy - La Crosse",
+        "city": "La Crosse",
+        "state": "WI",
+        "county": "",
+        "lat": 43.83456,
+        "lng": -91.25063,
+        "address": "410 Hagar Street",
+        "phone": "(608) 782-3308",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Consolidated Energy - Lake Mills",
+        "city": "Lake Mills",
+        "state": "IA",
+        "county": "",
+        "lat": 43.39301,
+        "lng": -93.52755,
+        "address": "43437 225th Ave",
+        "phone": "(641) 592-4206",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Consolidated Energy - Mason City",
+        "city": "Mason City",
+        "state": "IA",
+        "county": "",
+        "lat": 43.13584,
+        "lng": -93.22093,
+        "address": "1711 S Pierce Avenue",
+        "phone": "(641) 423-4510",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Consolidated Energy - Plainview",
+        "city": "Plainview",
+        "state": "MN",
+        "county": "",
+        "lat": 44.1643,
+        "lng": -92.17001,
+        "address": "56 3rd Street SW",
+        "phone": "(507) 534-2020",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Consolidated Energy - Postville",
+        "city": "Postville",
+        "state": "IA",
+        "county": "",
+        "lat": 43.08329,
+        "lng": -91.56127,
+        "address": "307 Wilson Street",
+        "phone": "(563) 518-6000",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Consolidated Energy - Rochester",
+        "city": "Rochester",
+        "state": "MN",
+        "county": "",
+        "lat": 44.0388,
+        "lng": -92.49921,
+        "address": "2525 Schuster Ln NW",
+        "phone": "(507) 289-2519",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Consolidated Energy - Rushford",
+        "city": "Rushford",
+        "state": "MN",
+        "county": "",
+        "lat": 46.1597,
+        "lng": -93.258,
+        "address": "43295 Highway 16",
+        "phone": "(507) 864-9229",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Consolidated Energy - Winona",
+        "city": "Winona",
+        "state": "MN",
+        "county": "",
+        "lat": 43.95844,
+        "lng": -91.66817,
+        "address": "27053 County Road 12",
+        "phone": "(507) 452-4743",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "Iowa regional fuels/propane company"
@@ -56351,10 +58242,12 @@
     "ownership": "independent",
     "ownerDetail": "Consolidated Energy Company",
     "states": [
-      "IA"
+      "IA",
+      "MN",
+      "WI"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 10,
+    "totalLocs": 10,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -56371,6 +58264,105 @@
         "address": "",
         "source": "state_approx",
         "needs_geocoding": false
+      },
+      {
+        "name": "Jesup Regional Office",
+        "city": "Jesup",
+        "state": "IA",
+        "county": "",
+        "lat": 42.47415,
+        "lng": -92.0613,
+        "address": "910 Main Street",
+        "phone": "(319) 827-1211",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "La Crosse",
+        "city": "La Crosse",
+        "state": "WI",
+        "county": "",
+        "lat": 43.83456,
+        "lng": -91.25063,
+        "address": "410 Hagar Street",
+        "phone": "(608) 782-3308",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Lake Mills",
+        "city": "Lake Mills",
+        "state": "IA",
+        "county": "",
+        "lat": 43.39301,
+        "lng": -93.52755,
+        "address": "43437 225th Ave",
+        "phone": "(641) 592-4206",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Mason City",
+        "city": "Mason City",
+        "state": "IA",
+        "county": "",
+        "lat": 43.13584,
+        "lng": -93.22093,
+        "address": "1711 S. Pierce Avenue",
+        "phone": "(641) 423-4510",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Plainview",
+        "city": "Plainview",
+        "state": "MN",
+        "county": "",
+        "lat": 44.1643,
+        "lng": -92.17001,
+        "address": "56 3rd Street SW",
+        "phone": "(507) 534-2020",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Postville",
+        "city": "Postville",
+        "state": "IA",
+        "county": "",
+        "lat": 43.08329,
+        "lng": -91.56127,
+        "address": "307 Wilson Street",
+        "phone": "(563) 518-6000",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Rochester",
+        "city": "Rochester",
+        "state": "MN",
+        "county": "",
+        "lat": 44.0388,
+        "lng": -92.49921,
+        "address": "2525 Schuster Ln NW",
+        "phone": "(507) 289-2519",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Rushford",
+        "city": "Rushford",
+        "state": "MN",
+        "county": "",
+        "lat": 46.1597,
+        "lng": -93.258,
+        "address": "43295 Highway 16",
+        "phone": "(507) 864-9229",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Winona",
+        "city": "Winona",
+        "state": "MN",
+        "county": "",
+        "lat": 43.95844,
+        "lng": -91.66817,
+        "address": "27053 County Road 12",
+        "phone": "(507) 452-4743",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "Iowa regional fuels/propane company"
@@ -56453,8 +58445,8 @@
     "states": [
       "ID"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -56471,6 +58463,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Proflame Propane - Jerome",
+        "city": "Jerome",
+        "state": "ID",
+        "county": "",
+        "lat": 42.70911,
+        "lng": -114.52381,
+        "address": "135 Bridon Way",
+        "phone": "(208) 324-0544",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "Idaho regional propane dealer"
@@ -56651,10 +58654,12 @@
     "ownership": "independent",
     "ownerDetail": "Energy West Propane",
     "states": [
-      "ID"
+      "ID",
+      "MT",
+      "WY"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 6,
+    "totalLocs": 6,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -56671,6 +58676,61 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Great Falls (HQ)",
+        "city": "Great Falls",
+        "state": "MT",
+        "county": "",
+        "lat": 47.50431,
+        "lng": -111.30693,
+        "address": "1 1st Ave S",
+        "phone": "",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Cut Bank",
+        "city": "Cut Bank",
+        "state": "MT",
+        "county": "",
+        "lat": 46.6045,
+        "lng": -110.0051,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cascade",
+        "city": "Cascade",
+        "state": "MT",
+        "county": "",
+        "lat": 46.8986,
+        "lng": -109.6767,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "West Yellowstone",
+        "city": "West Yellowstone",
+        "state": "MT",
+        "county": "",
+        "lat": 46.559,
+        "lng": -109.954,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cody service area",
+        "city": "Cody",
+        "state": "WY",
+        "county": "",
+        "lat": 43.1762,
+        "lng": -107.3421,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-state MT/ID propane operator"
@@ -57023,10 +59083,12 @@
     "ownership": "independent",
     "ownerDetail": "Independent family-owned",
     "states": [
-      "IL"
+      "IL",
+      "IN",
+      "KY"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 8,
+    "totalLocs": 8,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -57043,6 +59105,83 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Evansville HQ",
+        "city": "Evansville",
+        "state": "IN",
+        "county": "",
+        "lat": 37.97209,
+        "lng": -87.60978,
+        "address": "406 S Barker Avenue",
+        "phone": "(800) 850-4380",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Bicknell",
+        "city": "Bicknell",
+        "state": "IN",
+        "county": "",
+        "lat": 39.4098,
+        "lng": -86.1872,
+        "address": "7323 N State Road 159",
+        "phone": "(800) 850-4380",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Dale",
+        "city": "Dale",
+        "state": "IN",
+        "county": "",
+        "lat": 38.16692,
+        "lng": -86.97543,
+        "address": "533 E Medcalf Street",
+        "phone": "(800) 850-4380",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Princeton",
+        "city": "Princeton",
+        "state": "IN",
+        "county": "",
+        "lat": 39.9673,
+        "lng": -86.724,
+        "address": "1490 W 225 N",
+        "phone": "(800) 850-4380",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Elkton",
+        "city": "Elkton",
+        "state": "KY",
+        "county": "",
+        "lat": 36.72554,
+        "lng": -87.18928,
+        "address": "1784 Guthrie Road",
+        "phone": "(800) 850-4380",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Henderson",
+        "city": "Henderson",
+        "state": "KY",
+        "county": "",
+        "lat": 37.80567,
+        "lng": -87.63297,
+        "address": "2270 S Green Street",
+        "phone": "(800) 850-4380",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Livermore",
+        "city": "Livermore",
+        "state": "KY",
+        "county": "",
+        "lat": 37.9474,
+        "lng": -86.0733,
+        "address": "4075 US 431 North",
+        "phone": "(800) 850-4380",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Indiana/Illinois multi-location independent"
@@ -57057,10 +59196,14 @@
     "ownership": "independent",
     "ownerDetail": "United Propane Gas (HQ Paducah, KY)",
     "states": [
-      "IL"
+      "IL",
+      "IN",
+      "KY",
+      "MO",
+      "TN"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 18,
+    "totalLocs": 18,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -57077,6 +59220,193 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "United Propane Gas Corporate (Paducah)",
+        "city": "Paducah",
+        "state": "KY",
+        "county": "",
+        "lat": 37.10045,
+        "lng": -88.67363,
+        "address": "4200 Cairo Rd",
+        "phone": "800-874-4427",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Heartland Propane (Herrin)",
+        "city": "Herrin",
+        "state": "IL",
+        "county": "",
+        "lat": 39.6424,
+        "lng": -89.6026,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "South Indiana Propane",
+        "city": "Salem",
+        "state": "IN",
+        "county": "",
+        "lat": 39.5269,
+        "lng": -86.1207,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Calloway County Propane",
+        "city": "Murray",
+        "state": "KY",
+        "county": "",
+        "lat": 37.5814,
+        "lng": -85.3802,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Gasper River Propane",
+        "city": "Auburn",
+        "state": "KY",
+        "county": "",
+        "lat": 37.8439,
+        "lng": -85.8675,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Green River Propane",
+        "city": "Livermore",
+        "state": "KY",
+        "county": "",
+        "lat": 37.9474,
+        "lng": -86.0733,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Graves County Propane",
+        "city": "Mayfield",
+        "state": "KY",
+        "county": "",
+        "lat": 38.1411,
+        "lng": -86.0061,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Midwest Propane",
+        "city": "Trenton",
+        "state": "MO",
+        "county": "",
+        "lat": 38.3649,
+        "lng": -92.6442,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "MO Energy Propane",
+        "city": "Unionville",
+        "state": "MO",
+        "county": "",
+        "lat": 38.3176,
+        "lng": -92.1044,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Small Bootheel Propane",
+        "city": "Sikeston",
+        "state": "MO",
+        "county": "",
+        "lat": 38.3936,
+        "lng": -92.039,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cumberland River Propane",
+        "city": "Springfield",
+        "state": "TN",
+        "county": "",
+        "lat": 36.1904,
+        "lng": -86.276,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Highland Rim Propane",
+        "city": "Manchester",
+        "state": "TN",
+        "county": "",
+        "lat": 35.8231,
+        "lng": -85.9314,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Natchez Trace Propane",
+        "city": "Waynesboro",
+        "state": "TN",
+        "county": "",
+        "lat": 35.6461,
+        "lng": -86.197,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Obion County Propane",
+        "city": "Union City",
+        "state": "TN",
+        "county": "",
+        "lat": 35.9762,
+        "lng": -85.7921,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Quality Propane",
+        "city": "Lebanon",
+        "state": "TN",
+        "county": "",
+        "lat": 36.1443,
+        "lng": -86.0577,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Southern Propane",
+        "city": "Columbia",
+        "state": "TN",
+        "county": "",
+        "lat": 36.1255,
+        "lng": -86.0019,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Stewart County Propane",
+        "city": "Dover",
+        "state": "TN",
+        "county": "",
+        "lat": 35.7854,
+        "lng": -85.9344,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Branch of United Propane Gas, multi-state operator"
@@ -57193,10 +59523,11 @@
     "ownership": "coop",
     "ownerDetail": "MFA Oil Company (farmer-owned cooperative)",
     "states": [
-      "IL"
+      "IL",
+      "MO"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 6,
+    "totalLocs": 6,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -57213,6 +59544,61 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Rogersville MO",
+        "city": "Rogersville",
+        "state": "MO",
+        "county": "",
+        "lat": 38.2467,
+        "lng": -92.0031,
+        "address": "7007 E US Hwy 60",
+        "phone": "(417) 753-9055",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Butler MO",
+        "city": "Butler",
+        "state": "MO",
+        "county": "",
+        "lat": 38.27467,
+        "lng": -94.34911,
+        "address": "975 Elks Dr",
+        "phone": "(660) 679-3532",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Eldon MO",
+        "city": "Eldon",
+        "state": "MO",
+        "county": "",
+        "lat": 38.34488,
+        "lng": -92.56248,
+        "address": "704 Industrial Dr",
+        "phone": "",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Pevely MO",
+        "city": "Pevely",
+        "state": "MO",
+        "county": "",
+        "lat": 38.29227,
+        "lng": -90.39721,
+        "address": "8647 Commercial Blvd",
+        "phone": "",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Shell Knob MO",
+        "city": "Shell Knob",
+        "state": "MO",
+        "county": "",
+        "lat": 38.1082,
+        "lng": -92.2958,
+        "address": "20654 FR 1250",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Large Midwest farmer cooperative"
@@ -57495,8 +59881,8 @@
     "states": [
       "IL"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 4,
+    "totalLocs": 4,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -57513,6 +59899,39 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Evergreen FS - Bloomington HQ/Energy",
+        "city": "Bloomington",
+        "state": "IL",
+        "county": "",
+        "lat": 40.50486,
+        "lng": -88.93975,
+        "address": "402 N Hershey Road",
+        "phone": "(877) 963-2392",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Evergreen FS - Arrowsmith",
+        "city": "Arrowsmith",
+        "state": "IL",
+        "county": "",
+        "lat": 40.44905,
+        "lng": -88.6317,
+        "address": "102 S Main St",
+        "phone": "",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Evergreen FS - Towanda",
+        "city": "Towanda",
+        "state": "IL",
+        "county": "",
+        "lat": 40.5633,
+        "lng": -88.89771,
+        "address": "111 W Adams St",
+        "phone": "",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "Member of GROWMARK FS"
@@ -57527,10 +59946,11 @@
     "ownership": "independent",
     "ownerDetail": "Independent family-owned",
     "states": [
+      "IA",
       "IL"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -57547,6 +59967,17 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Mulgrew Oil and Propane - Dubuque",
+        "city": "Dubuque",
+        "state": "IA",
+        "county": "",
+        "lat": 42.43018,
+        "lng": -90.68934,
+        "address": "10314 Silverwood Drive",
+        "phone": "(563) 583-7386",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "IA/IL regional distributor"
@@ -57694,10 +60125,12 @@
     "ownership": "coop",
     "ownerDetail": "Co-Alliance LLP",
     "states": [
-      "IN"
+      "IN",
+      "MI",
+      "OH"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 15,
+    "totalLocs": 15,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -57714,6 +60147,160 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Angola",
+        "city": "Angola",
+        "state": "IN",
+        "county": "",
+        "lat": 41.63664,
+        "lng": -85.00595,
+        "address": "610 W Broad",
+        "phone": "(260) 665-7427",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Argos",
+        "city": "Argos",
+        "state": "IN",
+        "county": "",
+        "lat": 41.24088,
+        "lng": -86.24688,
+        "address": "15124 N Michigan St",
+        "phone": "(574) 780-0025",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Bringhurst",
+        "city": "Bringhurst",
+        "state": "IN",
+        "county": "",
+        "lat": 40.52612,
+        "lng": -86.52696,
+        "address": "27 W 250 S",
+        "phone": "(574) 967-4168",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Ade (Brook)",
+        "city": "Brook",
+        "state": "IN",
+        "county": "",
+        "lat": 39.914,
+        "lng": -86.5584,
+        "address": "2887 W 883 S",
+        "phone": "(219) 275-2732",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Buchanan",
+        "city": "Buchanan",
+        "state": "MI",
+        "county": "",
+        "lat": 41.81562,
+        "lng": -86.38755,
+        "address": "16724 Bakertown Rd",
+        "phone": "(269) 695-6823",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Chalmers",
+        "city": "Chalmers",
+        "state": "IN",
+        "county": "",
+        "lat": 39.5164,
+        "lng": -86.3392,
+        "address": "5774 S State Rd 43",
+        "phone": "(219) 984-5353",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Goshen Energy",
+        "city": "Goshen",
+        "state": "IN",
+        "county": "",
+        "lat": 41.58443,
+        "lng": -85.82036,
+        "address": "806 E Logan St",
+        "phone": "(574) 533-4131",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Greenville",
+        "city": "Greenville",
+        "state": "OH",
+        "county": "",
+        "lat": 40.09217,
+        "lng": -84.62755,
+        "address": "619 Sater St",
+        "phone": "(937) 548-1122",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Lena (Conover)",
+        "city": "Conover",
+        "state": "OH",
+        "county": "",
+        "lat": 40.0439,
+        "lng": -82.3696,
+        "address": "7436 N Bollinger Rd",
+        "phone": "(937) 368-3856",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Boswell",
+        "city": "Boswell",
+        "state": "IN",
+        "county": "",
+        "lat": 39.5448,
+        "lng": -86.3982,
+        "address": "2802 W St Rd 352",
+        "phone": "(765) 869-5219",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Decatur",
+        "city": "Decatur",
+        "state": "IN",
+        "county": "",
+        "lat": 39.31226,
+        "lng": -85.56132,
+        "address": "1966 W State Rd 224",
+        "phone": "(260) 724-2169",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Hamilton Propane",
+        "city": "Hamilton",
+        "state": "MI",
+        "county": "",
+        "lat": 44.73,
+        "lng": -86.0754,
+        "address": "4670 E Washington St",
+        "phone": "(888) 427-2968",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Avon (HQ)",
+        "city": "Avon",
+        "state": "IN",
+        "county": "",
+        "lat": 39.7738,
+        "lng": -86.4425,
+        "address": "5250 E US Hwy 36",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Tipton",
+        "city": "Tipton",
+        "state": "IN",
+        "county": "",
+        "lat": 40.29461,
+        "lng": -86.04595,
+        "address": "1005 N Berryman Pike",
+        "phone": "",
+        "source": "nominatim_precise"
       }
     ],
     "notes": "Large Indiana farmer cooperative"
@@ -57795,10 +60382,12 @@
     "ownership": "independent",
     "ownerDetail": "Corrigan Oil Company",
     "states": [
-      "IN"
+      "IN",
+      "MI",
+      "OH"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 17,
+    "totalLocs": 17,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -57815,6 +60404,182 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Battle Creek",
+        "city": "Battle Creek",
+        "state": "MI",
+        "county": "",
+        "lat": 42.3195,
+        "lng": -85.19736,
+        "address": "420 W Dickman Road",
+        "phone": "(269) 962-8549",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Brighton (2nd St)",
+        "city": "Brighton",
+        "state": "MI",
+        "county": "",
+        "lat": 44.8014,
+        "lng": -86.201,
+        "address": "775 N Second St",
+        "phone": "(810) 229-6323",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Detroit",
+        "city": "Detroit",
+        "state": "MI",
+        "county": "",
+        "lat": 42.28086,
+        "lng": -83.1432,
+        "address": "11800 Pleasant Street",
+        "phone": "(313) 357-2330",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Greenville",
+        "city": "Greenville",
+        "state": "MI",
+        "county": "",
+        "lat": 43.20613,
+        "lng": -85.24289,
+        "address": "5688 Vining Rd",
+        "phone": "(616) 754-3254",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Ionia",
+        "city": "Ionia",
+        "state": "MI",
+        "county": "",
+        "lat": 42.88649,
+        "lng": -85.07378,
+        "address": "75 E Grand River Ave",
+        "phone": "(616) 527-4370",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Jackson (Napoleon)",
+        "city": "Jackson",
+        "state": "MI",
+        "county": "",
+        "lat": 42.16456,
+        "lng": -84.26299,
+        "address": "7925 Napoleon Road",
+        "phone": "(517) 536-8310",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Manchester",
+        "city": "Manchester",
+        "state": "MI",
+        "county": "",
+        "lat": 44.7539,
+        "lng": -86.6587,
+        "address": "9050 MI State Road 52",
+        "phone": "(734) 428-8366",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Milan",
+        "city": "Milan",
+        "state": "MI",
+        "county": "",
+        "lat": 42.03231,
+        "lng": -83.7271,
+        "address": "11204 Cone Road",
+        "phone": "(800) 327-8645",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Modoc",
+        "city": "Modoc",
+        "state": "IN",
+        "county": "",
+        "lat": 40.04625,
+        "lng": -85.1279,
+        "address": "245 N Elm Street",
+        "phone": "(765) 853-5381",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Muncie",
+        "city": "Muncie",
+        "state": "IN",
+        "county": "",
+        "lat": 40.21907,
+        "lng": -85.34203,
+        "address": "3919 E McGalliard Road",
+        "phone": "(765) 284-7374",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "New Baltimore",
+        "city": "New Baltimore",
+        "state": "MI",
+        "county": "",
+        "lat": 42.68227,
+        "lng": -82.73524,
+        "address": "37280 Green Street",
+        "phone": "(586) 725-6300",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Rogers City",
+        "city": "Rogers City",
+        "state": "MI",
+        "county": "",
+        "lat": 45.4086,
+        "lng": -83.82506,
+        "address": "285 S Bradley Hwy",
+        "phone": "(989) 734-3835",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Sturgis",
+        "city": "Sturgis",
+        "state": "MI",
+        "county": "",
+        "lat": 41.81409,
+        "lng": -85.42382,
+        "address": "1100 N Clay Street",
+        "phone": "(269) 651-9674",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Toledo",
+        "city": "Toledo",
+        "state": "OH",
+        "county": "",
+        "lat": 41.63801,
+        "lng": -83.61487,
+        "address": "3015 Hill Avenue",
+        "phone": "(419) 491-2641",
+        "source": "nominatim_precise"
+      },
+      {
+        "name": "Wheeler",
+        "city": "Wheeler",
+        "state": "MI",
+        "county": "",
+        "lat": 44.648,
+        "lng": -86.4255,
+        "address": "8057 Monroe Road",
+        "phone": "(989) 546-4337",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Whitmore Lake",
+        "city": "Whitmore Lake",
+        "state": "MI",
+        "county": "",
+        "lat": 44.9658,
+        "lng": -86.4813,
+        "address": "11818 Whitmore Lake Road",
+        "phone": "(734) 449-0944",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "MI-based multi-state"
@@ -57962,10 +60727,11 @@
     "ownership": "coop",
     "ownerDetail": "Ceres Solutions Cooperative",
     "states": [
-      "IN"
+      "IN",
+      "MI"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 8,
+    "totalLocs": 8,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -57982,6 +60748,83 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Keystone Cooperative HQ (Indianapolis)",
+        "city": "Indianapolis",
+        "state": "IN",
+        "county": "",
+        "lat": 39.802,
+        "lng": -86.6363,
+        "address": "770 N High School Rd",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Fremont Administrative",
+        "city": "Fremont",
+        "state": "MI",
+        "county": "",
+        "lat": 44.8091,
+        "lng": -86.5793,
+        "address": "720 W Main St",
+        "phone": "231-924-3851",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "R and F Agronomy",
+        "city": "Anderson",
+        "state": "IN",
+        "county": "",
+        "lat": 39.7335,
+        "lng": -86.0212,
+        "address": "4002 W County Rd 600 N",
+        "phone": "765-754-7449",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Decatur Agronomy",
+        "city": "Decatur",
+        "state": "IN",
+        "county": "",
+        "lat": 40.0711,
+        "lng": -86.0647,
+        "address": "1966 W State Rd 224",
+        "phone": "260-724-2169",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Goshen Agronomy",
+        "city": "Goshen",
+        "state": "IN",
+        "county": "",
+        "lat": 39.808,
+        "lng": -86.6243,
+        "address": "66058 County Road 15",
+        "phone": "574-831-2231",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Angola Propane",
+        "city": "Angola",
+        "state": "IN",
+        "county": "",
+        "lat": 39.4781,
+        "lng": -86.7145,
+        "address": "610 W Broad",
+        "phone": "260-665-7427",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Bainbridge Propane",
+        "city": "Bainbridge",
+        "state": "IN",
+        "county": "",
+        "lat": 39.7896,
+        "lng": -86.1022,
+        "address": "6922 N County Rd 100 E",
+        "phone": "765-522-2800",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Large Indiana farmer cooperative"
@@ -58195,10 +61038,11 @@
     "ownership": "independent",
     "ownerDetail": "Independent",
     "states": [
-      "KS"
+      "KS",
+      "OK"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -58215,6 +61059,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Cleveland Petroleum Products (HQ)",
+        "city": "Cleveland",
+        "state": "OK",
+        "county": "",
+        "lat": 35.1331,
+        "lng": -99.0797,
+        "address": "2420 E Highway 64",
+        "phone": "(918) 358-3310",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "KS regional"
@@ -58925,10 +61780,11 @@
     "ownership": "independent",
     "ownerDetail": "Premier Energy",
     "states": [
+      "IN",
       "KY"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 8,
+    "totalLocs": 8,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -58945,6 +61801,83 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Premier Companies HQ (Seymour)",
+        "city": "Seymour",
+        "state": "IN",
+        "county": "",
+        "lat": 40.0974,
+        "lng": -86.4896,
+        "address": "811 W 2nd Street",
+        "phone": "812-522-4911",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Somerset",
+        "city": "Somerset",
+        "state": "KY",
+        "county": "",
+        "lat": 37.6485,
+        "lng": -85.8184,
+        "address": "605 S Main St",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Harrodsburg (Factory St)",
+        "city": "Harrodsburg",
+        "state": "KY",
+        "county": "",
+        "lat": 37.5151,
+        "lng": -85.687,
+        "address": "419 Factory St",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Pendleton",
+        "city": "Pendleton",
+        "state": "KY",
+        "county": "",
+        "lat": 37.7104,
+        "lng": -85.6664,
+        "address": "602 Pendleton Rd",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Columbia",
+        "city": "Columbia",
+        "state": "KY",
+        "county": "",
+        "lat": 38.1589,
+        "lng": -85.3848,
+        "address": "706 Burkesville St",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Warsaw",
+        "city": "Warsaw",
+        "state": "KY",
+        "county": "",
+        "lat": 38.0775,
+        "lng": -85.8637,
+        "address": "303 E Main St",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cynthiana",
+        "city": "Cynthiana",
+        "state": "KY",
+        "county": "",
+        "lat": 37.839,
+        "lng": -85.7448,
+        "address": "2012 US-27",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "KY/regional"
@@ -59554,10 +62487,11 @@
     "ownership": "independent",
     "ownerDetail": "Independent family-owned",
     "states": [
-      "MA"
+      "MA",
+      "NH"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -59574,6 +62508,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Henniker (Main Office)",
+        "city": "Henniker",
+        "state": "NH",
+        "county": "",
+        "lat": 44.2866,
+        "lng": -71.5817,
+        "address": "20 Hall Avenue",
+        "phone": "(603) 428-3333",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "NH/MA regional"
@@ -59955,8 +62900,8 @@
     "states": [
       "MD"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -59973,6 +62918,17 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Mrohs Gas Corporate Office",
+        "city": "Crisfield",
+        "state": "MD",
+        "county": "",
+        "lat": 39.1674,
+        "lng": -76.9851,
+        "address": "4471 Crisfield Hwy",
+        "phone": "410-968-0252",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "MD regional"
@@ -60021,10 +62977,12 @@
     "ownership": "independent",
     "ownerDetail": "PepUp Inc.",
     "states": [
-      "MD"
+      "DE",
+      "MD",
+      "VA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 10,
+    "totalLocs": 10,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -60041,6 +62999,105 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "PepUp - Federalsburg District Office",
+        "city": "Federalsburg",
+        "state": "MD",
+        "county": "",
+        "lat": 38.8489,
+        "lng": -77.2146,
+        "address": "3941 Federalsburg Hwy",
+        "phone": "(410) 754-2000",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "PepUp - Cambridge District Office",
+        "city": "Cambridge",
+        "state": "MD",
+        "county": "",
+        "lat": 38.7586,
+        "lng": -77.2365,
+        "address": "2918 Old Route 50",
+        "phone": "(410) 228-8500",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "PepUp - Grasonville District Office",
+        "city": "Grasonville",
+        "state": "MD",
+        "county": "",
+        "lat": 38.7873,
+        "lng": -77.441,
+        "address": "216 VFW Ave",
+        "phone": "(410) 827-3284",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "PepUp - Galena District Office",
+        "city": "Galena",
+        "state": "MD",
+        "county": "",
+        "lat": 39.0389,
+        "lng": -77.0001,
+        "address": "13255 Augustine Herman Hwy",
+        "phone": "(410) 648-5856",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "PepUp - Georgetown District Office",
+        "city": "Georgetown",
+        "state": "DE",
+        "county": "",
+        "lat": 39.345,
+        "lng": -75.2457,
+        "address": "24987 DuPont Hwy",
+        "phone": "(302) 856-6300",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "PepUp - Pocomoke City District Office",
+        "city": "Pocomoke City",
+        "state": "MD",
+        "county": "",
+        "lat": 39.0503,
+        "lng": -77.5677,
+        "address": "1211 Ocean Hwy",
+        "phone": "(410) 957-9535",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "PepUp - Tasley District Office",
+        "city": "Tasley",
+        "state": "VA",
+        "county": "",
+        "lat": 37.921,
+        "lng": -79.5822,
+        "address": "24411 Lankford Hwy",
+        "phone": "(757) 787-3580",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "PepUp - Belle Haven District Office",
+        "city": "Belle Haven",
+        "state": "VA",
+        "county": "",
+        "lat": 38.2118,
+        "lng": -79.6583,
+        "address": "15478 Merry Cat Ln",
+        "phone": "(757) 442-6091",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "PepUp - Glen Burnie District Office",
+        "city": "Glen Burnie",
+        "state": "MD",
+        "county": "",
+        "lat": 39.1424,
+        "lng": -77.4616,
+        "address": "898 Airport Park Rd, Suite 103",
+        "phone": "(410) 923-9199",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "MD/DE regional"
@@ -60057,8 +63114,8 @@
     "states": [
       "ME"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -60075,6 +63132,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Acadia Fuel (HQ)",
+        "city": "Southwest Harbor",
+        "state": "ME",
+        "county": "",
+        "lat": 45.0198,
+        "lng": -68.8453,
+        "address": "77 Seal Cove Rd",
+        "phone": "(207) 244-9664",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Maine regional"
@@ -60157,8 +63225,8 @@
     "states": [
       "ME"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 8,
+    "totalLocs": 8,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -60175,6 +63243,83 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Hampden Energy Services (Corporate HQ)",
+        "city": "Hampden",
+        "state": "ME",
+        "county": "",
+        "lat": 44.9668,
+        "lng": -69.2487,
+        "address": "81 Mecaw Rd, PO Box 688",
+        "phone": "207-947-3835",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Dennysville Energy Services / Eastern Plumbing & Heating",
+        "city": "Dennysville",
+        "state": "ME",
+        "county": "",
+        "lat": 45.5917,
+        "lng": -68.9867,
+        "address": "263 US-1",
+        "phone": "207-726-4700",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Penobscot Energy Services",
+        "city": "Penobscot",
+        "state": "ME",
+        "county": "",
+        "lat": 45.4185,
+        "lng": -68.6791,
+        "address": "1441 Castine Rd",
+        "phone": "207-326-8808",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Machias Energy Services",
+        "city": "Machias",
+        "state": "ME",
+        "county": "",
+        "lat": 45.6241,
+        "lng": -68.7782,
+        "address": "32 Old County Rd, PO Box 336",
+        "phone": "207-255-4501",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Beals / Carver Energy Services",
+        "city": "Beals",
+        "state": "ME",
+        "county": "",
+        "lat": 44.962,
+        "lng": -68.7919,
+        "address": "45 Bay View Drive, PO Box 62",
+        "phone": "207-497-3400",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ellsworth Energy Services",
+        "city": "Ellsworth",
+        "state": "ME",
+        "county": "",
+        "lat": 45.6485,
+        "lng": -69.3254,
+        "address": "372 High Street, PO Box 1647",
+        "phone": "207-667-0695",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Lincoln Energy Services",
+        "city": "Lincoln",
+        "state": "ME",
+        "county": "",
+        "lat": 45.113,
+        "lng": -68.6134,
+        "address": "110 River Rd",
+        "phone": "207-794-2200",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Maine multi-location"
@@ -61015,10 +64160,11 @@
     "ownership": "independent",
     "ownerDetail": "Independent",
     "states": [
-      "MN"
+      "MN",
+      "WI"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 3,
+    "totalLocs": 3,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -61035,6 +64181,28 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Superior Fuel - Duluth",
+        "city": "Duluth",
+        "state": "MN",
+        "county": "",
+        "lat": 46.0276,
+        "lng": -93.3259,
+        "address": "5102 S Cant Rd",
+        "phone": "(218) 722-2050",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Superior Fuel - Superior WI",
+        "city": "Superior",
+        "state": "WI",
+        "county": "",
+        "lat": 44.9893,
+        "lng": -89.6893,
+        "address": "1330 Tower Ave",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "MN/WI regional"
@@ -61252,8 +64420,8 @@
     "states": [
       "MN"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 12,
+    "totalLocs": 12,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -61270,6 +64438,127 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Rahn's Oil & Propane - Main Office Melrose",
+        "city": "Melrose",
+        "state": "MN",
+        "county": "",
+        "lat": 46.2332,
+        "lng": -93.3503,
+        "address": "1220 East Main Street",
+        "phone": "(320) 256-3680",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Alexandria Gas & Grocery",
+        "city": "Alexandria",
+        "state": "MN",
+        "county": "",
+        "lat": 46.5268,
+        "lng": -93.1629,
+        "address": "",
+        "phone": "(320) 763-5317",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Bowlus Gas & Grocery",
+        "city": "Bowlus",
+        "state": "MN",
+        "county": "",
+        "lat": 46.439,
+        "lng": -93.1496,
+        "address": "",
+        "phone": "(320) 584-5603",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Darwin Gas & Grocery",
+        "city": "Darwin",
+        "state": "MN",
+        "county": "",
+        "lat": 46.7211,
+        "lng": -93.3712,
+        "address": "",
+        "phone": "(320) 693-2586",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Freeport Cenex",
+        "city": "Freeport",
+        "state": "MN",
+        "county": "",
+        "lat": 46.3024,
+        "lng": -93.222,
+        "address": "",
+        "phone": "(320) 836-2850",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Grey Eagle Gas & Grocery",
+        "city": "Grey Eagle",
+        "state": "MN",
+        "county": "",
+        "lat": 46.741,
+        "lng": -93.5924,
+        "address": "",
+        "phone": "(320) 285-2336",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Grove City Gas & Grocery",
+        "city": "Grove City",
+        "state": "MN",
+        "county": "",
+        "lat": 46.3558,
+        "lng": -93.444,
+        "address": "",
+        "phone": "(320) 857-2741",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Meire Grove Gas & Grocery",
+        "city": "Meire Grove",
+        "state": "MN",
+        "county": "",
+        "lat": 46.1318,
+        "lng": -93.2947,
+        "address": "",
+        "phone": "(320) 987-3297",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Nelson Gas & Grocery",
+        "city": "Nelson",
+        "state": "MN",
+        "county": "",
+        "lat": 46.3049,
+        "lng": -93.0243,
+        "address": "",
+        "phone": "(320) 763-6029",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "New Munich Gas & Grocery",
+        "city": "New Munich",
+        "state": "MN",
+        "county": "",
+        "lat": 46.7389,
+        "lng": -93.743,
+        "address": "",
+        "phone": "(320) 837-5054",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "St. Stephen Gas & Grocery",
+        "city": "St. Stephen",
+        "state": "MN",
+        "county": "",
+        "lat": 46.2461,
+        "lng": -93.3327,
+        "address": "",
+        "phone": "(320) 253-9508",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "MN regional"
@@ -61725,10 +65014,11 @@
     "ownership": "independent",
     "ownerDetail": "Member-owned ag cooperative",
     "states": [
+      "IA",
       "MT"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -61745,6 +65035,17 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Prairie Ag Commodities - Mount Union",
+        "city": "Mount Union",
+        "state": "IA",
+        "county": "",
+        "lat": 41.6651,
+        "lng": -93.337,
+        "address": "PO Box 8",
+        "phone": "(319) 865-1450",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-location farm coop with energy division, MT"
@@ -61965,8 +65266,8 @@
     "states": [
       "MT"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 7,
+    "totalLocs": 7,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -61983,6 +65284,72 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Billings (HQ)",
+        "city": "Billings",
+        "state": "MT",
+        "county": "",
+        "lat": 46.959,
+        "lng": -109.7338,
+        "address": "1818 Minnesota Ave, PO Box 1078",
+        "phone": "406-252-5519",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Glendive",
+        "city": "Glendive",
+        "state": "MT",
+        "county": "",
+        "lat": 46.9607,
+        "lng": -110.0121,
+        "address": "56 Highway 16, PO Box 1388",
+        "phone": "406-377-8325",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Terry",
+        "city": "Terry",
+        "state": "MT",
+        "county": "",
+        "lat": 46.7581,
+        "lng": -109.9805,
+        "address": "14 Ten Mile Road",
+        "phone": "406-635-4124",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Hysham",
+        "city": "Hysham",
+        "state": "MT",
+        "county": "",
+        "lat": 46.4217,
+        "lng": -110.2736,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Savage",
+        "city": "Savage",
+        "state": "MT",
+        "county": "",
+        "lat": 46.7967,
+        "lng": -109.6737,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Sidney",
+        "city": "Sidney",
+        "state": "MT",
+        "county": "",
+        "lat": 46.6058,
+        "lng": -109.8271,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "MT regional petroleum and propane distributor"
@@ -61999,8 +65366,8 @@
     "states": [
       "MT"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 6,
+    "totalLocs": 6,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -62017,6 +65384,61 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Rocky Mountain Supply - Belgrade Retail",
+        "city": "Belgrade",
+        "state": "MT",
+        "county": "",
+        "lat": 46.723,
+        "lng": -110.2698,
+        "address": "350 Jackrabbit Lane",
+        "phone": "(406) 388-4008",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rocky Mountain Supply - Dillon Retail",
+        "city": "Dillon",
+        "state": "MT",
+        "county": "",
+        "lat": 46.8937,
+        "lng": -109.7877,
+        "address": "700 North Montana St",
+        "phone": "(406) 683-2308",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rocky Mountain Supply - Ennis Retail",
+        "city": "Ennis",
+        "state": "MT",
+        "county": "",
+        "lat": 46.9817,
+        "lng": -110.376,
+        "address": "4999 US Hwy 287 N",
+        "phone": "(406) 682-4315",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rocky Mountain Supply - Townsend Retail",
+        "city": "Townsend",
+        "state": "MT",
+        "county": "",
+        "lat": 46.8776,
+        "lng": -109.8913,
+        "address": "310 S Front St",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rocky Mountain Supply - Amsterdam Cardlock",
+        "city": "Manhattan",
+        "state": "MT",
+        "county": "",
+        "lat": 46.717,
+        "lng": -110.2686,
+        "address": "6685 Amsterdam Rd",
+        "phone": "(406) 388-6116",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-location MT ag coop; Ennis branch"
@@ -62065,10 +65487,16 @@
     "ownership": "independent",
     "ownerDetail": "Valley Wide Cooperative",
     "states": [
-      "MT"
+      "CA",
+      "ID",
+      "MT",
+      "NV",
+      "OR",
+      "UT",
+      "WA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 23,
+    "totalLocs": 23,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -62085,6 +65513,248 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Nampa Valley Wide Country Store",
+        "city": "Nampa",
+        "state": "ID",
+        "county": "",
+        "lat": 45.6692,
+        "lng": -113.8272,
+        "address": "9065 Booker Ln",
+        "phone": "(208) 466-1766",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "American Falls",
+        "city": "American Falls",
+        "state": "ID",
+        "county": "",
+        "lat": 45.2888,
+        "lng": -114.4675,
+        "address": "2775 Neu Rd",
+        "phone": "(208) 372-7020",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Arco",
+        "city": "Arco",
+        "state": "ID",
+        "county": "",
+        "lat": 45.3381,
+        "lng": -113.8097,
+        "address": "112 E Grand Ave",
+        "phone": "(208) 527-8209",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ashton",
+        "city": "Ashton",
+        "state": "ID",
+        "county": "",
+        "lat": 45.6474,
+        "lng": -113.7536,
+        "address": "634 Walnut St",
+        "phone": "(208) 652-7796",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Basin City/Mesa Valley",
+        "city": "Mesa",
+        "state": "WA",
+        "county": "",
+        "lat": 47.3649,
+        "lng": -121.1442,
+        "address": "22481 North Glade Road",
+        "phone": "(509) 269-4444",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Chehalis",
+        "city": "Chehalis",
+        "state": "WA",
+        "county": "",
+        "lat": 47.4279,
+        "lng": -120.9928,
+        "address": "250 Northwest Quincy Place",
+        "phone": "(360) 748-9277",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cornelius",
+        "city": "Cornelius",
+        "state": "OR",
+        "county": "",
+        "lat": 43.9651,
+        "lng": -120.3171,
+        "address": "986 N Holladay St",
+        "phone": "(503) 359-4289",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Coulee City",
+        "city": "Coulee City",
+        "state": "WA",
+        "county": "",
+        "lat": 47.339,
+        "lng": -120.6996,
+        "address": "310 W Main",
+        "phone": "(509) 632-5292",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Delta",
+        "city": "Delta",
+        "state": "UT",
+        "county": "",
+        "lat": 39.1317,
+        "lng": -111.5104,
+        "address": "25 W 1000 N",
+        "phone": "(435) 572-0244",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Donald",
+        "city": "Donald",
+        "state": "OR",
+        "county": "",
+        "lat": 43.8127,
+        "lng": -120.4466,
+        "address": "10803 Oak Street",
+        "phone": "(503) 678-5831",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Edwall",
+        "city": "Edwall",
+        "state": "WA",
+        "county": "",
+        "lat": 47.3764,
+        "lng": -121.2663,
+        "address": "16715 N Westerberg St",
+        "phone": "(509) 236-2231",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Emmett",
+        "city": "Emmett",
+        "state": "ID",
+        "county": "",
+        "lat": 45.2138,
+        "lng": -114.1697,
+        "address": "607 North Boise Avenue",
+        "phone": "(208) 365-4629",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Fallon",
+        "city": "Fallon",
+        "state": "NV",
+        "county": "",
+        "lat": 38.4016,
+        "lng": -116.7086,
+        "address": "500 Gummow Dr",
+        "phone": "(775) 461-2192",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Grandview",
+        "city": "Grandview",
+        "state": "WA",
+        "county": "",
+        "lat": 47.3648,
+        "lng": -121.2158,
+        "address": "1141 Highland Road",
+        "phone": "(509) 882-3764",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Greenleaf",
+        "city": "Greenleaf",
+        "state": "ID",
+        "county": "",
+        "lat": 45.8324,
+        "lng": -114.195,
+        "address": "20870 Van Slyke Road",
+        "phone": "(208) 453-5960",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Hansen",
+        "city": "Hansen",
+        "state": "ID",
+        "county": "",
+        "lat": 45.3415,
+        "lng": -114.1338,
+        "address": "22657 Hwy 30",
+        "phone": "(208) 423-5574",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Harrisburg",
+        "city": "Harrisburg",
+        "state": "OR",
+        "county": "",
+        "lat": 44.26,
+        "lng": -120.7084,
+        "address": "560 Lasalle Street",
+        "phone": "(541) 995-6314",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Idaho Falls",
+        "city": "Idaho Falls",
+        "state": "ID",
+        "county": "",
+        "lat": 45.4467,
+        "lng": -113.7531,
+        "address": "4750 South 15th West",
+        "phone": "(208) 523-0751",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Kerman",
+        "city": "Kerman",
+        "state": "CA",
+        "county": "",
+        "lat": 37.6331,
+        "lng": -119.4129,
+        "address": "12800 W Shields Ave",
+        "phone": "(559) 474-4400",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Kittitas",
+        "city": "Kittitas",
+        "state": "WA",
+        "county": "",
+        "lat": 47.3105,
+        "lng": -121.1806,
+        "address": "200 South Main Street",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Davenport",
+        "city": "Davenport",
+        "state": "WA",
+        "county": "",
+        "lat": 47.1964,
+        "lng": -120.5399,
+        "address": "39100 Sunset Hwy E",
+        "phone": "(509) 725-3321",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Dayton",
+        "city": "Dayton",
+        "state": "WA",
+        "county": "",
+        "lat": 47.1965,
+        "lng": -121.2832,
+        "address": "108 N Pine St",
+        "phone": "(509) 382-4581",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-state Pacific NW ag cooperative; Salmon ID/MT branch"
@@ -62373,8 +66043,8 @@
     "states": [
       "NC"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 7,
+    "totalLocs": 7,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -62391,6 +66061,72 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Parker Gas - Smithfield",
+        "city": "Smithfield",
+        "state": "NC",
+        "county": "",
+        "lat": 35.5683,
+        "lng": -80.1115,
+        "address": "",
+        "phone": "(919) 300-4311",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Parker Gas - Newton Grove",
+        "city": "Newton Grove",
+        "state": "NC",
+        "county": "",
+        "lat": 35.3413,
+        "lng": -79.5609,
+        "address": "",
+        "phone": "(910) 249-4088",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Parker Gas - Fayetteville",
+        "city": "Fayetteville",
+        "state": "NC",
+        "county": "",
+        "lat": 35.4475,
+        "lng": -79.9175,
+        "address": "",
+        "phone": "(910) 359-3141",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Parker Gas - Clinton",
+        "city": "Clinton",
+        "state": "NC",
+        "county": "",
+        "lat": 34.8069,
+        "lng": -80.0559,
+        "address": "",
+        "phone": "(910) 682-3151",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Parker Gas - Wilmington",
+        "city": "Wilmington",
+        "state": "NC",
+        "county": "",
+        "lat": 35.0584,
+        "lng": -79.8678,
+        "address": "",
+        "phone": "(910) 319-4070",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Parker Gas - Mt. Olive",
+        "city": "Mt. Olive",
+        "state": "NC",
+        "county": "",
+        "lat": 35.5448,
+        "lng": -79.659,
+        "address": "",
+        "phone": "(919) 551-4170",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Eastern NC multi-location propane; Clinton, Fayetteville, Wilmington, Smithfield, Newton Grove"
@@ -62509,8 +66245,8 @@
     "states": [
       "NC"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -62527,6 +66263,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Quality Oil Company HQ",
+        "city": "Winston-Salem",
+        "state": "NC",
+        "county": "",
+        "lat": 35.1775,
+        "lng": -79.9362,
+        "address": "1540 Silas Creek Pkwy",
+        "phone": "(336) 722-3441",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Winston-Salem NC; petroleum distribution and propane, multi-location"
@@ -62577,8 +66324,8 @@
     "states": [
       "ND"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 5,
+    "totalLocs": 5,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -62595,6 +66342,50 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Wimbledon (Main Office)",
+        "city": "Wimbledon",
+        "state": "ND",
+        "county": "",
+        "lat": 47.2631,
+        "lng": -100.3228,
+        "address": "355 Highway 9",
+        "phone": "(701) 435-2406",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cooperstown",
+        "city": "Cooperstown",
+        "state": "ND",
+        "county": "",
+        "lat": 47.7507,
+        "lng": -100.2072,
+        "address": "401 4th St SW",
+        "phone": "(701) 797-2040",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Carrington - Energy Office",
+        "city": "Carrington",
+        "state": "ND",
+        "county": "",
+        "lat": 47.1868,
+        "lng": -100.6025,
+        "address": "6710 Highway 200",
+        "phone": "(701) 652-3172",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Sutton",
+        "city": "Sutton",
+        "state": "ND",
+        "county": "",
+        "lat": 47.7059,
+        "lng": -100.3077,
+        "address": "120 99th Ave SE, County Road 3",
+        "phone": "(701) 769-2334",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-location ND ag coop; Cooperstown branch"
@@ -62643,10 +66434,11 @@
     "ownership": "independent",
     "ownerDetail": "CHS Inc. cooperative",
     "states": [
-      "ND"
+      "ND",
+      "SD"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 14,
+    "totalLocs": 14,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -62663,6 +66455,149 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Belfield",
+        "city": "Belfield",
+        "state": "ND",
+        "county": "",
+        "lat": 47.6456,
+        "lng": -100.6267,
+        "address": "305 1st Ave SE",
+        "phone": "701-575-4386",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Boyle Terminal",
+        "city": "Taylor",
+        "state": "ND",
+        "county": "",
+        "lat": 47.417,
+        "lng": -99.9141,
+        "address": "3645 98th Ave SW",
+        "phone": "701-483-6212",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "CHS Nutrition Feed Plant",
+        "city": "Dickinson",
+        "state": "ND",
+        "county": "",
+        "lat": 47.8167,
+        "lng": -100.5425,
+        "address": "4855 GTA Dr",
+        "phone": "701-483-1277",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Elgin",
+        "city": "Elgin",
+        "state": "ND",
+        "county": "",
+        "lat": 47.6663,
+        "lng": -100.2086,
+        "address": "110 South Main St",
+        "phone": "701-941-9630",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Gladstone",
+        "city": "Gladstone",
+        "state": "ND",
+        "county": "",
+        "lat": 47.8966,
+        "lng": -100.0341,
+        "address": "471 Rothschiller St",
+        "phone": "701-483-0021",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Hettinger",
+        "city": "Hettinger",
+        "state": "ND",
+        "county": "",
+        "lat": 47.3892,
+        "lng": -100.3156,
+        "address": "302 Mirror Lake Road",
+        "phone": "701-941-8880",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Killdeer",
+        "city": "Killdeer",
+        "state": "ND",
+        "county": "",
+        "lat": 47.803,
+        "lng": -100.6154,
+        "address": "200 Railroad St",
+        "phone": "701-483-4554",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Lemmon",
+        "city": "Lemmon",
+        "state": "SD",
+        "county": "",
+        "lat": 44.3077,
+        "lng": -100.6283,
+        "address": "201 2nd St E",
+        "phone": "605-898-1540",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "New England",
+        "city": "New England",
+        "state": "ND",
+        "county": "",
+        "lat": 47.852,
+        "lng": -100.5107,
+        "address": "170 Elevator Road",
+        "phone": "701-483-4555",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "New Salem",
+        "city": "New Salem",
+        "state": "ND",
+        "county": "",
+        "lat": 47.8987,
+        "lng": -100.6016,
+        "address": "103 South 3rd St",
+        "phone": "701-204-7044",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Reeder",
+        "city": "Reeder",
+        "state": "ND",
+        "county": "",
+        "lat": 47.5374,
+        "lng": -100.6007,
+        "address": "502 Railroad Ave",
+        "phone": "701-941-8675",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Regent",
+        "city": "Regent",
+        "state": "ND",
+        "county": "",
+        "lat": 47.4284,
+        "lng": -100.0702,
+        "address": "120 Cannonball St",
+        "phone": "701-941-9885",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Richardton",
+        "city": "Richardton",
+        "state": "ND",
+        "county": "",
+        "lat": 47.6589,
+        "lng": -100.6625,
+        "address": "351 N Ave",
+        "phone": "701-483-4559",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Part of CHS Inc., largest US ag coop; energy division includes propane"
@@ -62917,8 +66852,8 @@
     "states": [
       "ND"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 5,
+    "totalLocs": 5,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -62935,6 +66870,50 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Wimbledon Main Office",
+        "city": "Wimbledon",
+        "state": "ND",
+        "county": "",
+        "lat": 47.2631,
+        "lng": -100.3228,
+        "address": "355 Highway 9",
+        "phone": "(701) 435-2406",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cooperstown",
+        "city": "Cooperstown",
+        "state": "ND",
+        "county": "",
+        "lat": 47.7507,
+        "lng": -100.2072,
+        "address": "402 4th St SW",
+        "phone": "(701) 797-2040",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Carrington",
+        "city": "Carrington",
+        "state": "ND",
+        "county": "",
+        "lat": 47.1868,
+        "lng": -100.6025,
+        "address": "77 4th Ave S",
+        "phone": "(701) 652-3949",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Sutton",
+        "city": "Sutton",
+        "state": "ND",
+        "county": "",
+        "lat": 47.7059,
+        "lng": -100.3077,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Main office of multi-location ND ag coop"
@@ -63495,8 +67474,8 @@
     "states": [
       "NH"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 3,
+    "totalLocs": 3,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -63513,6 +67492,28 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Concord",
+        "city": "Concord",
+        "state": "NH",
+        "county": "",
+        "lat": 44.3016,
+        "lng": -71.5346,
+        "address": "75 Regional Drive",
+        "phone": "(603) 225-6660",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Derry",
+        "city": "Derry",
+        "state": "NH",
+        "county": "",
+        "lat": 44.2507,
+        "lng": -71.5072,
+        "address": "1 B Street",
+        "phone": "(603) 437-1906",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "NH regional propane supplier"
@@ -63631,8 +67632,8 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 5,
+    "totalLocs": 5,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -63649,6 +67650,50 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Yankee Propane - Franklin Lakes",
+        "city": "Franklin Lakes",
+        "state": "NJ",
+        "county": "",
+        "lat": 40.2072,
+        "lng": -74.6842,
+        "address": "889 Circle Ave",
+        "phone": "(973) 864-2711",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Yankee Propane - Franklin",
+        "city": "Franklin",
+        "state": "NJ",
+        "county": "",
+        "lat": 40.2265,
+        "lng": -74.8988,
+        "address": "3238 State Rt 94",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Yankee Propane - Newton",
+        "city": "Newton",
+        "state": "NJ",
+        "county": "",
+        "lat": 40.2784,
+        "lng": -74.8983,
+        "address": "4 High St",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Yankee Propane - Stockholm",
+        "city": "Stockholm",
+        "state": "NJ",
+        "county": "",
+        "lat": 40.0431,
+        "lng": -74.7439,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "NJ regional propane dealer"
@@ -63767,8 +67812,8 @@
     "states": [
       "NM"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 3,
+    "totalLocs": 3,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -63785,6 +67830,28 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Angel Fire Office",
+        "city": "Angel Fire",
+        "state": "NM",
+        "county": "",
+        "lat": 34.1646,
+        "lng": -106.0097,
+        "address": "19 Agua Rd",
+        "phone": "(800) 916-2510",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Taos Office",
+        "city": "Taos",
+        "state": "NM",
+        "county": "",
+        "lat": 33.9529,
+        "lng": -106.4438,
+        "address": "State Highway 522",
+        "phone": "(575) 758-8400",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "NM regional propane and natural gas"
@@ -64889,8 +68956,8 @@
     "states": [
       "OH"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -64907,6 +68974,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "AK Energy - Jackson",
+        "city": "Jackson",
+        "state": "OH",
+        "county": "",
+        "lat": 40.2572,
+        "lng": -82.6842,
+        "address": "433 Dixon Run Rd",
+        "phone": "(740) 688-8758",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "OH multi-location propane/fuel; Jackson branch"
@@ -65127,8 +69205,8 @@
     "states": [
       "OH"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -65145,6 +69223,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "AK Energy (Jackson)",
+        "city": "Jackson",
+        "state": "OH",
+        "county": "",
+        "lat": 40.2572,
+        "lng": -82.6842,
+        "address": "433 Dixon Run Rd",
+        "phone": "740-688-8758",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "OH multi-location propane/fuel; Gallia branch"
@@ -65261,10 +69350,11 @@
     "ownership": "independent",
     "ownerDetail": "Family-owned",
     "states": [
-      "OK"
+      "OK",
+      "TX"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 5,
+    "totalLocs": 5,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -65281,6 +69371,50 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Gainesville (Main Office)",
+        "city": "Gainesville",
+        "state": "TX",
+        "county": "",
+        "lat": 30.8159,
+        "lng": -100.298,
+        "address": "1405 W. Hwy 82",
+        "phone": "(940) 665-3457",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Sherman",
+        "city": "Sherman",
+        "state": "TX",
+        "county": "",
+        "lat": 31.0462,
+        "lng": -100.0376,
+        "address": "3101 US-82",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Bowie",
+        "city": "Bowie",
+        "state": "TX",
+        "county": "",
+        "lat": 30.8124,
+        "lng": -99.777,
+        "address": "3074 TX-59",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Krum",
+        "city": "Krum",
+        "state": "TX",
+        "county": "",
+        "lat": 30.9126,
+        "lng": -100.1648,
+        "address": "5549 Miller Rd",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "OK/TX regional propane distributor, multi-location"
@@ -65737,10 +69871,11 @@
     "ownership": "independent",
     "ownerDetail": "Family-owned since 1959",
     "states": [
+      "ID",
       "OR"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 9,
+    "totalLocs": 9,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -65757,6 +69892,94 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Ed Staub & Sons - Klamath Falls Support Center",
+        "city": "Klamath Falls",
+        "state": "OR",
+        "county": "",
+        "lat": 44.4984,
+        "lng": -120.6968,
+        "address": "1301 Esplanade Avenue",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ed Staub & Sons - Redmond",
+        "city": "Redmond",
+        "state": "OR",
+        "county": "",
+        "lat": 43.7535,
+        "lng": -120.5694,
+        "address": "1819 S 1st St",
+        "phone": "(541) 504-8265",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ed Staub & Sons - John Day",
+        "city": "John Day",
+        "state": "OR",
+        "county": "",
+        "lat": 43.987,
+        "lng": -120.7193,
+        "address": "139 S Canyon Blvd",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ed Staub & Sons - La Grande",
+        "city": "La Grande",
+        "state": "OR",
+        "county": "",
+        "lat": 43.9415,
+        "lng": -120.4838,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ed Staub & Sons - Enterprise",
+        "city": "Enterprise",
+        "state": "OR",
+        "county": "",
+        "lat": 43.8921,
+        "lng": -120.7685,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ed Staub & Sons - Chiloquin",
+        "city": "Chiloquin",
+        "state": "OR",
+        "county": "",
+        "lat": 44.4857,
+        "lng": -120.1497,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ed Staub & Sons - Nampa",
+        "city": "Nampa",
+        "state": "ID",
+        "county": "",
+        "lat": 45.6692,
+        "lng": -113.8272,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Ed Staub & Sons - Donnelly",
+        "city": "Donnelly",
+        "state": "ID",
+        "county": "",
+        "lat": 45.8016,
+        "lng": -114.0846,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "OR/CA/NV regional propane and petroleum distributor, multi-location"
@@ -65771,10 +69994,14 @@
     "ownership": "independent",
     "ownerDetail": "Independent",
     "states": [
-      "OR"
+      "AZ",
+      "CA",
+      "OR",
+      "UT",
+      "WA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 15,
+    "totalLocs": 15,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -65791,6 +70018,160 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Arcata",
+        "city": "Arcata",
+        "state": "CA",
+        "county": "",
+        "lat": 37.1706,
+        "lng": -119.3367,
+        "address": "1907 Heindon Road",
+        "phone": "(707) 822-4851",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Coast Co. (Crescent City)",
+        "city": "Crescent City",
+        "state": "CA",
+        "county": "",
+        "lat": 37.0926,
+        "lng": -119.2059,
+        "address": "340 H Street",
+        "phone": "(707) 464-7827",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Eugene Co.",
+        "city": "Eugene",
+        "state": "OR",
+        "county": "",
+        "lat": 43.9169,
+        "lng": -120.2148,
+        "address": "61 S. Danebo Avenue",
+        "phone": "(541) 689-3311",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Fortuna",
+        "city": "Fortuna",
+        "state": "CA",
+        "county": "",
+        "lat": 37.2731,
+        "lng": -119.2314,
+        "address": "926 Main Street",
+        "phone": "(707) 725-4465",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Garberville Co.",
+        "city": "Garberville",
+        "state": "CA",
+        "county": "",
+        "lat": 36.8682,
+        "lng": -119.1331,
+        "address": "1333 Redwood Drive",
+        "phone": "(707) 923-7827",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "McMinnville Co.",
+        "city": "Salem",
+        "state": "OR",
+        "county": "",
+        "lat": 44.42,
+        "lng": -120.722,
+        "address": "3837 Portland Road NE",
+        "phone": "(503) 472-1571",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Medford Co.",
+        "city": "Central Point",
+        "state": "OR",
+        "county": "",
+        "lat": 44.387,
+        "lng": -120.3864,
+        "address": "6096 Crater Lake Avenue",
+        "phone": "(541) 826-8683",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Mt. Shasta Co.",
+        "city": "Mt. Shasta",
+        "state": "CA",
+        "county": "",
+        "lat": 37.3146,
+        "lng": -119.3899,
+        "address": "3700 Spring Hill Road",
+        "phone": "(530) 926-5862",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Phoenix Co.",
+        "city": "Phoenix",
+        "state": "AZ",
+        "county": "",
+        "lat": 33.9605,
+        "lng": -111.5101,
+        "address": "447 W Watkins Street, Ste. #1",
+        "phone": "(602) 253-7827",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Redding Co.",
+        "city": "Anderson",
+        "state": "CA",
+        "county": "",
+        "lat": 37.4262,
+        "lng": -119.0921,
+        "address": "6775 Eastside Road",
+        "phone": "(530) 365-2131",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Salt Lake City Co.",
+        "city": "Salt Lake City",
+        "state": "UT",
+        "county": "",
+        "lat": 39.2533,
+        "lng": -111.7727,
+        "address": "3625 West California Ave",
+        "phone": "(801) 298-7827",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Santa Rosa Co. (Head Office)",
+        "city": "Santa Rosa",
+        "state": "CA",
+        "county": "",
+        "lat": 37.3974,
+        "lng": -118.9036,
+        "address": "880 N. Wright Road",
+        "phone": "(707) 546-1400",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Seattle Co.",
+        "city": "Tukwila",
+        "state": "WA",
+        "county": "",
+        "lat": 47.3238,
+        "lng": -120.9425,
+        "address": "10802 E. Marginal Way South",
+        "phone": "(206) 762-2583",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Acme Fuel",
+        "city": "Olympia",
+        "state": "WA",
+        "county": "",
+        "lat": 47.182,
+        "lng": -121.1288,
+        "address": "416 State Ave NW",
+        "phone": "(360) 943-1133",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Eugene, OR branch of Blue Star Gas chain"
@@ -65805,10 +70186,12 @@
     "ownership": "independent",
     "ownerDetail": "Independent",
     "states": [
+      "CA",
+      "ID",
       "OR"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 10,
+    "totalLocs": 10,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -65825,6 +70208,105 @@
         "address": "",
         "source": "state_approx",
         "needs_geocoding": false
+      },
+      {
+        "name": "Klamath Falls",
+        "city": "Klamath Falls",
+        "state": "OR",
+        "county": "",
+        "lat": 44.4984,
+        "lng": -120.6968,
+        "address": "977 South Spring Street",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Canyon City",
+        "city": "Canyon City",
+        "state": "OR",
+        "county": "",
+        "lat": 44.4821,
+        "lng": -120.1558,
+        "address": "243 N Canyon Blvd",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Lakeview",
+        "city": "Lakeview",
+        "state": "OR",
+        "county": "",
+        "lat": 44.3165,
+        "lng": -120.8954,
+        "address": "1440 North 4th Street",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "John Day",
+        "city": "John Day",
+        "state": "OR",
+        "county": "",
+        "lat": 43.987,
+        "lng": -120.7193,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "La Grande",
+        "city": "La Grande",
+        "state": "OR",
+        "county": "",
+        "lat": 43.9415,
+        "lng": -120.4838,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Enterprise",
+        "city": "Enterprise",
+        "state": "OR",
+        "county": "",
+        "lat": 43.8921,
+        "lng": -120.7685,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Nampa",
+        "city": "Nampa",
+        "state": "ID",
+        "county": "",
+        "lat": 45.6692,
+        "lng": -113.8272,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Donnelly",
+        "city": "Donnelly",
+        "state": "ID",
+        "county": "",
+        "lat": 45.8016,
+        "lng": -114.0846,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Alturas (HQ origin)",
+        "city": "Alturas",
+        "state": "CA",
+        "county": "",
+        "lat": 37.137,
+        "lng": -119.3255,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-location propane/petroleum distributor in OR/CA/NV"
@@ -66045,8 +70527,8 @@
     "states": [
       "PA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 4,
+    "totalLocs": 4,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -66063,6 +70545,39 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Tarentum (Headquarters)",
+        "city": "Tarentum",
+        "state": "PA",
+        "county": "",
+        "lat": 40.7927,
+        "lng": -77.9217,
+        "address": "450 Grantham St",
+        "phone": "(724) 226-3800",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Butler",
+        "city": "Butler",
+        "state": "PA",
+        "county": "",
+        "lat": 40.6864,
+        "lng": -77.402,
+        "address": "201 Kittanning St",
+        "phone": "(724) 285-4787",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Kittanning",
+        "city": "Kittanning",
+        "state": "PA",
+        "county": "",
+        "lat": 40.8098,
+        "lng": -77.2341,
+        "address": "291 Linde Road",
+        "phone": "(724) 543-2415",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Jeannette, PA; multi-location western PA"
@@ -66283,8 +70798,8 @@
     "states": [
       "SC"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -66301,6 +70816,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Butler LP Gas (Walterboro)",
+        "city": "Walterboro",
+        "state": "SC",
+        "county": "",
+        "lat": 33.7483,
+        "lng": -80.7566,
+        "address": "3886 Bells Hwy",
+        "phone": "843-538-5207",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "South Carolina operator"
@@ -66859,10 +71385,12 @@
     "ownership": "independent",
     "ownerDetail": "Independent",
     "states": [
+      "IL",
+      "KY",
       "TN"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 3,
+    "totalLocs": 3,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -66879,6 +71407,28 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "UPG Corporate Office",
+        "city": "Lisle",
+        "state": "IL",
+        "county": "",
+        "lat": 39.441,
+        "lng": -89.0996,
+        "address": "1001 Warrenville Road, Suite 350",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "UPG Paducah (operational HQ)",
+        "city": "Paducah",
+        "state": "KY",
+        "county": "",
+        "lat": 38.1107,
+        "lng": -86.0353,
+        "address": "4200 Cairo Road",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-state branch of UPG, large regional independent"
@@ -67065,8 +71615,8 @@
     "states": [
       "TX"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -67083,6 +71633,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Hino Gas - Harlingen (HQ)",
+        "city": "Harlingen",
+        "state": "TX",
+        "county": "",
+        "lat": 31.3172,
+        "lng": -99.8244,
+        "address": "2759 W Business 83",
+        "phone": "(956) 423-9178",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "South TX multi-location propane distributor"
@@ -67915,8 +72476,8 @@
     "states": [
       "UT"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -67933,6 +72494,17 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Utah Propane (Cedar City)",
+        "city": "Cedar City",
+        "state": "UT",
+        "county": "",
+        "lat": 39.7393,
+        "lng": -111.6893,
+        "address": "3425 Iron Springs Rd",
+        "phone": "435-922-5500",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "UT statewide operator"
@@ -68119,8 +72691,8 @@
     "states": [
       "VA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 4,
+    "totalLocs": 4,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -68137,6 +72709,39 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Lynchburg",
+        "city": "Lynchburg",
+        "state": "VA",
+        "county": "",
+        "lat": 38.2555,
+        "lng": -79.2577,
+        "address": "1505 Rutherford Street",
+        "phone": "(434) 846-6509",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Martinsville",
+        "city": "Martinsville",
+        "state": "VA",
+        "county": "",
+        "lat": 37.6513,
+        "lng": -79.1209,
+        "address": "910 Stultz Road",
+        "phone": "(276) 632-9808",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Radford",
+        "city": "Radford",
+        "state": "VA",
+        "county": "",
+        "lat": 37.8892,
+        "lng": -79.4656,
+        "address": "111 Harrison Street",
+        "phone": "(540) 639-1611",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "VA multi-location fuel/propane"
@@ -68187,8 +72792,8 @@
     "states": [
       "VA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 5,
+    "totalLocs": 5,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -68205,6 +72810,50 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Brookneal (HQ)",
+        "city": "Brookneal",
+        "state": "VA",
+        "county": "",
+        "lat": 38.0158,
+        "lng": -79.6313,
+        "address": "16720 Brookneal Hwy",
+        "phone": "434-376-2322",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rustburg",
+        "city": "Rustburg",
+        "state": "VA",
+        "county": "",
+        "lat": 37.7993,
+        "lng": -79.0928,
+        "address": "10951 Wards Rd",
+        "phone": "434-808-1597",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Forest",
+        "city": "Forest",
+        "state": "VA",
+        "county": "",
+        "lat": 38.1195,
+        "lng": -79.2811,
+        "address": "17898 Forest Rd",
+        "phone": "434-333-0897",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Hearth & Home Showroom (Blairs)",
+        "city": "Blairs",
+        "state": "VA",
+        "county": "",
+        "lat": 37.6454,
+        "lng": -79.7396,
+        "address": "6261 US-29 BUS",
+        "phone": "434-836-8283",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Brookneal, VA; large regional independent"
@@ -68221,8 +72870,8 @@
     "states": [
       "VA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 8,
+    "totalLocs": 8,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -68239,6 +72888,83 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Tiger Fuel - Charlottesville (HQ)",
+        "city": "Charlottesville",
+        "state": "VA",
+        "county": "",
+        "lat": 37.9299,
+        "lng": -79.5238,
+        "address": "200 Carlton Road",
+        "phone": "(434) 293-6157",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Tiger Fuel - Appomattox",
+        "city": "Appomattox",
+        "state": "VA",
+        "county": "",
+        "lat": 38.3883,
+        "lng": -79.3325,
+        "address": "130 Commerce Street",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Tiger Fuel - Lovingston",
+        "city": "Lovingston",
+        "state": "VA",
+        "county": "",
+        "lat": 37.6197,
+        "lng": -79.7686,
+        "address": "242 Front St",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Tiger Fuel - Orange",
+        "city": "Orange",
+        "state": "VA",
+        "county": "",
+        "lat": 37.9058,
+        "lng": -79.2271,
+        "address": "175 Caroline St",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Tiger Fuel - Fredericksburg",
+        "city": "Fredericksburg",
+        "state": "VA",
+        "county": "",
+        "lat": 37.9058,
+        "lng": -79.2271,
+        "address": "11905 Tidewater Trail",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Tiger Fuel - Scottsville Propane Fill",
+        "city": "Scottsville",
+        "state": "VA",
+        "county": "",
+        "lat": 37.7964,
+        "lng": -79.7751,
+        "address": "153 James River Rd",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Tiger Fuel - Locust Grove Propane Fill",
+        "city": "Locust Grove",
+        "state": "VA",
+        "county": "",
+        "lat": 38.0044,
+        "lng": -79.7152,
+        "address": "32301 Constitution Highway",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Charlottesville, VA; multi-location"
@@ -68355,10 +73081,11 @@
     "ownership": "independent",
     "ownerDetail": "Independent",
     "states": [
+      "NC",
       "VA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 10,
+    "totalLocs": 10,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -68375,6 +73102,105 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Chatham (Headquarters)",
+        "city": "Chatham",
+        "state": "VA",
+        "county": "",
+        "lat": 37.8987,
+        "lng": -79.6105,
+        "address": "120 S. Main Street",
+        "phone": "(434) 432-0251",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Gretna",
+        "city": "Gretna",
+        "state": "VA",
+        "county": "",
+        "lat": 37.9831,
+        "lng": -79.4818,
+        "address": "413 Vaden Drive",
+        "phone": "(434) 656-2271",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rocky Mount",
+        "city": "Rocky Mount",
+        "state": "VA",
+        "county": "",
+        "lat": 37.6401,
+        "lng": -79.7262,
+        "address": "40 Diamond Avenue",
+        "phone": "(540) 483-5146",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Martinsville",
+        "city": "Martinsville",
+        "state": "VA",
+        "county": "",
+        "lat": 37.6513,
+        "lng": -79.1209,
+        "address": "8720 Philpott Highway",
+        "phone": "(276) 632-5788",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "South Boston",
+        "city": "South Boston",
+        "state": "VA",
+        "county": "",
+        "lat": 37.6244,
+        "lng": -79.1559,
+        "address": "7 Edmunds Street",
+        "phone": "(434) 572-4981",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Roanoke",
+        "city": "Roanoke",
+        "state": "VA",
+        "county": "",
+        "lat": 37.887,
+        "lng": -79.6693,
+        "address": "4939 Starkey Road",
+        "phone": "(540) 774-4401",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Covington",
+        "city": "Covington",
+        "state": "VA",
+        "county": "",
+        "lat": 38.0537,
+        "lng": -79.6177,
+        "address": "610 W Locust Street",
+        "phone": "(540) 962-1176",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Danville",
+        "city": "Danville",
+        "state": "VA",
+        "county": "",
+        "lat": 38.3976,
+        "lng": -79.2939,
+        "address": "200 River Street",
+        "phone": "(434) 793-5811",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Greensboro",
+        "city": "Greensboro",
+        "state": "NC",
+        "county": "",
+        "lat": 35.5107,
+        "lng": -80.1853,
+        "address": "5910 W Market Street",
+        "phone": "(336) 378-0400",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Chatham, VA; large regional multi-location"
@@ -68459,8 +73285,8 @@
     "states": [
       "VT"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 4,
+    "totalLocs": 4,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -68477,6 +73303,39 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Fred's Energy - Derby (Main)",
+        "city": "Derby",
+        "state": "VT",
+        "county": "",
+        "lat": 43.6769,
+        "lng": -72.1707,
+        "address": "328 Main Street",
+        "phone": "(802) 766-4949",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Fred's Energy - Lyndonville",
+        "city": "Lyndonville",
+        "state": "VT",
+        "county": "",
+        "lat": 44.0371,
+        "lng": -72.0901,
+        "address": "4920 Memorial Drive",
+        "phone": "(802) 626-4588",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Fred's Energy - Morrisville",
+        "city": "Morrisville",
+        "state": "VT",
+        "county": "",
+        "lat": 44.0183,
+        "lng": -72.8266,
+        "address": "288 Bridge Street",
+        "phone": "(802) 888-3827",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "VT multi-location fuel/propane"
@@ -68629,8 +73488,8 @@
     "states": [
       "WA"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -68647,6 +73506,17 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Tacoma",
+        "city": "Tacoma",
+        "state": "WA",
+        "county": "",
+        "lat": 47.6211,
+        "lng": -120.9212,
+        "address": "19122 38th Ave E",
+        "phone": "253-875-3000",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Tacoma, WA; multi-location PNW"
@@ -69341,10 +74211,11 @@
     "ownership": "independent",
     "ownerDetail": "Independent",
     "states": [
+      "MN",
       "WI"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 3,
+    "totalLocs": 3,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -69361,6 +74232,28 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Duluth (main)",
+        "city": "Duluth",
+        "state": "MN",
+        "county": "",
+        "lat": 46.0276,
+        "lng": -93.3259,
+        "address": "5820 Old Highway 61",
+        "phone": "(218) 722-2060",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Hibbing",
+        "city": "Hibbing",
+        "state": "MN",
+        "county": "",
+        "lat": 46.0966,
+        "lng": -93.4343,
+        "address": "202 1st Ave N",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Duluth MN/WI area multi-location"
@@ -69683,8 +74576,8 @@
     "states": [
       "WV"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 7,
+    "totalLocs": 7,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -69701,6 +74594,72 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Elkins (HQ)",
+        "city": "Elkins",
+        "state": "WV",
+        "county": "",
+        "lat": 39.2433,
+        "lng": -80.0145,
+        "address": "1 Thirteenth St",
+        "phone": "(304) 636-2688",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Marlinton",
+        "city": "Marlinton",
+        "state": "WV",
+        "county": "",
+        "lat": 38.5182,
+        "lng": -80.0331,
+        "address": "802 4th Ave",
+        "phone": "(304) 799-4503",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Moorefield",
+        "city": "Moorefield",
+        "state": "WV",
+        "county": "",
+        "lat": 39.2883,
+        "lng": -80.0825,
+        "address": "1660 Fish Pond Rd",
+        "phone": "(304) 358-0445",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Clarksburg",
+        "city": "Clarksburg",
+        "state": "WV",
+        "county": "",
+        "lat": 38.9234,
+        "lng": -80.5293,
+        "address": "9851 Cost Ave",
+        "phone": "(304) 622-6843",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Morgantown",
+        "city": "Morgantown",
+        "state": "WV",
+        "county": "",
+        "lat": 38.5141,
+        "lng": -80.0938,
+        "address": "89 Corporate Drive",
+        "phone": "(304) 296-3835",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Reedsville",
+        "city": "Reedsville",
+        "state": "WV",
+        "county": "",
+        "lat": 39.2009,
+        "lng": -80.2096,
+        "address": "14573 Veterans Memorial Hwy",
+        "phone": "(304) 864-6970",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "WV/OH/PA multi-location distributor"
@@ -69887,8 +74846,8 @@
     "states": [
       "WY"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 7,
+    "totalLocs": 7,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -69905,6 +74864,72 @@
         "address": "",
         "source": "gmaps_place",
         "needs_geocoding": false
+      },
+      {
+        "name": "Cody",
+        "city": "Cody",
+        "state": "WY",
+        "county": "",
+        "lat": 43.1762,
+        "lng": -107.3421,
+        "address": "PO Box 2473",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rawlins",
+        "city": "Rawlins",
+        "state": "WY",
+        "county": "",
+        "lat": 43.0756,
+        "lng": -107.8518,
+        "address": "2118 East Daley Street",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Lander",
+        "city": "Lander",
+        "state": "WY",
+        "county": "",
+        "lat": 43.023,
+        "lng": -107.7698,
+        "address": "1320 Main St",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rock Springs",
+        "city": "Rock Springs",
+        "state": "WY",
+        "county": "",
+        "lat": 42.7221,
+        "lng": -107.2568,
+        "address": "201 Industrial Dr",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Casper",
+        "city": "Casper",
+        "state": "WY",
+        "county": "",
+        "lat": 43.2654,
+        "lng": -107.3398,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Douglas",
+        "city": "Douglas",
+        "state": "WY",
+        "county": "",
+        "lat": 43.2332,
+        "lng": -107.9252,
+        "address": "",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "Multi-state western operator (WY/CO/ID/MT)"
@@ -70057,8 +75082,8 @@
     "states": [
       "WY"
     ],
-    "seLocs": 1,
-    "totalLocs": 1,
+    "seLocs": 11,
+    "totalLocs": 11,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -70075,6 +75100,116 @@
         "address": "",
         "source": "gmaps_search",
         "needs_geocoding": false
+      },
+      {
+        "name": "Buffalo",
+        "city": "Buffalo",
+        "state": "WY",
+        "county": "",
+        "lat": 42.6836,
+        "lng": -107.7029,
+        "address": "P.O. Box 777",
+        "phone": "(307) 684-0682",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Casper",
+        "city": "Casper",
+        "state": "WY",
+        "county": "",
+        "lat": 43.2654,
+        "lng": -107.3398,
+        "address": "P.O. Box 253",
+        "phone": "(307) 235-5058",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cheyenne",
+        "city": "Cheyenne",
+        "state": "WY",
+        "county": "",
+        "lat": 42.7629,
+        "lng": -107.8758,
+        "address": "P.O. Box 602",
+        "phone": "(307) 756-3302",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Cody",
+        "city": "Cody",
+        "state": "WY",
+        "county": "",
+        "lat": 43.1762,
+        "lng": -107.3421,
+        "address": "2338 Mountain View Drive",
+        "phone": "(307) 587-5183",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Douglas",
+        "city": "Douglas",
+        "state": "WY",
+        "county": "",
+        "lat": 43.2332,
+        "lng": -107.9252,
+        "address": "P.O. Box 1012",
+        "phone": "(307) 358-8355",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Gillette",
+        "city": "Gillette",
+        "state": "WY",
+        "county": "",
+        "lat": 43.0273,
+        "lng": -107.7347,
+        "address": "4111 N. Hwy 14-16",
+        "phone": "(307) 682-1447",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Moorcroft",
+        "city": "Moorcroft",
+        "state": "WY",
+        "county": "",
+        "lat": 43.1441,
+        "lng": -107.3198,
+        "address": "P.O. Box 45",
+        "phone": "(307) 756-3302",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Rawlins",
+        "city": "Rawlins",
+        "state": "WY",
+        "county": "",
+        "lat": 43.0756,
+        "lng": -107.8518,
+        "address": "P.O. Box 1409",
+        "phone": "(307) 324-3144",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Sundance",
+        "city": "Sundance",
+        "state": "WY",
+        "county": "",
+        "lat": 42.9234,
+        "lng": -107.2078,
+        "address": "P.O. Box 1054",
+        "phone": "(307) 283-2512",
+        "source": "website_scrape_state_approx"
+      },
+      {
+        "name": "Newcastle",
+        "city": "Newcastle",
+        "state": "WY",
+        "county": "",
+        "lat": 42.6424,
+        "lng": -107.3808,
+        "address": "78 WY-450",
+        "phone": "",
+        "source": "website_scrape_state_approx"
       }
     ],
     "notes": "WY family-owned, multi-location"
