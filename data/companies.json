@@ -30,7 +30,7 @@
       "WI",
       "WV"
     ],
-    "seLocs": 133,
+    "seLocs": 186,
     "totalLocs": 186,
     "excluded": true,
     "optBScore": null,
@@ -5146,7 +5146,7 @@
       "NC",
       "TN"
     ],
-    "seLocs": 57,
+    "seLocs": 71,
     "totalLocs": 71,
     "excluded": true,
     "optBScore": null,
@@ -25048,32 +25048,27 @@
     "ownership": "coop",
     "ownerDetail": "Cooperative",
     "states": [
+      "IA",
       "IL",
       "IN",
-      "IA",
-      "WI",
+      "KS",
+      "KY",
+      "MD",
+      "MI",
       "MN",
-      "SD",
+      "MO",
+      "NC",
       "ND",
       "NE",
-      "KS",
-      "MO",
-      "OH",
-      "MI",
-      "PA",
       "NY",
-      "VA",
-      "NC",
+      "OH",
+      "PA",
+      "SD",
       "TN",
-      "KY",
-      "AR",
-      "OK",
-      "TX",
-      "MD",
-      "DE",
-      "ON"
+      "VA",
+      "WI"
     ],
-    "seLocs": 4,
+    "seLocs": 58,
     "totalLocs": 58,
     "excluded": false,
     "optBScore": null,
@@ -25631,29 +25626,27 @@
     "ownership": "pe",
     "ownerDetail": "Private Equity",
     "states": [
+      "CA",
+      "CT",
+      "FL",
+      "GA",
+      "IA",
       "IL",
       "IN",
-      "OH",
+      "ME",
       "MI",
-      "WI",
       "MN",
-      "IA",
       "MO",
-      "KS",
-      "NE",
-      "OK",
-      "TX",
-      "PA",
-      "NY",
-      "VA",
       "NC",
-      "GA",
-      "FL",
-      "AL",
-      "MS"
+      "NY",
+      "OH",
+      "PA",
+      "TX",
+      "VA",
+      "WI"
     ],
-    "seLocs": 4,
-    "totalLocs": 54,
+    "seLocs": 49,
+    "totalLocs": 49,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -26137,8 +26130,8 @@
       "IN",
       "KY"
     ],
-    "seLocs": 11,
-    "totalLocs": 190,
+    "seLocs": 91,
+    "totalLocs": 91,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -26998,8 +26991,8 @@
       "MA",
       "CT"
     ],
-    "seLocs": 0,
-    "totalLocs": 70,
+    "seLocs": 40,
+    "totalLocs": 40,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -27400,8 +27393,8 @@
       "SD",
       "ND"
     ],
-    "seLocs": 0,
-    "totalLocs": 54,
+    "seLocs": 57,
+    "totalLocs": 57,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -27949,17 +27942,13 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "NY",
-      "NJ",
-      "PA",
       "CT",
-      "MA",
-      "VT",
-      "NH",
-      "FL"
+      "NY",
+      "PA",
+      "RI"
     ],
-    "seLocs": 0,
-    "totalLocs": 27,
+    "seLocs": 19,
+    "totalLocs": 19,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -28168,8 +28157,8 @@
       "OH",
       "MI"
     ],
-    "seLocs": 0,
-    "totalLocs": 26,
+    "seLocs": 54,
+    "totalLocs": 54,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -28698,8 +28687,8 @@
       "FL",
       "OH"
     ],
-    "seLocs": 12,
-    "totalLocs": 29,
+    "seLocs": 25,
+    "totalLocs": 25,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -28969,8 +28958,8 @@
       "NC",
       "VA"
     ],
-    "seLocs": 4,
-    "totalLocs": 30,
+    "seLocs": 14,
+    "totalLocs": 14,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -29138,8 +29127,8 @@
       "MT",
       "WY"
     ],
-    "seLocs": 0,
-    "totalLocs": 19,
+    "seLocs": 15,
+    "totalLocs": 15,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -29312,8 +29301,8 @@
       "MN",
       "WI"
     ],
-    "seLocs": 0,
-    "totalLocs": 21,
+    "seLocs": 15,
+    "totalLocs": 15,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -29483,12 +29472,14 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "MS",
+      "AL",
       "AR",
-      "LA"
+      "LA",
+      "MS",
+      "TN"
     ],
     "seLocs": 47,
-    "totalLocs": 59,
+    "totalLocs": 47,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -29951,8 +29942,8 @@
       "IA",
       "IL"
     ],
-    "seLocs": 0,
-    "totalLocs": 80,
+    "seLocs": 47,
+    "totalLocs": 47,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -30415,8 +30406,8 @@
       "KS",
       "MO"
     ],
-    "seLocs": 0,
-    "totalLocs": 22,
+    "seLocs": 14,
+    "totalLocs": 14,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -30576,25 +30567,20 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
+      "CT",
       "FL",
       "GA",
-      "SC",
-      "NC",
-      "VA",
-      "MD",
-      "PA",
-      "NY",
-      "NJ",
-      "CT",
+      "IL",
       "MA",
-      "NH",
-      "ME",
-      "OH",
       "MI",
-      "IN",
-      "IL"
+      "NC",
+      "NJ",
+      "NY",
+      "OH",
+      "PA",
+      "VA"
     ],
-    "seLocs": 6,
+    "seLocs": 14,
     "totalLocs": 14,
     "excluded": false,
     "optBScore": null,
@@ -30761,7 +30747,7 @@
       "OR",
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 9,
     "totalLocs": 9,
     "excluded": false,
     "optBScore": null,
@@ -30880,7 +30866,7 @@
       "WI",
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 6,
     "totalLocs": 6,
     "excluded": false,
     "optBScore": null,
@@ -30974,8 +30960,8 @@
       "OR",
       "ID"
     ],
-    "seLocs": 0,
-    "totalLocs": 16,
+    "seLocs": 11,
+    "totalLocs": 11,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -31114,7 +31100,7 @@
       "WV",
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 7,
     "totalLocs": 7,
     "excluded": false,
     "optBScore": null,
@@ -31215,7 +31201,7 @@
       "WI",
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 6,
     "totalLocs": 6,
     "excluded": false,
     "optBScore": null,
@@ -31410,7 +31396,7 @@
       "TX",
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 7,
     "totalLocs": 7,
     "excluded": false,
     "optBScore": null,
@@ -31601,8 +31587,7 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "AL",
-      "MS"
+      "AL"
     ],
     "seLocs": 2,
     "totalLocs": 2,
@@ -34060,10 +34045,9 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "NH",
-      "ME"
+      "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34109,7 +34093,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34155,7 +34139,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34247,7 +34231,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34293,7 +34277,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34339,7 +34323,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34385,7 +34369,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34431,7 +34415,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34477,7 +34461,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34523,7 +34507,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34615,7 +34599,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34661,7 +34645,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34753,7 +34737,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34799,7 +34783,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34845,7 +34829,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34891,7 +34875,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34937,7 +34921,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -34983,7 +34967,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -36639,7 +36623,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 9,
     "totalLocs": 9,
     "excluded": false,
     "optBScore": null,
@@ -36757,7 +36741,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -36803,7 +36787,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -36849,7 +36833,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -36895,7 +36879,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -36941,7 +36925,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -36987,7 +36971,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37033,7 +37017,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37079,7 +37063,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37125,7 +37109,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37171,7 +37155,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37217,7 +37201,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 9,
     "totalLocs": 9,
     "excluded": false,
     "optBScore": null,
@@ -37335,7 +37319,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37381,7 +37365,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37427,7 +37411,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37473,7 +37457,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37519,7 +37503,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37565,7 +37549,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37611,7 +37595,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37657,7 +37641,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37703,7 +37687,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37749,7 +37733,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37795,7 +37779,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37841,7 +37825,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37887,7 +37871,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37933,7 +37917,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -37979,7 +37963,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38025,7 +38009,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38071,7 +38055,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38117,7 +38101,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38163,7 +38147,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38209,7 +38193,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38255,7 +38239,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38301,7 +38285,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38347,7 +38331,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38393,7 +38377,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38439,7 +38423,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38485,7 +38469,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38531,7 +38515,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38577,7 +38561,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38623,7 +38607,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38669,7 +38653,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38715,7 +38699,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38761,7 +38745,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38807,7 +38791,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38853,7 +38837,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38899,7 +38883,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38945,7 +38929,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -38991,7 +38975,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39037,7 +39021,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39083,7 +39067,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39129,7 +39113,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39175,7 +39159,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39221,7 +39205,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39267,7 +39251,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39313,7 +39297,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39359,7 +39343,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39405,7 +39389,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39451,7 +39435,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39497,7 +39481,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39543,7 +39527,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39589,7 +39573,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39635,7 +39619,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39681,7 +39665,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39727,7 +39711,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39773,7 +39757,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39819,7 +39803,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39865,7 +39849,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39911,7 +39895,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -39957,7 +39941,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40003,7 +39987,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40049,7 +40033,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40095,7 +40079,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40139,10 +40123,11 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
+      "AZ",
       "CA"
     ],
-    "seLocs": 0,
-    "totalLocs": 1,
+    "seLocs": 2,
+    "totalLocs": 2,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -40196,7 +40181,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40242,7 +40227,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40286,10 +40271,12 @@
     "ownership": "private",
     "ownerDetail": "Private",
     "states": [
-      "CA"
+      "AZ",
+      "CA",
+      "WA"
     ],
-    "seLocs": 0,
-    "totalLocs": 1,
+    "seLocs": 3,
+    "totalLocs": 3,
     "excluded": false,
     "optBScore": null,
     "optBTier": null,
@@ -40352,7 +40339,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40398,7 +40385,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40444,7 +40431,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40490,7 +40477,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40536,7 +40523,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40582,7 +40569,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40628,7 +40615,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40674,7 +40661,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40720,7 +40707,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40766,7 +40753,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40812,7 +40799,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40858,7 +40845,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40904,7 +40891,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40950,7 +40937,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -40996,7 +40983,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41042,7 +41029,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41088,7 +41075,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41134,7 +41121,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41180,7 +41167,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41226,7 +41213,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41272,7 +41259,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41318,7 +41305,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41364,7 +41351,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41410,7 +41397,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41456,7 +41443,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41502,7 +41489,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41548,7 +41535,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41594,7 +41581,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41640,7 +41627,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41686,7 +41673,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41732,7 +41719,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41778,7 +41765,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41824,7 +41811,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41870,7 +41857,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41916,7 +41903,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -41962,7 +41949,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42008,7 +41995,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42054,7 +42041,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42100,7 +42087,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42146,7 +42133,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42192,7 +42179,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42238,7 +42225,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42284,7 +42271,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42330,7 +42317,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42376,7 +42363,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42422,7 +42409,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42468,7 +42455,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42514,7 +42501,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42560,7 +42547,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42606,7 +42593,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42652,7 +42639,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42698,7 +42685,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42744,7 +42731,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42790,7 +42777,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42836,7 +42823,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42882,7 +42869,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42928,7 +42915,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -42974,7 +42961,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43020,7 +43007,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43066,7 +43053,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43112,7 +43099,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43158,7 +43145,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43204,7 +43191,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43250,7 +43237,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43296,7 +43283,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43342,7 +43329,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43388,7 +43375,7 @@
     "states": [
       "WV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43434,7 +43421,7 @@
     "states": [
       "WV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43480,7 +43467,7 @@
     "states": [
       "WV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43526,7 +43513,7 @@
     "states": [
       "WV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43572,7 +43559,7 @@
     "states": [
       "WV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43618,7 +43605,7 @@
     "states": [
       "WV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43664,7 +43651,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43710,7 +43697,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43756,7 +43743,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43802,7 +43789,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43848,7 +43835,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43894,7 +43881,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43940,7 +43927,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -43986,7 +43973,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44032,7 +44019,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44078,7 +44065,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44124,7 +44111,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44170,7 +44157,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44216,7 +44203,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44262,7 +44249,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44309,7 +44296,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44355,7 +44342,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44401,7 +44388,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44447,7 +44434,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44493,7 +44480,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44539,7 +44526,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44585,7 +44572,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44631,7 +44618,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44677,7 +44664,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44723,7 +44710,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44769,7 +44756,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44815,7 +44802,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44861,7 +44848,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44907,7 +44894,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44953,7 +44940,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -44999,7 +44986,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45045,7 +45032,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45091,7 +45078,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45137,7 +45124,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45183,7 +45170,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45229,7 +45216,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45275,7 +45262,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45321,7 +45308,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45367,7 +45354,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45413,7 +45400,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45459,7 +45446,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45505,7 +45492,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45551,7 +45538,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45597,7 +45584,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45643,7 +45630,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45689,7 +45676,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45735,7 +45722,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45781,7 +45768,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45827,7 +45814,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45873,7 +45860,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45919,7 +45906,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -45965,7 +45952,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46011,7 +45998,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46057,7 +46044,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46103,7 +46090,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46149,7 +46136,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46195,7 +46182,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46241,7 +46228,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46287,7 +46274,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46333,7 +46320,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46379,7 +46366,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46425,7 +46412,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46471,7 +46458,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46517,7 +46504,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46563,7 +46550,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46609,7 +46596,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46655,7 +46642,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46701,7 +46688,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46744,8 +46731,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "AL"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46788,8 +46777,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "AL"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46832,8 +46823,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "AZ"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46876,8 +46869,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "AZ"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46920,8 +46915,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "AZ"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -46967,7 +46964,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47013,7 +47010,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47056,8 +47053,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "AZ"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47100,8 +47099,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "FL"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47144,8 +47145,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "KS"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47188,8 +47191,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "MD"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47232,8 +47237,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "MD"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47322,8 +47329,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "NH"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47369,7 +47378,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47412,8 +47421,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "NH"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47456,8 +47467,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "NH"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47500,8 +47513,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "NY"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47544,8 +47559,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "NY"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47588,8 +47605,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "NY"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47635,7 +47654,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47678,8 +47697,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "NY"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47722,8 +47743,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "OH"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47769,7 +47792,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47812,8 +47835,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "PA"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47859,7 +47884,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47902,8 +47927,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "PA"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47949,7 +47976,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -47995,7 +48022,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48038,8 +48065,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "PA"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48085,7 +48114,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48131,7 +48160,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48174,8 +48203,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "SD"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48218,8 +48249,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "SD"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48262,8 +48295,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "VT"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48306,8 +48341,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "WI"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48350,8 +48387,10 @@
     "website": "",
     "ownership": "private",
     "ownerDetail": "Private",
-    "states": [],
-    "seLocs": 0,
+    "states": [
+      "WI"
+    ],
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48397,7 +48436,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48443,7 +48482,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48489,7 +48528,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48535,7 +48574,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48581,7 +48620,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48627,7 +48666,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48673,7 +48712,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48719,7 +48758,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48765,7 +48804,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48811,7 +48850,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48857,7 +48896,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48903,7 +48942,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48949,7 +48988,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -48995,7 +49034,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49041,7 +49080,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49087,7 +49126,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49133,7 +49172,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49179,7 +49218,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49225,7 +49264,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49271,7 +49310,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49317,7 +49356,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49363,7 +49402,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49409,7 +49448,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49455,7 +49494,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49501,7 +49540,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49547,7 +49586,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49593,7 +49632,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49639,7 +49678,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49685,7 +49724,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49731,7 +49770,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49777,7 +49816,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49823,7 +49862,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49869,7 +49908,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49915,7 +49954,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -49961,7 +50000,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50007,7 +50046,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50053,7 +50092,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50099,7 +50138,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50145,7 +50184,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50191,7 +50230,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50237,7 +50276,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50283,7 +50322,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50329,7 +50368,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50375,7 +50414,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50421,7 +50460,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50467,7 +50506,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50513,7 +50552,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50559,7 +50598,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50605,7 +50644,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50651,7 +50690,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50697,7 +50736,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50743,7 +50782,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50774,7 +50813,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50805,7 +50844,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50836,7 +50875,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50867,7 +50906,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50898,7 +50937,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50929,7 +50968,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50960,7 +50999,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -50991,7 +51030,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51022,7 +51061,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51053,7 +51092,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51082,9 +51121,9 @@
     "ownership": "independent",
     "ownerDetail": "Independent",
     "states": [
-      "MD"
+      "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51115,7 +51154,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51146,7 +51185,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51177,7 +51216,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51208,7 +51247,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51239,7 +51278,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51270,7 +51309,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51301,7 +51340,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51332,7 +51371,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51363,7 +51402,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51394,7 +51433,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51425,7 +51464,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51456,7 +51495,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51487,7 +51526,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51518,7 +51557,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -51549,7 +51588,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -52937,7 +52976,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -52971,7 +53010,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53005,7 +53044,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53039,7 +53078,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53072,7 +53111,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53106,7 +53145,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53140,7 +53179,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53174,7 +53213,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53208,7 +53247,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53242,7 +53281,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53276,7 +53315,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53310,7 +53349,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53344,7 +53383,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53378,7 +53417,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53412,7 +53451,7 @@
     "states": [
       "AZ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53446,7 +53485,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53479,7 +53518,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53512,7 +53551,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53545,7 +53584,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53579,7 +53618,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53613,7 +53652,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53647,7 +53686,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53681,7 +53720,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53715,7 +53754,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53749,7 +53788,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53783,7 +53822,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53817,7 +53856,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53851,7 +53890,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53885,7 +53924,7 @@
     "states": [
       "CA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53918,7 +53957,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53952,7 +53991,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -53986,7 +54025,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54020,7 +54059,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54054,7 +54093,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54088,7 +54127,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54122,7 +54161,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54156,7 +54195,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54190,7 +54229,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54224,7 +54263,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54257,7 +54296,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54291,7 +54330,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54325,7 +54364,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54359,7 +54398,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54393,7 +54432,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54427,7 +54466,7 @@
     "states": [
       "CO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54461,7 +54500,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54495,7 +54534,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54529,7 +54568,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54563,7 +54602,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54597,7 +54636,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54630,7 +54669,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54663,7 +54702,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54697,7 +54736,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54731,7 +54770,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -54765,7 +54804,7 @@
     "states": [
       "CT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55136,7 +55175,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55170,7 +55209,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55203,7 +55242,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55237,7 +55276,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55271,7 +55310,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55304,7 +55343,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55338,7 +55377,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55372,7 +55411,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55406,7 +55445,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55440,7 +55479,7 @@
     "states": [
       "DE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55914,7 +55953,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55947,7 +55986,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -55981,7 +56020,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56015,7 +56054,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56048,7 +56087,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56081,7 +56120,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56115,7 +56154,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56148,7 +56187,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56182,7 +56221,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56215,7 +56254,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56248,7 +56287,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56281,7 +56320,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56314,7 +56353,7 @@
     "states": [
       "IA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56348,7 +56387,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56381,7 +56420,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56414,7 +56453,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56448,7 +56487,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56482,7 +56521,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56515,7 +56554,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56548,7 +56587,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56581,7 +56620,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56614,7 +56653,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56648,7 +56687,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56682,7 +56721,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56716,7 +56755,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56750,7 +56789,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56784,7 +56823,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56818,7 +56857,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56851,7 +56890,7 @@
     "states": [
       "ID"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56885,7 +56924,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56918,7 +56957,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56952,7 +56991,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -56986,7 +57025,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57020,7 +57059,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57054,7 +57093,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57088,7 +57127,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57122,7 +57161,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57156,7 +57195,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57190,7 +57229,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57224,7 +57263,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57257,7 +57296,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57291,7 +57330,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57324,7 +57363,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57357,7 +57396,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57390,7 +57429,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57423,7 +57462,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57456,7 +57495,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57490,7 +57529,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57524,7 +57563,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57557,7 +57596,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57591,7 +57630,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57624,7 +57663,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57657,7 +57696,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57691,7 +57730,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57725,7 +57764,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57758,7 +57797,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57792,7 +57831,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57826,7 +57865,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57859,7 +57898,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57892,7 +57931,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57925,7 +57964,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57959,7 +57998,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -57993,7 +58032,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58026,7 +58065,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58059,7 +58098,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58092,7 +58131,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58125,7 +58164,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58158,7 +58197,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58192,7 +58231,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58225,7 +58264,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58258,7 +58297,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58291,7 +58330,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58324,7 +58363,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58357,7 +58396,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58390,7 +58429,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58423,7 +58462,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58456,7 +58495,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58489,7 +58528,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58522,7 +58561,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -58555,7 +58594,7 @@
     "states": [
       "KS"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59285,7 +59324,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59318,7 +59357,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59351,7 +59390,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59384,7 +59423,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59417,7 +59456,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59450,7 +59489,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59484,7 +59523,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59517,7 +59556,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59551,7 +59590,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59585,7 +59624,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59618,7 +59657,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59651,7 +59690,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59684,7 +59723,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59717,7 +59756,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59750,7 +59789,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59783,7 +59822,7 @@
     "states": [
       "MA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59816,7 +59855,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59849,7 +59888,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59883,7 +59922,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59916,7 +59955,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59950,7 +59989,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -59984,7 +60023,7 @@
     "states": [
       "MD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60018,7 +60057,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60052,7 +60091,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60085,7 +60124,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60118,7 +60157,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60152,7 +60191,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60185,7 +60224,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60218,7 +60257,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60251,7 +60290,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60284,7 +60323,7 @@
     "states": [
       "ME"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60317,7 +60356,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60350,7 +60389,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60383,7 +60422,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60416,7 +60455,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60449,7 +60488,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60482,7 +60521,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60515,7 +60554,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60548,7 +60587,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60581,7 +60620,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60614,7 +60653,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60647,7 +60686,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60680,7 +60719,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60713,7 +60752,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60746,7 +60785,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60779,7 +60818,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60812,7 +60851,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60845,7 +60884,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60879,7 +60918,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60912,7 +60951,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60945,7 +60984,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -60978,7 +61017,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61012,7 +61051,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61045,7 +61084,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61078,7 +61117,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61112,7 +61151,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61145,7 +61184,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61179,7 +61218,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61213,7 +61252,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61247,7 +61286,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61280,7 +61319,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61314,7 +61353,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61348,7 +61387,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61382,7 +61421,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61416,7 +61455,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61450,7 +61489,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61484,7 +61523,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61518,7 +61557,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61654,7 +61693,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61688,7 +61727,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61722,7 +61761,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61756,7 +61795,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61790,7 +61829,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61824,7 +61863,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61858,7 +61897,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61892,7 +61931,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61926,7 +61965,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61960,7 +61999,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -61994,7 +62033,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62028,7 +62067,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62062,7 +62101,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62096,7 +62135,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62130,7 +62169,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62164,7 +62203,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62198,7 +62237,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62232,7 +62271,7 @@
     "states": [
       "MT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62504,7 +62543,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62538,7 +62577,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62572,7 +62611,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62606,7 +62645,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62640,7 +62679,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62674,7 +62713,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62708,7 +62747,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62742,7 +62781,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62776,7 +62815,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62810,7 +62849,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62844,7 +62883,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62878,7 +62917,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62912,7 +62951,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62946,7 +62985,7 @@
     "states": [
       "ND"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -62980,7 +63019,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63014,7 +63053,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63048,7 +63087,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63082,7 +63121,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63116,7 +63155,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63150,7 +63189,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63184,7 +63223,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63218,7 +63257,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63252,7 +63291,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63286,7 +63325,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63320,7 +63359,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63354,7 +63393,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63388,7 +63427,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63422,7 +63461,7 @@
     "states": [
       "NE"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63456,7 +63495,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63490,7 +63529,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63524,7 +63563,7 @@
     "states": [
       "NH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63558,7 +63597,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63592,7 +63631,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63626,7 +63665,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63660,7 +63699,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63694,7 +63733,7 @@
     "states": [
       "NJ"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63728,7 +63767,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63762,7 +63801,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63796,7 +63835,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63830,7 +63869,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63864,7 +63903,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63898,7 +63937,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63932,7 +63971,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -63966,7 +64005,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64000,7 +64039,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64034,7 +64073,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64068,7 +64107,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64102,7 +64141,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64136,7 +64175,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64170,7 +64209,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64204,7 +64243,7 @@
     "states": [
       "NM"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64238,7 +64277,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64272,7 +64311,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64306,7 +64345,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64340,7 +64379,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64374,7 +64413,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64408,7 +64447,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64442,7 +64481,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64476,7 +64515,7 @@
     "states": [
       "NV"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64510,7 +64549,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64544,7 +64583,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64578,7 +64617,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64612,7 +64651,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64646,7 +64685,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64680,7 +64719,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64714,7 +64753,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64748,7 +64787,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64782,7 +64821,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64816,7 +64855,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64850,7 +64889,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64884,7 +64923,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64918,7 +64957,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64952,7 +64991,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -64986,7 +65025,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65020,7 +65059,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65054,7 +65093,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65088,7 +65127,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65122,7 +65161,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65156,7 +65195,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65190,7 +65229,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65224,7 +65263,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65258,7 +65297,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65292,7 +65331,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65326,7 +65365,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65360,7 +65399,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65394,7 +65433,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65428,7 +65467,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65462,7 +65501,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65496,7 +65535,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65530,7 +65569,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65564,7 +65603,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65598,7 +65637,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65632,7 +65671,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65666,7 +65705,7 @@
     "states": [
       "OK"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65700,7 +65739,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65734,7 +65773,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65768,7 +65807,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65802,7 +65841,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65836,7 +65875,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65870,7 +65909,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65904,7 +65943,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65938,7 +65977,7 @@
     "states": [
       "OR"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -65972,7 +66011,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66006,7 +66045,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66040,7 +66079,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66074,7 +66113,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66108,7 +66147,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66142,7 +66181,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66176,7 +66215,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66210,7 +66249,7 @@
     "states": [
       "RI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66278,7 +66317,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66312,7 +66351,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66346,7 +66385,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66380,7 +66419,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66414,7 +66453,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66448,7 +66487,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66482,7 +66521,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66516,7 +66555,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66550,7 +66589,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66584,7 +66623,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66618,7 +66657,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66652,7 +66691,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66686,7 +66725,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66720,7 +66759,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66754,7 +66793,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66788,7 +66827,7 @@
     "states": [
       "SD"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -66992,7 +67031,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67026,7 +67065,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67060,7 +67099,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67094,7 +67133,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67128,7 +67167,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67162,7 +67201,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67196,7 +67235,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67230,7 +67269,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67264,7 +67303,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67298,7 +67337,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67332,7 +67371,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67366,7 +67405,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67400,7 +67439,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67434,7 +67473,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67468,7 +67507,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67502,7 +67541,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67536,7 +67575,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67570,7 +67609,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67604,7 +67643,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67638,7 +67677,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67672,7 +67711,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67706,7 +67745,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67740,7 +67779,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67774,7 +67813,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67808,7 +67847,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67842,7 +67881,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67876,7 +67915,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67910,7 +67949,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -67944,7 +67983,7 @@
     "states": [
       "UT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68352,7 +68391,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68386,7 +68425,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68420,7 +68459,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68454,7 +68493,7 @@
     "states": [
       "VT"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68488,7 +68527,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68522,7 +68561,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68556,7 +68595,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68590,7 +68629,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68624,7 +68663,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68658,7 +68697,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68692,7 +68731,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68726,7 +68765,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68760,7 +68799,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68794,7 +68833,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68828,7 +68867,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68862,7 +68901,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68896,7 +68935,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68930,7 +68969,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68964,7 +69003,7 @@
     "states": [
       "WA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -68998,7 +69037,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69032,7 +69071,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69066,7 +69105,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69100,7 +69139,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69134,7 +69173,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69168,7 +69207,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69202,7 +69241,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69236,7 +69275,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69270,7 +69309,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69304,7 +69343,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69338,7 +69377,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69372,7 +69411,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69406,7 +69445,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69440,7 +69479,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69474,7 +69513,7 @@
     "states": [
       "WI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69780,7 +69819,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69814,7 +69853,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69848,7 +69887,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69882,7 +69921,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69916,7 +69955,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69950,7 +69989,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -69984,7 +70023,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -70018,7 +70057,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -70052,7 +70091,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -70086,7 +70125,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -70120,7 +70159,7 @@
     "states": [
       "WY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "optBScore": null,
@@ -70154,7 +70193,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70182,7 +70221,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70210,7 +70249,7 @@
     "states": [
       "IL"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70238,7 +70277,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70266,7 +70305,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70294,7 +70333,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70322,7 +70361,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70350,7 +70389,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70378,7 +70417,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70406,7 +70445,7 @@
     "states": [
       "IN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70434,7 +70473,7 @@
     "states": [
       "MI"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70462,7 +70501,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70490,7 +70529,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70518,7 +70557,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70546,7 +70585,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70574,7 +70613,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70602,7 +70641,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70630,7 +70669,7 @@
     "states": [
       "MN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70658,7 +70697,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70686,7 +70725,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70714,7 +70753,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70742,7 +70781,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70770,7 +70809,7 @@
     "states": [
       "MO"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70798,7 +70837,7 @@
     "states": [
       "NC"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70826,7 +70865,7 @@
     "states": [
       "NC"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70854,7 +70893,7 @@
     "states": [
       "NC"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70882,7 +70921,7 @@
     "states": [
       "NC"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70910,7 +70949,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70938,7 +70977,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70966,7 +71005,7 @@
     "states": [
       "NY"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -70994,7 +71033,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71022,7 +71061,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71050,7 +71089,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71078,7 +71117,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71106,7 +71145,7 @@
     "states": [
       "OH"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71134,7 +71173,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71162,7 +71201,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71190,7 +71229,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71218,7 +71257,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71246,7 +71285,7 @@
     "states": [
       "PA"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71274,7 +71313,7 @@
     "states": [
       "TN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71302,7 +71341,7 @@
     "states": [
       "TN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71330,7 +71369,7 @@
     "states": [
       "TN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71358,7 +71397,7 @@
     "states": [
       "TN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71386,7 +71425,7 @@
     "states": [
       "TN"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71414,7 +71453,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71442,7 +71481,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71470,7 +71509,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71498,7 +71537,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71526,7 +71565,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [
@@ -71554,7 +71593,7 @@
     "states": [
       "TX"
     ],
-    "seLocs": 0,
+    "seLocs": 1,
     "totalLocs": 1,
     "excluded": false,
     "locations": [

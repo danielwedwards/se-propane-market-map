@@ -869,7 +869,7 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 // === CONSTANTS ===
 let DATA=[];  // Loaded from data/companies.json
 let CD=[];  // Loaded from data/counties_national.json
-let GEO={"type":"FeatureCollection","features":[]};  // Loaded from data/counties_southeast_simple.geojson
+let GEO={"type":"FeatureCollection","features":[]};  // Loaded from data/counties_national_simple.geojson
 // Data validation moved to async loader
 const CONFIG={PROX_BANDS:[{d:5,p:10},{d:15,p:7},{d:25,p:5},{d:50,p:3},{d:100,p:1}],COUNTY_R:25,DEBOUNCE:150,MAX_SAVES:20,CENTER:[38,-96],ZOOM:4.5};
 const OC={public:'#1565C0',pe:'#F57F17',family:'#2E7D32',coop:'#7B1FA2',private:'#546E7A',ll:'#C8A951',unknown:'#90A4AE'};
@@ -1123,18 +1123,16 @@ function toggleRegion(region){
   } else {
     initStatePills(REGIONS[region]);
   }
-  // Load region GeoJSON if available
-  if(region!=='ALL'){
-    loadRegionGeo(region).then(function(ok){
-      if(ok && typeof countyLayer!=='undefined' && countyLayer){
-        // Refresh county overlay if visible
-        if(map.hasLayer(countyLayer)){
-          map.removeLayer(countyLayer);
-          toggleCounty();
-        }
+  // Load region GeoJSON (national for ALL, region-specific otherwise)
+  loadRegionGeo(region==='ALL'?'national':region).then(function(ok){
+    if(ok && typeof countyLayer!=='undefined' && countyLayer){
+      // Refresh county overlay if visible
+      if(map.hasLayer(countyLayer)){
+        map.removeLayer(countyLayer);
+        toggleCounty();
       }
-    });
-  }
+    }
+  });
   go();
   // Zoom to region
   const regionBounds={
@@ -2297,7 +2295,7 @@ async function loadData() {
     const [companiesRes, countiesRes, geoRes] = await Promise.all([
       fetch('data/companies.json'),
       fetch('data/counties_national.json'),
-      fetch('data/counties_southeast_simple.geojson')
+      fetch('data/counties_national_simple.geojson')
     ]);
 
     if (!companiesRes.ok || !countiesRes.ok || !geoRes.ok) {
