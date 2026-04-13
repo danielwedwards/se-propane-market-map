@@ -682,7 +682,7 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <div class="bar-row">
 <input type="text" id="si" placeholder="Search companies..." aria-label="Search companies">
 <div class="bar-group" style="border-left:none">
-<span class="bar-label">Type</span>
+<span class="bar-label">Ownership</span>
 <div class="state-pills" id="ownerPills">
 <span class="state-pill on" data-ow="ALL" onclick="toggleOwner('ALL')">All</span>
 <span class="state-pill" data-ow="public" onclick="toggleOwner('public')">Public</span>
@@ -1468,7 +1468,7 @@ function updateMapLegend(companies){
   }).join('')+(companies.length>30?'<div style="font-size:8px;color:var(--slate);margin-top:4px">+' +(companies.length-30)+' more</div>':'');
 }
 
-/* Marker cache: pre-built markers keyed by company ID */
+/* Marker cache: pre-built markers keyed by company ID, each with state tag for filtering */
 var _markerCache={};var _markerCacheBuilt=false;
 function buildMarkerCache(){
   _markerCache={};
@@ -1479,10 +1479,11 @@ function buildMarkerCache(){
     let sz=isLL?[9,9]:[7,7];let anch=isLL?[4.5,4.5]:[3.5,3.5];
     let mks=[];
     c.locations.filter(l=>l.lat!=null&&l.lng!=null&&isFinite(l.lat)&&isFinite(l.lng)).forEach(l=>{
-      let iconHtml=isLL?'<div class="cm cm-ll-star" style="background:'+col+'">&#9733;</div>':'<div class="'+cls+'" style="background:'+col+'"></div>';
-      let mk=L.marker([l.lat,l.lng],{icon:L.divIcon({className:'',html:iconHtml,iconSize:isLL?[14,14]:sz,iconAnchor:isLL?[7,7]:anch}),alt:esc(c.name)+' - '+esc(l.city||'')+', '+esc(l.state||'')});
+      /* Use circleMarker for Canvas rendering (50x faster than divIcon DOM markers) */
+      let mk=L.circleMarker([l.lat,l.lng],{radius:isLL?6:4,fillColor:col,color:isLL?'#C8A951':'#fff',weight:isLL?2:0.5,fillOpacity:0.85,opacity:0.9});
       mk.bindPopup('<div class="mp"><h3>'+esc(c.name)+'</h3><div class="sub">'+esc(l.name||c.name)+' &mdash; '+esc(l.city||'')+', '+esc(l.state||'')+'</div><button class="vf" onclick="op(\''+c.id+'\')">View Full Profile &rarr;</button></div>',{maxWidth:280,minWidth:200,autoClose:true,closeOnClick:true});
       mk.bindTooltip(esc(c.name),{direction:'top',className:'propane-tip',opacity:0.95});
+      mk._locState=l.state||'';
       mks.push(mk);
     });
     _markerCache[c.id]=mks;
@@ -1499,9 +1500,16 @@ function updateMap(){
   let companyIds=new Set(companies.map(c=>c.id));
   if(spotlight.size>0)companyIds=new Set([...spotlight,LL_ID].filter(id=>companyIds.has(id)));
   let markers=[];
+  let hasStateFilter=stateFilter.size>0;
   companyIds.forEach(id=>{
     let mks=_markerCache[id];
-    if(mks)markers.push(...mks);
+    if(!mks)return;
+    if(hasStateFilter){
+      /* Only include markers in filtered states */
+      mks.forEach(mk=>{if(stateFilter.has(mk._locState))markers.push(mk)});
+    }else{
+      markers.push(...mks);
+    }
   });
   // Create new layer group with all markers at once (avoids per-marker DOM cost)
   if(clusterMode){
