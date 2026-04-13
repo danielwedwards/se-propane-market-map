@@ -1191,31 +1191,45 @@ function toggleState(st){
   else{let bounds=[];stateFilter.forEach(s=>{if(SB[s]){bounds.push(SB[s][0]);bounds.push(SB[s][1])}});if(bounds.length)map.fitBounds(bounds,{padding:[20,20]})}
 }
 
+/* State mask: cached GeoJSON layer, restyle on filter change instead of recreating */
+var _stateMaskGeo=null;var _stateMaskLoading=false;
 async function updateStateMask(){
-  if(stateMaskLayer){map.removeLayer(stateMaskLayer);stateMaskLayer=null}
-  if(stateFilter.size===0){reorderLayers();return}
-  // Lazy-load GeoJSON if not yet loaded (needed for state shading)
+  if(stateFilter.size===0){
+    if(stateMaskLayer){map.removeLayer(stateMaskLayer);stateMaskLayer=null}
+    reorderLayers();return;
+  }
+  // Build FIPS lookup
+  let selectedFips=new Set();
+  stateFilter.forEach(st=>{Object.entries(FIPS_TO_ST).forEach(([f,s])=>{if(s===st)selectedFips.add(f)})});
+  // If we already have the layer, just restyle it (instant!)
+  if(stateMaskLayer&&_stateMaskGeo){
+    stateMaskLayer.eachLayer(function(layer){
+      let stFips=(layer.feature.id||'').substring(0,2);
+      let inSel=selectedFips.has(stFips);
+      layer.setStyle(inSel?{fillOpacity:0,weight:2,color:'#C8A951',opacity:0.8}:{fillColor:'#0D1B2A',fillOpacity:0.45,weight:0,opacity:0});
+    });
+    reorderLayers();return;
+  }
+  // First time: load GeoJSON and build layer
+  if(_stateMaskLoading)return;
+  _stateMaskLoading=true;
   if(!GEO||!GEO.features||GEO.features.length===0){
     try{
       var res=await fetch('data/counties_national_simple.geojson');
-      if(res.ok){GEO=await res.json();console.log('Loaded '+GEO.features.length+' county polygons for state mask')}
-    }catch(e){console.error('GeoJSON load error:',e);reorderLayers();return}
+      if(res.ok){GEO=await res.json();console.log('Loaded '+GEO.features.length+' county polygons')}
+    }catch(e){console.error('GeoJSON load:',e);_stateMaskLoading=false;reorderLayers();return}
   }
-  if(!GEO||!GEO.features||GEO.features.length===0){reorderLayers();return}
-  let selectedFips=new Set();
-  stateFilter.forEach(st=>{Object.entries(FIPS_TO_ST).forEach(([f,s])=>{if(s===st)selectedFips.add(f)})});
+  _stateMaskGeo=GEO;
   stateMaskLayer=L.geoJSON(GEO,{
     style:function(f){
       let stFips=f.id.substring(0,2);
-      let inSelected=selectedFips.has(stFips);
-      return inSelected
-        ?{fillOpacity:0,weight:2.5,color:'#C8A951',opacity:1}
-        :{fillColor:'#0D1B2A',fillOpacity:0.5,weight:0.5,color:'#C8A951',opacity:0.15};
+      let inSel=selectedFips.has(stFips);
+      return inSel?{fillOpacity:0,weight:2,color:'#C8A951',opacity:0.8}:{fillColor:'#0D1B2A',fillOpacity:0.45,weight:0,opacity:0};
     },
-    interactive:false,
-    pane:'shadowPane'
+    interactive:false,pane:'shadowPane'
   });
   stateMaskLayer.addTo(map);
+  _stateMaskLoading=false;
   reorderLayers();
 }
 
@@ -1259,7 +1273,8 @@ function go(immediate){
   if(immediate){_goInner();}
   else{_goTimer=setTimeout(_goInner,80);}
 }
-function _goInner(){searchQuery=document.getElementById('si').value;hideEx=document.getElementById('exToggle').checked;isoMode=document.getElementById('isoToggle').checked;selectedRow=-1;computeMarketShare();computeProxScores();render();updateMap();updateH();updateStateMask();if(document.getElementById('mainArea').classList.contains('view-charts'))renderCharts();pushURLState()}
+var _lastStateKey='';
+function _goInner(){searchQuery=document.getElementById('si').value;hideEx=document.getElementById('exToggle').checked;isoMode=document.getElementById('isoToggle').checked;selectedRow=-1;computeMarketShare();computeProxScores();render();updateMap();updateH();var newSK=[...stateFilter].sort().join(',');if(newSK!==_lastStateKey){_lastStateKey=newSK;updateStateMask()}if(document.getElementById('mainArea').classList.contains('view-charts'))renderCharts();pushURLState()}
 function pushURLState(){
   try{
     let p=new URLSearchParams();
@@ -1416,7 +1431,7 @@ function render(){try{
     /* === PRODUCT SPRINT: Research data cells === */
     '<td class="num" style="font-size:10px;color:var(--green)">'+(c.estRevenue?'$'+c.estRevenue+'M':'\u2014')+'</td>'+
     '<td class="num" style="font-size:10px">'+(c.employeeCount||'\u2014')+'</td>'+
-    '<td style="font-size:9px;color:var(--slate)">'+c.states.join(', ')+'</td>'+
+    '<td style="font-size:9px;color:var(--slate);max-width:100px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" title="'+c.states.join(', ')+'">'+c.states.slice(0,6).join(', ')+(c.states.length>6?' +' +(c.states.length-6):'')+'</td>'+
   '</tr>'}).join('')+(totalCompanies>TABLE_LIMIT?'<tr><td colspan="13" style="text-align:center;padding:12px"><button onclick="document.getElementById(\'tb\').dataset.showAll=\'1\';render()" style="background:var(--navy);color:#fff;border:none;padding:8px 24px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600">Show all '+totalCompanies+' companies ('+(totalCompanies-TABLE_LIMIT)+' more)</button></td></tr>':'');
   // Show/hide map hint
   let hint=document.getElementById('mapHint');
@@ -1477,18 +1492,25 @@ function buildMarkerCache(){
 
 function updateMap(){
   if(map)map.closePopup();
-  mcg.clearLayers();
+  // Remove old layer group entirely and create a fresh one (much faster than clearLayers+addLayer loop)
+  if(mcg)map.removeLayer(mcg);
   if(!_markerCacheBuilt)buildMarkerCache();
   let companies=fil();
   let companyIds=new Set(companies.map(c=>c.id));
-  // If spotlight active, filter to spotlighted companies only
   if(spotlight.size>0)companyIds=new Set([...spotlight,LL_ID].filter(id=>companyIds.has(id)));
   let markers=[];
   companyIds.forEach(id=>{
     let mks=_markerCache[id];
     if(mks)markers.push(...mks);
   });
-  if(clusterMode&&mcg.addLayers)mcg.addLayers(markers);else markers.forEach(m=>mcg.addLayer(m));
+  // Create new layer group with all markers at once (avoids per-marker DOM cost)
+  if(clusterMode){
+    mcg=L.markerClusterGroup({maxClusterRadius:50,spiderfyOnMaxZoom:true,showCoverageOnHover:false,chunkedLoading:true,chunkInterval:50,disableClusteringAtZoom:10});
+    mcg.addLayers(markers);
+  }else{
+    mcg=L.layerGroup(markers);
+  }
+  map.addLayer(mcg);
   // Update company color legend
   updateMapLegend(companies);
   // Update spotlight legend if companies are spotlighted
@@ -1510,14 +1532,7 @@ function updateMap(){
 function toggleCluster(){
   clusterMode=!clusterMode;
   document.getElementById('clusterToggle').classList.toggle('on',clusterMode);
-  map.removeLayer(mcg);
-  if(clusterMode){
-    mcg=L.markerClusterGroup({maxClusterRadius:50,spiderfyOnMaxZoom:true,showCoverageOnHover:false,chunkedLoading:true,disableClusteringAtZoom:10});
-  } else {
-    mcg=L.layerGroup();
-  }
-  map.addLayer(mcg);
-  updateMap();
+  updateMap(); /* updateMap() now handles layer creation based on clusterMode */
   showToast(clusterMode?'Clustering enabled':'Showing all locations');
 }
 
