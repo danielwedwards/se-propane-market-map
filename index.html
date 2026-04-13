@@ -996,7 +996,7 @@ function getCompanyColor(companyId){
   return companyColorCache[companyId]||'#90A4AE';
 }
 let mapColorMode='company'; /* 'company' or 'ownership' */
-let clusterMode=false; /* false = individual pins (default), true = clustered */
+let clusterMode=true; /* true = clustered (default for performance with 8000+ markers) */
 let proxScores={},countyScores={},totalScores={};
 let sortCol='total',sortDir='desc';
 let stateMaskLayer=null;
@@ -1401,7 +1401,7 @@ function render(){try{
 function initMap(){
   map=L.map('map',{center:CONFIG.CENTER,zoom:CONFIG.ZOOM,preferCanvas:true});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OSM &copy; CARTO',maxZoom:19}).addTo(map);
-  mcg=L.layerGroup();map.addLayer(mcg); /* Default: no clustering. Use toggleCluster() to enable. */
+  mcg=L.markerClusterGroup({maxClusterRadius:50,spiderfyOnMaxZoom:true,showCoverageOnHover:false,chunkedLoading:true,chunkInterval:100,chunkDelay:10,disableClusteringAtZoom:10});map.addLayer(mcg); /* Clustered by default for performance with 8000+ markers */
   [{n:'MS',la:32.7,lo:-89.7},{n:'AL',la:32.8,lo:-86.8},{n:'LA',la:31,lo:-92},{n:'TN',la:35.8,lo:-86.4},{n:'AR',la:34.8,lo:-92.4},{n:'GA',la:32.7,lo:-83.5},{n:'SC',la:33.9,lo:-80.9},{n:'NC',la:35.5,lo:-79.8},{n:'VA',la:37.5,lo:-79},{n:'FL',la:28.5,lo:-82.5},{n:'KY',la:37.8,lo:-85.7}]
   .forEach(s=>L.marker([s.la,s.lo],{icon:L.divIcon({className:'slbl',html:s.n,iconSize:[30,15]}),interactive:false}).addTo(map));
   updateMap();
@@ -1479,7 +1479,7 @@ function updateMap(){
 // === CLUSTER TOGGLE ===
 function toggleCluster(){
   clusterMode=!clusterMode;
-  document.getElementById('clusterToggle').classList.toggle('on',clusterMode);
+  document.getElementById('clusterToggle').classList.toggle('on',!clusterMode); /* Inverted: button shows active when UN-clustered since we default to clustered */
   map.removeLayer(mcg);
   if(clusterMode){
     mcg=L.markerClusterGroup({maxClusterRadius:50,spiderfyOnMaxZoom:true,showCoverageOnHover:false,chunkedLoading:true,disableClusteringAtZoom:10});
@@ -1492,12 +1492,23 @@ function toggleCluster(){
 }
 
 // === COUNTY LAYER ===
-function toggleCounty(){
+async function toggleCounty(){
   countyVisible=!countyVisible;
   document.getElementById('countyToggle').classList.toggle('county-on',countyVisible);
   document.getElementById('countyLegend').style.display=countyVisible?'block':'none';
   document.getElementById('countyMode').style.display=countyVisible?'inline-block':'none';
-  if(countyVisible)updateCountyLayer();
+  if(countyVisible){
+    // Lazy-load GeoJSON on first county toggle
+    if(!GEO||!GEO.features||GEO.features.length===0){
+      document.getElementById('countyToggle').textContent='Loading counties...';
+      try{
+        var res=await fetch('data/counties_national_simple.geojson');
+        if(res.ok){GEO=await res.json();console.log('Loaded '+GEO.features.length+' county polygons (lazy)')}
+      }catch(e){console.error('GeoJSON load error:',e)}
+      document.getElementById('countyToggle').innerHTML='&#127760; County Data';
+    }
+    updateCountyLayer();
+  }
   else if(countyGeoLayer){map.removeLayer(countyGeoLayer);countyGeoLayer=null}
 }
 
@@ -2326,25 +2337,27 @@ window.addEventListener('resize',function(){chartInstances.forEach(function(c){t
 
 // === ASYNC DATA LOADER ===
 async function loadData() {
-  const overlay = document.getElementById('loading-overlay');
+  const overlay = document.getElementById('loadingOverlay');
   if (overlay) overlay.style.display = 'flex';
 
   try {
-    const [companiesRes, countiesRes, geoRes] = await Promise.all([
+    // Load companies first (critical), defer county GeoJSON (3MB) until needed
+    const [companiesRes, countiesRes] = await Promise.all([
       fetch('data/companies.json'),
-      fetch('data/counties_national.json'),
-      fetch('data/counties_national_simple.geojson')
+      fetch('data/counties_national.json')
     ]);
 
-    if (!companiesRes.ok || !countiesRes.ok || !geoRes.ok) {
+    if (!companiesRes.ok || !countiesRes.ok) {
       throw new Error('Failed to load data files');
     }
 
     DATA = await companiesRes.json();
     CD = await countiesRes.json();
-    GEO = await geoRes.json();
 
-    console.log(`Loaded: ${DATA.length} companies, ${CD.length} counties, ${GEO.features.length} county polygons`);
+    // Defer GeoJSON loading — load it lazily when county layer is toggled
+    GEO = {features: []};
+
+    console.log('Loaded: ' + DATA.length + ' companies, ' + CD.length + ' counties (GeoJSON deferred)');
 
     if (!DATA || !Array.isArray(DATA) || DATA.length === 0) {
       document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:DM Sans"><h2>Error: No company data loaded</h2></div>';
@@ -2354,7 +2367,7 @@ async function loadData() {
     return true;
   } catch (err) {
     console.error('Data load error:', err);
-    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:DM Sans;flex-direction:column"><h2>Error Loading Data</h2><p>' + err.message + '</p><p>Make sure data/ directory contains companies.json, counties_national.json, and counties_southeast_simple.geojson</p></div>';
+    document.body.innerHTML = '<div style="display:flex;align-items:center;justify-content:center;height:100vh;font-family:DM Sans;flex-direction:column"><h2>Error Loading Data</h2><p>' + err.message + '</p><p>Make sure data/ directory contains companies.json and counties_national.json</p></div>';
     return false;
   }
 }
@@ -2414,14 +2427,28 @@ window.addEventListener('load',async()=>{
   // Load data from external JSON files
   const dataLoaded = await loadData();
   if (!dataLoaded) return;
+
+  // Yield to UI between heavy init steps so page stays responsive
+  const yieldUI = () => new Promise(r => setTimeout(r, 0));
+
   buildGrid();buildUniqueCompanyColors();
-  cacheDOM();initStatePills(ALL_STATES);initScoreTip();initRowPreview();computeProxScores();computeMarketShare();render();initMap();updateH();updatePF();updateSavedCount();
+  cacheDOM();initStatePills(ALL_STATES);initScoreTip();initRowPreview();
+  await yieldUI();
+
+  computeProxScores();computeMarketShare();
+  await yieldUI();
+
+  render();
+  await yieldUI();
+
+  initMap();updateH();updatePF();updateSavedCount();
   restoreTheme();
   loadFromURL();
+
   // Hide loading overlay
   document.getElementById('loadingOverlay').classList.add('hidden');
-  // SPRINT P: Safety timeout — force-hide loading overlay after 15s
-  setTimeout(function(){document.getElementById('loadingOverlay').classList.add('hidden')},15000);
+  // Safety timeout — force-hide loading overlay after 20s
+  setTimeout(function(){document.getElementById('loadingOverlay').classList.add('hidden')},20000);
 });
 </script>
 </body>
