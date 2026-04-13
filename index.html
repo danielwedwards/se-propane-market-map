@@ -1191,9 +1191,17 @@ function toggleState(st){
   else{let bounds=[];stateFilter.forEach(s=>{if(SB[s]){bounds.push(SB[s][0]);bounds.push(SB[s][1])}});if(bounds.length)map.fitBounds(bounds,{padding:[20,20]})}
 }
 
-function updateStateMask(){
+async function updateStateMask(){
   if(stateMaskLayer){map.removeLayer(stateMaskLayer);stateMaskLayer=null}
-  if(stateFilter.size===0||!GEO||!GEO.features){reorderLayers();return}
+  if(stateFilter.size===0){reorderLayers();return}
+  // Lazy-load GeoJSON if not yet loaded (needed for state shading)
+  if(!GEO||!GEO.features||GEO.features.length===0){
+    try{
+      var res=await fetch('data/counties_national_simple.geojson');
+      if(res.ok){GEO=await res.json();console.log('Loaded '+GEO.features.length+' county polygons for state mask')}
+    }catch(e){console.error('GeoJSON load error:',e);reorderLayers();return}
+  }
+  if(!GEO||!GEO.features||GEO.features.length===0){reorderLayers();return}
   let selectedFips=new Set();
   stateFilter.forEach(st=>{Object.entries(FIPS_TO_ST).forEach(([f,s])=>{if(s===st)selectedFips.add(f)})});
   stateMaskLayer=L.geoJSON(GEO,{
@@ -1379,7 +1387,9 @@ function render(){try{
     let cells=tr.querySelectorAll('td');
     if(cells.length>=9)prevScores[id]={p:cells[6].textContent.trim(),c:cells[7].textContent.trim(),t:cells[8].textContent.trim()};
   });
-  tb.innerHTML=companies.map((c,i)=>{
+  let TABLE_LIMIT=(document.getElementById('tb')&&document.getElementById('tb').dataset.showAll==='1')?9999:200;let totalCompanies=companies.length;
+  let displayCompanies=companies.slice(0,TABLE_LIMIT);
+  tb.innerHTML=displayCompanies.map((c,i)=>{
     let inPF=platform.includes(c.id);let isLL=c.id===LL_ID;let canAdd=!c.excluded&&!isLL;
     let ps=proxScores[c.id]||0;let cys=countyScores[c.id]||0;let ts=totalScores[c.id]||0;
     let ms=marketShare[c.id]||{se:0,gallons:0,counties:0,states:{}};
@@ -1407,7 +1417,7 @@ function render(){try{
     '<td class="num" style="font-size:10px;color:var(--green)">'+(c.estRevenue?'$'+c.estRevenue+'M':'\u2014')+'</td>'+
     '<td class="num" style="font-size:10px">'+(c.employeeCount||'\u2014')+'</td>'+
     '<td style="font-size:9px;color:var(--slate)">'+c.states.join(', ')+'</td>'+
-  '</tr>'}).join('');
+  '</tr>'}).join('')+(totalCompanies>TABLE_LIMIT?'<tr><td colspan="13" style="text-align:center;padding:12px"><button onclick="document.getElementById(\'tb\').dataset.showAll=\'1\';render()" style="background:var(--navy);color:#fff;border:none;padding:8px 24px;border-radius:6px;cursor:pointer;font-size:12px;font-weight:600">Show all '+totalCompanies+' companies ('+(totalCompanies-TABLE_LIMIT)+' more)</button></td></tr>':'');
   // Show/hide map hint
   let hint=document.getElementById('mapHint');
   if(hint)hint.style.display=(spotlight.size===0&&companies.length>0)?'block':'none';
@@ -1425,7 +1435,7 @@ function initMap(){
 
 /* SPRINT O: Map color mode toggle and dynamic legend */
 function setMapColorMode(mode){
-  mapColorMode=mode;
+  mapColorMode=mode;_markerCacheBuilt=false; /* Rebuild markers with new colors */
   document.getElementById('legendTitle').textContent=mode==='company'?'By Company':'By Ownership';
   document.getElementById('legendModeCompany').innerHTML=mode==='company'?'<b>By Company</b>':'By Company';
   document.getElementById('legendModeOwnership').innerHTML=mode==='ownership'?'<b>By Ownership</b>':'By Ownership';
@@ -1443,37 +1453,40 @@ function updateMapLegend(companies){
   }).join('')+(companies.length>30?'<div style="font-size:8px;color:var(--slate);margin-top:4px">+' +(companies.length-30)+' more</div>':'');
 }
 
-function updateMap(){
-  /* SPRINT P: Close popup and destroy tippy instances before clearing markers */
-  if(map)map.closePopup();
-  mcg.clearLayers();
-  let allPFIds=[LL_ID,...platform];
-  let companies=fil();
-  let markers=[];
-  // Build spotlight color map for individual company distinction
-  let spotColors={};
-  if(spotlight.size>0){
-    companies=companies.filter(c=>spotlight.has(c.id)||c.id===LL_ID);
-    let spotArr=[...spotlight];
-    spotArr.forEach((id,i)=>{spotColors[id]=CO_COLORS[i%CO_COLORS.length]});
-  }
-  companies.forEach(c=>{let isInPF=allPFIds.includes(c.id);let isLL=c.id===LL_ID;
-    // SPRINT O: Per-company color by default, ownership color as option
-    let col=spotColors[c.id]||(mapColorMode==='company'?getCompanyColor(c.id):OC[c.ownership]);
-    let cls=isLL?'cm cm-ll':isInPF?'cm cm-platform':'cm';
-    let sz=isLL?[9,9]:(spotlight.size>0?[9,9]:[7,7]);
-    let anch=isLL?[4.5,4.5]:(spotlight.size>0?[4.5,4.5]:[3.5,3.5]);
+/* Marker cache: pre-built markers keyed by company ID */
+var _markerCache={};var _markerCacheBuilt=false;
+function buildMarkerCache(){
+  _markerCache={};
+  DATA.forEach(c=>{
+    let isLL=c.id===LL_ID;
+    let col=mapColorMode==='company'?getCompanyColor(c.id):OC[c.ownership];
+    let cls=isLL?'cm cm-ll':'cm';
+    let sz=isLL?[9,9]:[7,7];let anch=isLL?[4.5,4.5]:[3.5,3.5];
+    let mks=[];
     c.locations.filter(l=>l.lat!=null&&l.lng!=null&&isFinite(l.lat)&&isFinite(l.lng)).forEach(l=>{
       let iconHtml=isLL?'<div class="cm cm-ll-star" style="background:'+col+'">&#9733;</div>':'<div class="'+cls+'" style="background:'+col+'"></div>';
-      let mk=L.marker([l.lat,l.lng],{icon:L.divIcon({className:'',html:iconHtml,iconSize:isLL?[14,14]:sz,iconAnchor:isLL?[7,7]:anch}),alt:esc(c.name)+' - '+esc(l.city)+', '+esc(l.state)});
-      let ps=proxScores[c.id]||0;
-      var msPct=marketShare[c.id]?marketShare[c.id].se:0;
-      var covStates=stateFilter.size>0?[...stateFilter]:c.states;
-      var filtLocs=stateFilter.size>0?c.locations.filter(function(ll){return stateFilter.has(ll.state)}).length:c.locations.length;
-      mk.bindPopup('<div class="mp"><h3>'+esc(c.name)+'</h3><div class="sub">'+esc(l.name)+' &mdash; '+esc(l.city)+', '+esc(l.state)+'</div><div class="g"><div class="s"><div class="sl">Locations</div><div class="sv">'+filtLocs+'</div></div><div class="s"><div class="sl">Market Share</div><div class="sv" style="color:var(--blue)">'+msPct+'%</div></div><div class="s"><div class="sl">Ownership</div><div class="sv"><span class="badge '+BC[c.ownership]+'">'+OL[c.ownership]+'</span></div></div><div class="s"><div class="sl">Coverage</div><div class="sv" style="font-size:9px">'+covStates.slice(0,6).map(function(st){return st+':'+c.locations.filter(function(ll){return ll.state===st}).length}).join(' ')+'</div></div></div><button class="vf" onclick="op(\''+c.id+'\')">View Full Profile &rarr;</button></div>',{maxWidth:300,minWidth:220,autoClose:true,closeOnClick:true});
-      mk.bindTooltip('<b>'+esc(c.name)+'</b><br>'+c.locations.length+' locs &middot; '+OL[c.ownership],{direction:'top',className:'propane-tip',opacity:0.95});
-      markers.push(mk);
-    })
+      let mk=L.marker([l.lat,l.lng],{icon:L.divIcon({className:'',html:iconHtml,iconSize:isLL?[14,14]:sz,iconAnchor:isLL?[7,7]:anch}),alt:esc(c.name)+' - '+esc(l.city||'')+', '+esc(l.state||'')});
+      mk.bindPopup('<div class="mp"><h3>'+esc(c.name)+'</h3><div class="sub">'+esc(l.name||c.name)+' &mdash; '+esc(l.city||'')+', '+esc(l.state||'')+'</div><button class="vf" onclick="op(\''+c.id+'\')">View Full Profile &rarr;</button></div>',{maxWidth:280,minWidth:200,autoClose:true,closeOnClick:true});
+      mk.bindTooltip(esc(c.name),{direction:'top',className:'propane-tip',opacity:0.95});
+      mks.push(mk);
+    });
+    _markerCache[c.id]=mks;
+  });
+  _markerCacheBuilt=true;
+}
+
+function updateMap(){
+  if(map)map.closePopup();
+  mcg.clearLayers();
+  if(!_markerCacheBuilt)buildMarkerCache();
+  let companies=fil();
+  let companyIds=new Set(companies.map(c=>c.id));
+  // If spotlight active, filter to spotlighted companies only
+  if(spotlight.size>0)companyIds=new Set([...spotlight,LL_ID].filter(id=>companyIds.has(id)));
+  let markers=[];
+  companyIds.forEach(id=>{
+    let mks=_markerCache[id];
+    if(mks)markers.push(...mks);
   });
   if(clusterMode&&mcg.addLayers)mcg.addLayers(markers);else markers.forEach(m=>mcg.addLayer(m));
   // Update company color legend
