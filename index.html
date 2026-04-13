@@ -1207,7 +1207,7 @@ async function updateStateMask(){
     stateMaskLayer.eachLayer(function(layer){
       let stFips=(layer.feature.id||'').substring(0,2);
       let inSel=selectedFips.has(stFips);
-      layer.setStyle(inSel?{fillOpacity:0,weight:2,color:'#C8A951',opacity:0.8}:{fillColor:'#0D1B2A',fillOpacity:0.45,weight:0,opacity:0});
+      layer.setStyle(inSel?{fillOpacity:0,weight:1.5,color:'#C8A951',opacity:0.7}:{fillColor:'#0D1B2A',fillOpacity:0.4,weight:0,opacity:0});
     });
     reorderLayers();return;
   }
@@ -1225,7 +1225,7 @@ async function updateStateMask(){
     style:function(f){
       let stFips=f.id.substring(0,2);
       let inSel=selectedFips.has(stFips);
-      return inSel?{fillOpacity:0,weight:2,color:'#C8A951',opacity:0.8}:{fillColor:'#0D1B2A',fillOpacity:0.45,weight:0,opacity:0};
+      return inSel?{fillOpacity:0,weight:1.5,color:'#C8A951',opacity:0.7}:{fillColor:'#0D1B2A',fillOpacity:0.4,weight:0,opacity:0};
     },
     interactive:false,pane:'shadowPane'
   });
@@ -1487,10 +1487,21 @@ function buildMarkerCache(){
     let col=mapColorMode==='company'?getCompanyColor(c.id):OC[c.ownership];
     let mks=[];
     c.locations.filter(l=>l.lat!=null&&l.lng!=null&&isFinite(l.lat)&&isFinite(l.lng)).forEach(l=>{
-      let mk=L.circleMarker([l.lat,l.lng],{radius:isLL?6:3.5,fillColor:col,color:isLL?'#C8A951':'#fff',weight:isLL?2:0.5,fillOpacity:0.85,opacity:0.9});
+      /* Lampton Love: larger gold markers. Others: smaller colored dots */
+      let mk=L.circleMarker([l.lat,l.lng],{
+        radius:isLL?8:3.5,
+        fillColor:isLL?'#FFD100':col,
+        color:isLL?'#0D1B2A':'#fff',
+        weight:isLL?2.5:0.5,
+        fillOpacity:isLL?1:0.85,
+        opacity:0.9,
+        interactive:true,
+        bubblingMouseEvents:false,
+        pane:isLL?'markerPane':'overlayPane' /* LL markers on top */
+      });
       mk.bindPopup('<div class="mp"><h3>'+esc(c.name)+'</h3><div class="sub">'+esc(l.name||c.name)+' &mdash; '+esc(l.city||'')+', '+esc(l.state||'')+'</div><button class="vf" onclick="op(\''+c.id+'\')">View Full Profile &rarr;</button></div>',{maxWidth:280,minWidth:200,autoClose:true,closeOnClick:true});
-      mk.bindTooltip(esc(c.name),{direction:'top',className:'propane-tip',opacity:0.95});
-      mk._cid=c.id;mk._st=l.state||'';
+      mk.bindTooltip('<b>'+esc(c.name)+'</b><br>'+esc(l.city||'')+', '+esc(l.state||''),{direction:'top',className:'propane-tip',opacity:0.95});
+      mk._cid=c.id;mk._st=l.state||'';mk._isLL=isLL;
       mks.push(mk);_allMarkers.push(mk);
     });
     _markerCache[c.id]=mks;
@@ -1514,8 +1525,12 @@ function updateMap(){
   for(let i=0,n=_allMarkers.length;i<n;i++){
     let mk=_allMarkers[i];
     let show=visIds.has(mk._cid)&&(!hasSF||stateFilter.has(mk._st));
-    if(show){mk.setStyle({fillOpacity:0.85,opacity:0.9,radius:mk._cid===LL_ID?6:3.5})}
-    else{mk.setStyle({fillOpacity:0,opacity:0,radius:0})}
+    if(show){
+      mk.setStyle({fillOpacity:mk._isLL?1:0.85,opacity:0.9,radius:mk._isLL?8:3.5,
+        fillColor:mk._isLL?'#FFD100':undefined,interactive:true});
+    }else{
+      mk.setStyle({fillOpacity:0,opacity:0,radius:0,interactive:false});
+    }
   }
   // Update company color legend
   updateMapLegend(companies);
@@ -1625,7 +1640,7 @@ function updateCountyLayer(){
         else if(countyMode==='customers')val=cd.h;
         else val=cd.u;
       }
-      return{fillColor:val>0?getColor(val):'#f0f0f0',weight:0.5,opacity:0.6,color:'#999',fillOpacity:0.65};
+      return{fillColor:val>0?getColor(val):'#f0f0f0',weight:0.2,opacity:0.3,color:'#bbb',fillOpacity:0.55};
     },
     onEachFeature:function(feature,layer){
       let cd=fipsData[feature.id];
