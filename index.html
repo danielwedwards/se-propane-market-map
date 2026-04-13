@@ -895,7 +895,7 @@ const SB={AL:[[30.22,-88.47],[35.01,-84.89]],AK:[[51.21,-179.15],[71.39,-129.99]
 const SE_STATES=['MS','AL','LA','TN','AR','GA','SC','NC','VA','FL','KY'];
 const ALL_STATES=['AL','AK','AZ','AR','CA','CO','CT','DE','DC','FL','GA','HI','ID','IL','IN','IA','KS','KY','LA','ME','MD','MA','MI','MN','MS','MO','MT','NE','NV','NH','NJ','NM','NY','NC','ND','OH','OK','OR','PA','RI','SC','SD','TN','TX','UT','VT','VA','WA','WV','WI','WY'];
 const REGIONS={southeast:['AL','AR','FL','GA','KY','LA','MS','NC','SC','TN','VA'],northeast:['CT','DE','DC','ME','MD','MA','NH','NJ','NY','PA','RI','VT','WV'],midwest:['IL','IN','IA','KS','MI','MN','MO','NE','ND','OH','SD','WI'],west:['AK','AZ','CA','CO','HI','ID','MT','NV','NM','OR','UT','WA','WY'],south_central:['OK','TX']};
-let activeRegion='southeast';  // Default region
+let activeRegion='ALL';  // Default region — show all US
 const FIPS_TO_ST={'01':'AL','02':'AK','04':'AZ','05':'AR','06':'CA','08':'CO','09':'CT','10':'DE','11':'DC','12':'FL','13':'GA','15':'HI','16':'ID','17':'IL','18':'IN','19':'IA','20':'KS','21':'KY','22':'LA','23':'ME','24':'MD','25':'MA','26':'MI','27':'MN','28':'MS','29':'MO','30':'MT','31':'NE','32':'NV','33':'NH','34':'NJ','35':'NM','36':'NY','37':'NC','38':'ND','39':'OH','40':'OK','41':'OR','42':'PA','44':'RI','45':'SC','46':'SD','47':'TN','48':'TX','49':'UT','50':'VT','51':'VA','53':'WA','54':'WV','55':'WI','56':'WY'};
 const LL_ID='lampton_love';
 // Known founding years for major U.S. propane companies
@@ -1133,40 +1133,31 @@ function initStatePills(statesArray){
   states.forEach(s=>{html+='<span class="state-pill" data-st="'+s+'" onclick="toggleState(\''+s+'\')">'+s+'</span>'});
   document.getElementById('statePills').innerHTML=html;
 }
-function toggleRegion(region){
+async function toggleRegion(region){
   // Update region pill UI
   document.querySelectorAll('#regionPills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.rg===region));
   activeRegion=region;
-  // Clear state filter
+  // Clear state filter completely
   stateFilter.clear();
-  // Rebuild state pills for the selected region and activate region's states as filter
+  // Rebuild state pills for the selected region
   if(region==='ALL'){
     initStatePills(ALL_STATES);
-    // No state filter = show all
     document.querySelector('.state-pill[data-st="ALL"]').classList.add('on');
   } else {
     initStatePills(REGIONS[region]);
-    // Activate all states in this region so companies outside are filtered out
     REGIONS[region].forEach(function(st){stateFilter.add(st)});
     document.querySelectorAll('#statePills .state-pill').forEach(function(p){
       if(p.dataset.st && p.dataset.st!=='ALL' && stateFilter.has(p.dataset.st))p.classList.add('on');
       if(p.dataset.st==='ALL')p.classList.remove('on');
     });
   }
-  // Load region GeoJSON first, then render (fixes wrong-region display)
-  loadRegionGeo(region==='ALL'?'national':region).then(function(ok){
-    if(ok && countyGeoLayer && countyVisible){
-      map.removeLayer(countyGeoLayer);
-      countyGeoLayer=null;
-      updateCountyLayer();
-    }
-  });
-  // Reset market share cache since state filter changed
-  _mktCacheKey='';
+  // Reset ALL caches to force fresh computation
+  _mktCacheKey='__FORCE__';_lastStateKey='__FORCE__';
+  // Render immediately with current data
   go(true);
   // Zoom to region
   const regionBounds={
-    southeast:[[24.5,-95],[ 39.5,-75]],
+    southeast:[[24.5,-95],[39.5,-75]],
     northeast:[[38,-80],[47.5,-66.5]],
     midwest:[[36,-104.5],[49,-80]],
     south_central:[[25.8,-106.7],[37,-93.5]],
@@ -1174,10 +1165,20 @@ function toggleRegion(region){
   };
   if(region==='ALL')map.setView([38,-96],4);
   else if(regionBounds[region])map.fitBounds(regionBounds[region],{padding:[20,20]});
-  showToast('Region: '+(region==='ALL'?'All US':region.replace('_',' ')));
+  // Load region GeoJSON in background for county overlay
+  var geoRegion=region==='ALL'?'national':region;
+  loadRegionGeo(geoRegion).then(function(ok){
+    if(ok && countyGeoLayer && countyVisible){
+      map.removeLayer(countyGeoLayer);countyGeoLayer=null;
+      updateCountyLayer();
+    }
+    // Refresh state mask with loaded GeoJSON
+    if(ok)updateStateMask();
+  });
+  showToast('Region: '+(region==='ALL'?'All US':region.replace(/_/g,' ')));
 }
 function toggleState(st){
-  _mktCacheKey=''; // Reset market share cache
+  _mktCacheKey='__FORCE__';_lastStateKey='__FORCE__'; // Reset caches
   if(st==='ALL'){stateFilter.clear();document.querySelectorAll('.state-pill').forEach(p=>p.classList.toggle('on',p.dataset.st==='ALL'))}
   else{document.querySelector('.state-pill[data-st="ALL"]').classList.remove('on');
     let pill=document.querySelector('.state-pill[data-st="'+st+'"]');
@@ -1246,7 +1247,7 @@ function toggleOwner(ow){
     if(ownerFilter.has(ow)){ownerFilter.delete(ow);pill.classList.remove('on')}else{ownerFilter.add(ow);pill.classList.add('on')}
     if(ownerFilter.size===0)document.querySelector('#ownerPills .state-pill[data-ow="ALL"]').classList.add('on');
   }
-  go();
+  _mktCacheKey='__FORCE__';go();
 }
 function toggleCT(ct){
   if(ct==='ALL'){ctFilter.clear();document.querySelectorAll('#ctPills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.ct==='ALL'))}
@@ -1255,7 +1256,7 @@ function toggleCT(ct){
     if(ctFilter.has(ct)){ctFilter.delete(ct);pill.classList.remove('on')}else{ctFilter.add(ct);pill.classList.add('on')}
     if(ctFilter.size===0)document.querySelector('#ctPills .state-pill[data-ct="ALL"]').classList.add('on');
   }
-  go();
+  _mktCacheKey='__FORCE__';go();
 }
 function sortBy(col){
   if(sortCol===col)sortDir=sortDir==='desc'?'asc':'desc';
@@ -1381,10 +1382,15 @@ function clearAllFilters(){
   ownerFilter.clear();document.querySelectorAll('#ownerPills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.ow==='ALL'));
   ctFilter.clear();document.querySelectorAll('#ctPills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.ct==='ALL'));
   stateFilter.clear();document.querySelectorAll('#statePills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.st==='ALL'));
+  /* Reset region pills to ALL */
+  document.querySelectorAll('#regionPills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.rg==='ALL'));
+  activeRegion='ALL';
   document.getElementById('si').value='';
   document.getElementById('exToggle').checked=false;
   document.getElementById('isoToggle').checked=false;
-  go();
+  /* Reset ALL caches to force recomputation */
+  _mktCacheKey='__FORCE__';_proxCacheKey='__FORCE__';_lastStateKey='__FORCE__';
+  go(true);
   map.setView(CONFIG.CENTER,CONFIG.ZOOM);
 }
 
@@ -2168,6 +2174,12 @@ function resetApp(){
   hideEx=false;document.getElementById('exToggle').checked=false;
   isoMode=false;document.getElementById('isoToggle').checked=false;
   spotlight.clear();
+  /* Reset region to ALL */
+  activeRegion='ALL';
+  document.querySelectorAll('#regionPills .state-pill').forEach(function(p){p.classList.toggle('on',p.dataset.rg==='ALL')});
+  initStatePills(ALL_STATES);
+  /* Reset all caches */
+  _mktCacheKey='__FORCE__';_proxCacheKey='__FORCE__';_lastStateKey='__FORCE__';
   /* Reset sort */
   sortCol='total';sortDir='desc';
   selectedRow=-1;
