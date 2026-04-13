@@ -9,7 +9,7 @@
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.css" />
 <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.5.3/dist/MarkerCluster.Default.css" />
-<link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/shift-away.css" />
+<!-- tippy.js removed for performance; using native Leaflet tooltips -->
 <style>
 /* === SPRINT 9: font-display:swap for faster load === */
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=DM+Serif+Display&display=swap');
@@ -155,7 +155,8 @@ body{font-family:'DM Sans',sans-serif;background:var(--light-bg);color:var(--nav
 .fsep{width:1px;height:18px;background:var(--border)}
 select.fsel{padding:5px 8px;border:1px solid var(--border);border-radius:var(--radius);font-size:11px;font-family:inherit;background:var(--white)}
 .state-pills{display:flex;flex-wrap:wrap;gap:3px}
-#statePills{max-height:52px;overflow-y:auto;scrollbar-width:thin}
+#statePills{max-height:72px;overflow-y:auto;scrollbar-width:thin}
+.propane-tip{font-family:'DM Sans',sans-serif;font-size:11px;padding:6px 10px;border-radius:6px;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
 #regionPills .state-pill.on{background:var(--gold);color:var(--navy);border-color:var(--gold)}
 .state-pill{padding:3px 8px;border:1px solid var(--border);border-radius:12px;font-size:10px;font-weight:500;cursor:pointer;background:var(--white);color:var(--slate);transition:all var(--tr)}
 .state-pill:hover{border-color:var(--gold)}.state-pill:active{transform:scale(0.95)}.state-pill.on{background:var(--navy);color:var(--white);border-color:var(--navy)}
@@ -704,9 +705,11 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <span class="state-pill" data-ct="wholesale_transport" onclick="toggleCT('wholesale_transport')">Wholesale</span>
 </div>
 </div>
-<div class="bar-group" style="flex:1;min-width:0">
-<div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">
-<span class="bar-label" style="margin:0">Region</span>
+</div>
+<!-- Row 2: Region + States -->
+<div class="bar-row" style="padding-top:0">
+<div class="bar-group" style="border-left:none;flex-shrink:0">
+<span class="bar-label">Region</span>
 <div class="state-pills" id="regionPills">
 <span class="state-pill on" data-rg="ALL" onclick="toggleRegion('ALL')">All US</span>
 <span class="state-pill" data-rg="southeast" onclick="toggleRegion('southeast')">Southeast</span>
@@ -716,8 +719,7 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <span class="state-pill" data-rg="west" onclick="toggleRegion('west')">West</span>
 </div>
 </div>
-<div class="state-pills" id="statePills" style="flex-wrap:wrap"></div>
-</div>
+<div class="state-pills" id="statePills" style="flex-wrap:wrap;flex:1;min-width:0"></div>
 </div>
 <!-- Row 2: Layers + Tools + Checkboxes + Theme (single unified row) -->
 <div class="bar-row">
@@ -875,7 +877,7 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://unpkg.com/leaflet.markercluster@1.5.3/dist/leaflet.markercluster.js"></script>
 <script src="https://unpkg.com/@popperjs/core@2"></script>
-<script src="https://unpkg.com/tippy.js@6"></script>
+<!-- tippy.js removed for performance -->
 <script src="https://cdn.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
 <script>
 // === CONSTANTS ===
@@ -996,8 +998,9 @@ function getCompanyColor(companyId){
   return companyColorCache[companyId]||'#90A4AE';
 }
 let mapColorMode='company'; /* 'company' or 'ownership' */
-let clusterMode=true; /* true = clustered (default for performance with 8000+ markers) */
+let clusterMode=false; /* false = individual pins (default), true = clustered */
 let proxScores={},countyScores={},totalScores={};
+let _proxCacheKey='',_mktCacheKey='';
 let sortCol='total',sortDir='desc';
 let stateMaskLayer=null;
 let spotlight=new Set();
@@ -1031,6 +1034,9 @@ function getGridNeighbors(lat,lng){
 function safeRun(fn,label){try{fn()}catch(e){console.error('['+label+']',e);showToast('Error in '+label+'. Some data may be incomplete.')}}
 
 function computeProxScores(){try{
+  let newKey=platform.slice().sort().join(',');
+  if(newKey===_proxCacheKey)return;
+  _proxCacheKey=newKey;
   let ll=DATA.find(c=>c.id===LL_ID);
   let acqs=platform.map(id=>DATA.find(c=>c.id===id)).filter(Boolean);
   let pfLocs=[...(ll?ll.locations:[]),...acqs.flatMap(c=>c.locations)].filter(l=>l.lat!=null&&l.lng!=null);
@@ -1074,6 +1080,9 @@ let totalSEGallons=0;
 let stateGallons={};  // {ST: total gallons}
 
 function computeMarketShare(){
+  let newKey=[...stateFilter].sort().join(',');
+  if(newKey===_mktCacheKey)return;
+  _mktCacheKey=newKey;
   marketShare={};
   /* SPRINT N: Location-based market share.
      Market share = company locations in area / total locations of ALL companies in area.
@@ -1087,13 +1096,13 @@ function computeMarketShare(){
         if(stateFilter.has(l.state)){totalLocs++;stateTotals[l.state]=(stateTotals[l.state]||0)+1}
       });
     } else {
-      totalLocs+=c.seLocs;
+      totalLocs+=c.locations.length;
       c.locations.forEach(function(l){stateTotals[l.state]=(stateTotals[l.state]||0)+1});
     }
   });
   // Compute each company's share
   DATA.forEach(function(c){
-    var companyLocs=stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}).length:c.seLocs;
+    var companyLocs=stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}).length:c.locations.length;
     var stShares={};
     if(stateFilter.size>0){
       stateFilter.forEach(function(st){
@@ -1144,17 +1153,17 @@ function toggleRegion(region){
       if(p.dataset.st==='ALL')p.classList.remove('on');
     });
   }
-  // Load region GeoJSON (national for ALL, region-specific otherwise)
+  // Load region GeoJSON first, then render (fixes wrong-region display)
   loadRegionGeo(region==='ALL'?'national':region).then(function(ok){
-    if(ok && typeof countyLayer!=='undefined' && countyLayer){
-      // Refresh county overlay if visible
-      if(map.hasLayer(countyLayer)){
-        map.removeLayer(countyLayer);
-        toggleCounty();
-      }
+    if(ok && countyGeoLayer && countyVisible){
+      map.removeLayer(countyGeoLayer);
+      countyGeoLayer=null;
+      updateCountyLayer();
     }
   });
-  go();
+  // Reset market share cache since state filter changed
+  _mktCacheKey='';
+  go(true);
   // Zoom to region
   const regionBounds={
     southeast:[[24.5,-95],[ 39.5,-75]],
@@ -1168,6 +1177,7 @@ function toggleRegion(region){
   showToast('Region: '+(region==='ALL'?'All US':region.replace('_',' ')));
 }
 function toggleState(st){
+  _mktCacheKey=''; // Reset market share cache
   if(st==='ALL'){stateFilter.clear();document.querySelectorAll('.state-pill').forEach(p=>p.classList.toggle('on',p.dataset.st==='ALL'))}
   else{document.querySelector('.state-pill[data-st="ALL"]').classList.remove('on');
     let pill=document.querySelector('.state-pill[data-st="'+st+'"]');
@@ -1235,7 +1245,13 @@ function sortBy(col){
   selectedRow=-1;
   render();
 }
-function go(){searchQuery=document.getElementById('si').value;hideEx=document.getElementById('exToggle').checked;isoMode=document.getElementById('isoToggle').checked;selectedRow=-1;computeMarketShare();computeProxScores();render();updateMap();updateH();updateStateMask();if(document.getElementById('mainArea').classList.contains('view-charts'))renderCharts();pushURLState()}
+let _goTimer=null;
+function go(immediate){
+  if(_goTimer)clearTimeout(_goTimer);
+  if(immediate){_goInner();}
+  else{_goTimer=setTimeout(_goInner,80);}
+}
+function _goInner(){searchQuery=document.getElementById('si').value;hideEx=document.getElementById('exToggle').checked;isoMode=document.getElementById('isoToggle').checked;selectedRow=-1;computeMarketShare();computeProxScores();render();updateMap();updateH();updateStateMask();if(document.getElementById('mainArea').classList.contains('view-charts'))renderCharts();pushURLState()}
 function pushURLState(){
   try{
     let p=new URLSearchParams();
@@ -1267,7 +1283,7 @@ function fil(){
     let va,vb;
     if(sortCol==='name'){va=a.name.toLowerCase();vb=b.name.toLowerCase();return sortDir==='asc'?va.localeCompare(vb):vb.localeCompare(va)}
     if(sortCol==='type'){va=a.ownership;vb=b.ownership;return sortDir==='asc'?va.localeCompare(vb):vb.localeCompare(va)}
-    if(sortCol==='locs'){va=stateFilter.size>0?a.locations.filter(function(l){return stateFilter.has(l.state)}).length:(a.seLocs||0);vb=stateFilter.size>0?b.locations.filter(function(l){return stateFilter.has(l.state)}).length:(b.seLocs||0);return sortDir==='desc'?vb-va:va-vb}
+    if(sortCol==='locs'){va=stateFilter.size>0?a.locations.filter(function(l){return stateFilter.has(l.state)}).length:a.locations.length;vb=stateFilter.size>0?b.locations.filter(function(l){return stateFilter.has(l.state)}).length:b.locations.length;return sortDir==='desc'?vb-va:va-vb}
     if(sortCol==='prox'){va=proxScores[a.id]||0;vb=proxScores[b.id]||0;return sortDir==='desc'?vb-va:va-vb}
     if(sortCol==='county'){va=countyScores[a.id]||0;vb=countyScores[b.id]||0;return sortDir==='desc'?vb-va:va-vb}
     if(sortCol==='total'){va=totalScores[a.id]||0;vb=totalScores[b.id]||0;return sortDir==='desc'?vb-va:va-vb}
@@ -1382,7 +1398,7 @@ function render(){try{
     '<td class="num" style="color:var(--slate);font-size:10px">'+(i+1)+'</td>'+
     '<td><span class="cn">'+highlightText(c.name,searchQuery)+'<small>'+(c.parentGroup&&c.parentGroup!==c.name?highlightText(c.parentGroup,searchQuery)+' \u00b7 ':'')+esc(c.hqCity?c.hqCity+', ':'')+esc(c.hqState)+'</small></span></td>'+
     '<td><span class="badge '+BC[c.ownership]+'">'+OL[c.ownership]+'</span></td>'+
-    '<td class="num">'+(stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}).length:c.seLocs)+'</td>'+
+    '<td class="num">'+(stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}).length:c.locations.length)+'</td>'+
     '<td class="num'+pPulse+'" onmouseenter="showScoreTip(event,\''+c.id+'\',\'prox\')" onmouseleave="hideScoreTip()"><span class="'+scoreCls(ps)+'">'+(ps||'\u2014')+'</span></td>'+
     '<td class="num'+cPulse+'" onmouseenter="showScoreTip(event,\''+c.id+'\',\'county\')" onmouseleave="hideScoreTip()"><span class="'+scoreCls(cys)+'">'+(cys||'\u2014')+'</span></td>'+
     '<td class="num'+tPulse+'" style="font-weight:700" onmouseenter="showScoreTip(event,\''+c.id+'\',\'total\')" onmouseleave="hideScoreTip()"><span class="'+scoreCls(ts)+'">'+(ts||'\u2014')+'</span></td>'+
@@ -1401,7 +1417,7 @@ function render(){try{
 function initMap(){
   map=L.map('map',{center:CONFIG.CENTER,zoom:CONFIG.ZOOM,preferCanvas:true});
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png',{attribution:'&copy; OSM &copy; CARTO',maxZoom:19}).addTo(map);
-  mcg=L.markerClusterGroup({maxClusterRadius:50,spiderfyOnMaxZoom:true,showCoverageOnHover:false,chunkedLoading:true,chunkInterval:100,chunkDelay:10,disableClusteringAtZoom:10});map.addLayer(mcg); /* Clustered by default for performance with 8000+ markers */
+  mcg=L.layerGroup();map.addLayer(mcg); /* Individual pins by default. Use Cluster Pins button to enable clustering. */
   [{n:'MS',la:32.7,lo:-89.7},{n:'AL',la:32.8,lo:-86.8},{n:'LA',la:31,lo:-92},{n:'TN',la:35.8,lo:-86.4},{n:'AR',la:34.8,lo:-92.4},{n:'GA',la:32.7,lo:-83.5},{n:'SC',la:33.9,lo:-80.9},{n:'NC',la:35.5,lo:-79.8},{n:'VA',la:37.5,lo:-79},{n:'FL',la:28.5,lo:-82.5},{n:'KY',la:37.8,lo:-85.7}]
   .forEach(s=>L.marker([s.la,s.lo],{icon:L.divIcon({className:'slbl',html:s.n,iconSize:[30,15]}),interactive:false}).addTo(map));
   updateMap();
@@ -1430,10 +1446,10 @@ function updateMapLegend(companies){
 function updateMap(){
   /* SPRINT P: Close popup and destroy tippy instances before clearing markers */
   if(map)map.closePopup();
-  document.querySelectorAll('[data-tippy-root]').forEach(function(el){el.remove()});
   mcg.clearLayers();
   let allPFIds=[LL_ID,...platform];
   let companies=fil();
+  let markers=[];
   // Build spotlight color map for individual company distinction
   let spotColors={};
   if(spotlight.size>0){
@@ -1453,12 +1469,13 @@ function updateMap(){
       let ps=proxScores[c.id]||0;
       var msPct=marketShare[c.id]?marketShare[c.id].se:0;
       var covStates=stateFilter.size>0?[...stateFilter]:c.states;
-      var filtLocs=stateFilter.size>0?c.locations.filter(function(ll){return stateFilter.has(ll.state)}).length:c.seLocs;
+      var filtLocs=stateFilter.size>0?c.locations.filter(function(ll){return stateFilter.has(ll.state)}).length:c.locations.length;
       mk.bindPopup('<div class="mp"><h3>'+esc(c.name)+'</h3><div class="sub">'+esc(l.name)+' &mdash; '+esc(l.city)+', '+esc(l.state)+'</div><div class="g"><div class="s"><div class="sl">Locations</div><div class="sv">'+filtLocs+'</div></div><div class="s"><div class="sl">Market Share</div><div class="sv" style="color:var(--blue)">'+msPct+'%</div></div><div class="s"><div class="sl">Ownership</div><div class="sv"><span class="badge '+BC[c.ownership]+'">'+OL[c.ownership]+'</span></div></div><div class="s"><div class="sl">Coverage</div><div class="sv" style="font-size:9px">'+covStates.slice(0,6).map(function(st){return st+':'+c.locations.filter(function(ll){return ll.state===st}).length}).join(' ')+'</div></div></div><button class="vf" onclick="op(\''+c.id+'\')">View Full Profile &rarr;</button></div>',{maxWidth:300,minWidth:220,autoClose:true,closeOnClick:true});
-      mk.on('add',function(){var el=mk.getElement();if(el){try{tippy(el,{content:'<div style="font-family:DM Sans,sans-serif;font-size:11px"><b>'+esc(c.name)+'</b><br><span style="color:#8899AA">'+c.seLocs+' locations &middot; '+OL[c.ownership]+'</span>'+(c.estRevenue?'<br><span style="color:#2E7D32">$'+c.estRevenue+'M rev</span>':'')+'</div>',allowHTML:true,placement:'top',animation:'shift-away',theme:'propane',delay:[200,0],touch:false})}catch(e){}}});
-      mcg.addLayer(mk);
+      mk.bindTooltip('<b>'+esc(c.name)+'</b><br>'+c.locations.length+' locs &middot; '+OL[c.ownership],{direction:'top',className:'propane-tip',opacity:0.95});
+      markers.push(mk);
     })
   });
+  if(clusterMode&&mcg.addLayers)mcg.addLayers(markers);else markers.forEach(m=>mcg.addLayer(m));
   // Update company color legend
   updateMapLegend(companies);
   // Update spotlight legend if companies are spotlighted
@@ -1479,7 +1496,7 @@ function updateMap(){
 // === CLUSTER TOGGLE ===
 function toggleCluster(){
   clusterMode=!clusterMode;
-  document.getElementById('clusterToggle').classList.toggle('on',!clusterMode); /* Inverted: button shows active when UN-clustered since we default to clustered */
+  document.getElementById('clusterToggle').classList.toggle('on',clusterMode);
   map.removeLayer(mcg);
   if(clusterMode){
     mcg=L.markerClusterGroup({maxClusterRadius:50,spiderfyOnMaxZoom:true,showCoverageOnHover:false,chunkedLoading:true,disableClusteringAtZoom:10});
@@ -1963,7 +1980,7 @@ function updateH(){
     tl=companies.reduce((s,c)=>s+c.locations.filter(l=>stateFilter.has(l.state)).length,0);
     stCount=new Set(companies.flatMap(c=>c.locations.filter(l=>stateFilter.has(l.state)).map(l=>l.state))).size;
   } else {
-    tl=companies.reduce((s,c)=>s+c.seLocs,0);
+    tl=companies.reduce((s,c)=>s+c.locations.length,0);
     stCount=new Set(companies.flatMap(c=>c.states)).size;
   }
   if(firstUpdate){
@@ -1987,7 +2004,7 @@ function updateH(){
 
 // === KEYBOARD SHORTCUTS ===
 document.addEventListener('keydown',e=>{
-  if(e.key==='Escape'){cp();closeSavesDropdown();document.getElementById('helpModal').classList.remove('open');document.getElementById('sourcesModal').classList.remove('open');if(map)map.closePopup();document.querySelectorAll('[data-tippy-root]').forEach(function(el){el.remove()});return}
+  if(e.key==='Escape'){cp();closeSavesDropdown();document.getElementById('helpModal').classList.remove('open');document.getElementById('sourcesModal').classList.remove('open');if(map)map.closePopup();/* tippy cleanup removed */return}
   // Ignore shortcuts when typing in inputs
   let tag=document.activeElement.tagName;
   if(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'){
@@ -2094,7 +2111,7 @@ function resetApp(){
   try{
   /* Close all popups, panels, modals, tooltips */
   if(map){try{map.closePopup()}catch(e){}}
-  document.querySelectorAll('[data-tippy-root]').forEach(function(el){el.remove()});
+  /* tippy cleanup removed */
   cp(); /* close profile panel */
   try{closeSavesDropdown()}catch(e){}
   document.getElementById('helpModal').classList.remove('open');
@@ -2321,7 +2338,7 @@ function renderCharts(){
   ch1.on('click',function(params){var owKey=ownerKeys[params.name];if(owKey){toggleOwner(owKey);setView('table')}});
   chartInstances.push(ch1);
   // 2. Top 25 by Locations Bar — ALL companies, clickable to open profile
-  var locCos=allCompanies.map(function(c){var filtLocs=stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}).length:c.seLocs;return Object.assign({},c,{filtLocs:filtLocs})}).sort(function(a,b){return(b.filtLocs||0)-(a.filtLocs||0)}).slice(0,25);
+  var locCos=allCompanies.map(function(c){var filtLocs=stateFilter.size>0?c.locations.filter(function(l){return stateFilter.has(l.state)}).length:c.locations.length;return Object.assign({},c,{filtLocs:filtLocs})}).sort(function(a,b){return(b.filtLocs||0)-(a.filtLocs||0)}).slice(0,25);
   var titleEl=document.getElementById('chartLocTitle');if(titleEl)titleEl.textContent='Top 25 Companies by Locations'+(stateFilter.size>0?' in '+[...stateFilter].join(', '):'');
   var ch2=echarts.init(document.getElementById('chartLocations'),theme);
   ch2.setOption({tooltip:{trigger:'axis',formatter:function(p){var co=locCos[locCos.length-1-p[0].dataIndex];return '<b>'+p[0].name+'</b><br>'+p[0].value+' locations'+(stateFilter.size>0?' in '+[...stateFilter].join(', '):' (SE total)')+(co&&co.estRevenue?'<br>$'+co.estRevenue+'M est. revenue':'')+(co?'<br><span style="color:#8899AA;font-size:10px">Click to view profile</span>':'')}},grid:{left:140,right:30,top:10,bottom:30},xAxis:{type:'value',axisLabel:{fontSize:9}},yAxis:{type:'category',data:locCos.map(function(c){return c.name}).reverse(),axisLabel:{fontSize:9,width:130,overflow:'truncate'}},series:[{type:'bar',data:locCos.map(function(c){return c.filtLocs}).reverse(),itemStyle:{color:new echarts.graphic.LinearGradient(0,0,1,0,[{offset:0,color:'#C8A951'},{offset:1,color:'#2E7D32'}]),borderRadius:[0,4,4,0]},barWidth:12,cursor:'pointer'}]});
