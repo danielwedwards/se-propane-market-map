@@ -1000,7 +1000,7 @@ function getCompanyColor(companyId){
 let mapColorMode='company'; /* 'company' or 'ownership' */
 let clusterMode=false; /* false = individual pins (default), true = clustered */
 let proxScores={},countyScores={},totalScores={};
-let _proxCacheKey='',_mktCacheKey='';
+let _proxCacheKey='__INIT__',_mktCacheKey='__INIT__';
 let sortCol='total',sortDir='desc';
 let stateMaskLayer=null;
 let spotlight=new Set();
