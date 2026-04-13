@@ -692,6 +692,18 @@ table.lt td{padding:var(--space-sm) var(--space-sm);min-height:var(--touch-min)}
 <span class="state-pill" data-ow="ll" onclick="toggleOwner('ll')">Ergon</span>
 </div>
 </div>
+<div class="bar-group">
+<span class="bar-label">Biz Type</span>
+<div class="state-pills" id="ctPills">
+<span class="state-pill on" data-ct="ALL" onclick="toggleCT('ALL')">All</span>
+<span class="state-pill" data-ct="retail_dealer" onclick="toggleCT('retail_dealer')">Retail</span>
+<span class="state-pill" data-ct="cylinder_exchange" onclick="toggleCT('cylinder_exchange')">Cylinder</span>
+<span class="state-pill" data-ct="multi_fuel" onclick="toggleCT('multi_fuel')">Multi-Fuel</span>
+<span class="state-pill" data-ct="industrial_gas" onclick="toggleCT('industrial_gas')">Ind. Gas</span>
+<span class="state-pill" data-ct="coop_utility" onclick="toggleCT('coop_utility')">Co-op/Util</span>
+<span class="state-pill" data-ct="wholesale_transport" onclick="toggleCT('wholesale_transport')">Wholesale</span>
+</div>
+</div>
 <div class="bar-group" style="flex:1;min-width:0">
 <div style="display:flex;align-items:center;gap:6px;margin-bottom:3px">
 <span class="bar-label" style="margin:0">Region</span>
@@ -905,7 +917,8 @@ Object.keys(OC).forEach(type=>{
 });
 
 // === STATE ===
-let ownerFilter=new Set(),stateFilter=new Set(),searchQuery='',hideEx=false,isoMode=false,map,mcg,countyGeoLayer=null,countyVisible=false,countyMode='consumption',platform=[],pfExpanded=false;
+const CTL={retail_dealer:'Retail Dealer',cylinder_exchange:'Cylinder Exchange',multi_fuel:'Multi-Fuel',industrial_gas:'Industrial Gas',coop_utility:'Co-op/Utility',wholesale_transport:'Wholesale/Transport'};
+let ownerFilter=new Set(),ctFilter=new Set(),stateFilter=new Set(),searchQuery='',hideEx=false,isoMode=false,map,mcg,countyGeoLayer=null,countyVisible=false,countyMode='consumption',platform=[],pfExpanded=false;
 /* === SPRINT 8: Mobile tab view toggle === */
 function setMobileView(view){
   let main=document.getElementById('mainArea');
@@ -1203,6 +1216,15 @@ function toggleOwner(ow){
   }
   go();
 }
+function toggleCT(ct){
+  if(ct==='ALL'){ctFilter.clear();document.querySelectorAll('#ctPills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.ct==='ALL'))}
+  else{document.querySelector('#ctPills .state-pill[data-ct="ALL"]').classList.remove('on');
+    let pill=document.querySelector('#ctPills .state-pill[data-ct="'+ct+'"]');
+    if(ctFilter.has(ct)){ctFilter.delete(ct);pill.classList.remove('on')}else{ctFilter.add(ct);pill.classList.add('on')}
+    if(ctFilter.size===0)document.querySelector('#ctPills .state-pill[data-ct="ALL"]').classList.add('on');
+  }
+  go();
+}
 function sortBy(col){
   if(sortCol===col)sortDir=sortDir==='desc'?'asc':'desc';
   else{sortCol=col;sortDir=(col==='name'||col==='type'||col==='states')?'asc':'desc'}
@@ -1219,6 +1241,7 @@ function pushURLState(){
     let p=new URLSearchParams();
     if(currentView&&currentView!=='both')p.set('view',currentView);
     if(ownerFilter.size>0)p.set('type',[...ownerFilter].join(','));
+    if(ctFilter.size>0)p.set('ct',[...ctFilter].join(','));
     if(stateFilter.size>0)p.set('states',[...stateFilter].join(','));
     if(searchQuery)p.set('q',searchQuery);
     if(platform.length>0)p.set('pf',platform.join(','));
@@ -1234,9 +1257,10 @@ function fil(){
   let companies=DATA.filter(c=>{
     if(isoMode){let allPF=[LL_ID,...platform];if(!allPF.includes(c.id))return false}
     if(ownerFilter.size>0&&!ownerFilter.has(c.ownership))return false;
+    if(ctFilter.size>0&&!ctFilter.has(c.companyType||'retail_dealer'))return false;
     if(stateFilter.size>0&&!c.states.some(s=>stateFilter.has(s)))return false;
     if(hideEx&&c.excluded)return false;
-    if(searchQuery){let q=searchQuery.toLowerCase(),s=[c.name,c.hqCity,c.hqState,c.ownerDetail,c.parentGroup,c.description,c.phone,...c.states,...(c.keyPersonnel||[]).map(function(p){return p.name}),...(c.serviceTypes||[])].filter(Boolean).join(' ').toLowerCase();if(!s.includes(q))return false}
+    if(searchQuery){let q=searchQuery.toLowerCase(),s=[c.name,c.hqCity,c.hqState,c.ownerDetail,c.parentGroup,c.description,c.phone,c.companyType||'',...c.states,...(c.keyPersonnel||[]).map(function(p){return p.name}),...(c.serviceTypes||[])].filter(Boolean).join(' ').toLowerCase();if(!s.includes(q))return false}
     return true
   });
   companies.sort((a,b)=>{
@@ -1295,6 +1319,7 @@ function updateFilterBar(){
   let bar=document.getElementById('filterBar');
   let chips=[];
   if(ownerFilter.size>0)[...ownerFilter].forEach(o=>chips.push({label:OL[o]||o,type:'owner',val:o}));
+  if(ctFilter.size>0)[...ctFilter].forEach(ct=>chips.push({label:CTL[ct]||ct,type:'ct',val:ct}));
   if(stateFilter.size>0)[...stateFilter].forEach(s=>chips.push({label:s,type:'state',val:s}));
   if(searchQuery)chips.push({label:'"'+searchQuery+'"',type:'search',val:''});
   if(hideEx)chips.push({label:'Hide excluded',type:'excl',val:''});
@@ -1307,6 +1332,7 @@ function updateFilterBar(){
 }
 function clearChip(type,val){
   if(type==='owner'){toggleOwner(val)}
+  else if(type==='ct'){toggleCT(val)}
   else if(type==='state'){toggleState(val)}
   else if(type==='search'){document.getElementById('si').value='';go()}
   else if(type==='excl'){document.getElementById('exToggle').checked=false;go()}
@@ -1314,6 +1340,7 @@ function clearChip(type,val){
 }
 function clearAllFilters(){
   ownerFilter.clear();document.querySelectorAll('#ownerPills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.ow==='ALL'));
+  ctFilter.clear();document.querySelectorAll('#ctPills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.ct==='ALL'));
   stateFilter.clear();document.querySelectorAll('#statePills .state-pill').forEach(p=>p.classList.toggle('on',p.dataset.st==='ALL'));
   document.getElementById('si').value='';
   document.getElementById('exToggle').checked=false;
@@ -1763,6 +1790,7 @@ function op(id){try{
     '<div class="pg">'+
     '<div class="pst"><div class="l">Ownership Type</div><div class="v"><span class="badge '+BC[c.ownership]+'" style="font-size:11px;padding:3px 8px">'+OL[c.ownership]+'</span></div></div>'+
     '<div class="pst"><div class="l">Detail</div><div class="v" style="font-size:11px">'+esc(c.ownerDetail||'N/A')+'</div></div>'+
+    '<div class="pst"><div class="l">Business Type</div><div class="v" style="font-size:11px">'+(CTL[c.companyType]||'Retail Dealer')+'</div></div>'+
     '<div class="pst"><div class="l">Parent Group</div><div class="v" style="font-size:11px">'+esc(c.parentGroup||'Independent')+'</div></div>'+
     '<div class="pst"><div class="l">Status</div><div class="v" style="font-size:11px">'+(c.excluded?'<span style="color:var(--red)">Excluded</span>':'<span style="color:var(--green)">Active Target</span>')+'</div></div>'+
     '</div></div>'+
@@ -2067,6 +2095,7 @@ function resetApp(){
   /* Clear all filters */
   searchQuery='';document.getElementById('si').value='';
   ownerFilter.clear();document.querySelectorAll('[data-ow]').forEach(function(p){p.classList.toggle('on',p.dataset.ow==='ALL')});
+  ctFilter.clear();document.querySelectorAll('[data-ct]').forEach(function(p){p.classList.toggle('on',p.dataset.ct==='ALL')});
   stateFilter.clear();document.querySelectorAll('#statePills .state-pill').forEach(function(p){p.classList.toggle('on',p.dataset.st==='ALL')});
   hideEx=false;document.getElementById('exToggle').checked=false;
   isoMode=false;document.getElementById('isoToggle').checked=false;
@@ -2265,6 +2294,7 @@ function renderCharts(){
   /* Use fil() for state/type/search filtering but do NOT exclude companies based on excluded flag */
   var allCompanies=DATA.filter(function(c){
     if(ownerFilter.size>0&&!ownerFilter.has(c.ownership))return false;
+    if(ctFilter.size>0&&!ctFilter.has(c.companyType||'retail_dealer'))return false;
     if(stateFilter.size>0&&!c.states.some(function(s){return stateFilter.has(s)}))return false;
     if(searchQuery){var q=searchQuery.toLowerCase(),s=[c.name,c.hqCity,c.hqState,c.ownerDetail,c.parentGroup,...c.states].filter(Boolean).join(' ').toLowerCase();if(!s.includes(q))return false}
     return true;

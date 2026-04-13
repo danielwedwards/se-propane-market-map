@@ -139,9 +139,9 @@ locations_added = 0
 precise_geocoded = 0
 
 for rc in all_records:
-    name = rc.get('name', '').strip()
-    state = rc.get('hqState', '').strip().upper()
-    city = rc.get('hqCity', '').strip()
+    name = (rc.get('name') or '').strip()
+    state = (rc.get('hqState') or '').strip().upper()
+    city = (rc.get('hqCity') or '').strip()
 
     if not name or len(name) < 3 or not state:
         skipped_invalid += 1
@@ -276,6 +276,14 @@ for rc in all_records:
 
     notes = rc.get('notes') or f"Propane distributor in {state}. Source: discovery agent."
 
+    # Auto-classify company type
+    try:
+        from classify_company_types import classify as classify_ct
+        _ct_rec = {"name": name, "description": notes, "ownership": ownership, "serviceTypes": ["residential", "commercial"]}
+        ct, ct_conf, _ = classify_ct(_ct_rec)
+    except Exception:
+        ct, ct_conf = "retail_dealer", "low"
+
     record = {
         "id": cid,
         "name": name,
@@ -295,8 +303,10 @@ for rc in all_records:
         "estRevenue": None, "estAnnualGallons": None, "employeeCount": None,
         "description": notes,
         "serviceTypes": ["residential", "commercial"],
+        "companyType": ct,
+        "companyTypeConfidence": ct_conf,
         "keyPersonnel": [], "phone": "", "email": "",
-        "dataConfidence": 2, "lastResearched": "2026-04-11",
+        "dataConfidence": 2, "lastResearched": "2026-04-12",
         "yearFounded": None, "lastAcquisition": None,
     }
     companies.append(record)
