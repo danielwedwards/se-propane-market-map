@@ -896,7 +896,7 @@ const REGIONS={southeast:['AL','AR','FL','GA','KY','LA','MS','NC','SC','TN','VA'
 let activeRegion='southeast';  // Default region
 const FIPS_TO_ST={'01':'AL','02':'AK','04':'AZ','05':'AR','06':'CA','08':'CO','09':'CT','10':'DE','11':'DC','12':'FL','13':'GA','15':'HI','16':'ID','17':'IL','18':'IN','19':'IA','20':'KS','21':'KY','22':'LA','23':'ME','24':'MD','25':'MA','26':'MI','27':'MN','28':'MS','29':'MO','30':'MT','31':'NE','32':'NV','33':'NH','34':'NJ','35':'NM','36':'NY','37':'NC','38':'ND','39':'OH','40':'OK','41':'OR','42':'PA','44':'RI','45':'SC','46':'SD','47':'TN','48':'TX','49':'UT','50':'VT','51':'VA','53':'WA','54':'WV','55':'WI','56':'WY'};
 const LL_ID='lampton_love';
-// Known founding years for major SE propane companies
+// Known founding years for major U.S. propane companies
 const FOUNDED={
 'lampton_love':1956,'blossman_gas':1951,'ferrellgas':1939,
 'amerigas_partners___ugi_corporation':1959,'suburban_propane_partners__l_p_':1928,
@@ -1033,12 +1033,12 @@ function safeRun(fn,label){try{fn()}catch(e){console.error('['+label+']',e);show
 function computeProxScores(){try{
   let ll=DATA.find(c=>c.id===LL_ID);
   let acqs=platform.map(id=>DATA.find(c=>c.id===id)).filter(Boolean);
-  let pfLocs=[...(ll?ll.locations:[]),...acqs.flatMap(c=>c.locations)];
+  let pfLocs=[...(ll?ll.locations:[]),...acqs.flatMap(c=>c.locations)].filter(l=>l.lat!=null&&l.lng!=null);
   proxScores={};
   DATA.forEach(c=>{
     if(c.id===LL_ID||platform.includes(c.id)||c.excluded){proxScores[c.id]=0;return}
     let score=0;
-    c.locations.forEach(loc=>{
+    c.locations.filter(l=>l.lat!=null&&l.lng!=null).forEach(loc=>{
       let minDist=Infinity;
       pfLocs.forEach(pl=>{let d=haversine(loc.lat,loc.lng,pl.lat,pl.lng);if(d<minDist)minDist=d});
       for(let band of CONFIG.PROX_BANDS){if(minDist<=band.d){score+=band.p;break}}
@@ -1055,7 +1055,7 @@ function computeCountyScores(){try{
   DATA.forEach(c=>{
     if(c.excluded||c.id===LL_ID||platform.includes(c.id)){countyScores[c.id]=0;totalScores[c.id]=0;return}
     let cs=0;
-    c.locations.forEach(loc=>{
+    c.locations.filter(l=>l.lat!=null&&l.lng!=null).forEach(loc=>{
       let bestG=0;
       let nearby=getGridNeighbors(loc.lat,loc.lng);
       nearby.forEach(d=>{
@@ -1447,7 +1447,7 @@ function updateMap(){
     let cls=isLL?'cm cm-ll':isInPF?'cm cm-platform':'cm';
     let sz=isLL?[9,9]:(spotlight.size>0?[9,9]:[7,7]);
     let anch=isLL?[4.5,4.5]:(spotlight.size>0?[4.5,4.5]:[3.5,3.5]);
-    c.locations.forEach(l=>{
+    c.locations.filter(l=>l.lat!=null&&l.lng!=null&&isFinite(l.lat)&&isFinite(l.lng)).forEach(l=>{
       let iconHtml=isLL?'<div class="cm cm-ll-star" style="background:'+col+'">&#9733;</div>':'<div class="'+cls+'" style="background:'+col+'"></div>';
       let mk=L.marker([l.lat,l.lng],{icon:L.divIcon({className:'',html:iconHtml,iconSize:isLL?[14,14]:sz,iconAnchor:isLL?[7,7]:anch}),alt:esc(c.name)+' - '+esc(l.city)+', '+esc(l.state)});
       let ps=proxScores[c.id]||0;
@@ -1558,7 +1558,7 @@ function updateCountyLayer(){
       layer.on('click',function(e){
         if(!cd)return;
         let nearby=[];
-        fil().forEach(c=>c.locations.forEach(l=>{
+        fil().forEach(c=>c.locations.filter(l=>l.lat!=null&&l.lng!=null).forEach(l=>{
           if(haversine(cd.lat,cd.lng,l.lat,l.lng)<CONFIG.COUNTY_R&&!nearby.some(n=>n.co===c.name))nearby.push({co:c.name,loc:l.city});
         }));
         let popup=L.popup().setLatLng(e.latlng).setContent(
@@ -1587,12 +1587,12 @@ function showScoreTip(e,companyId,type){
   const c=DATA.find(x=>x.id===companyId);if(!c)return;
   const ll=DATA.find(x=>x.id===LL_ID);
   const acqs=platform.map(id=>DATA.find(x=>x.id===id)).filter(Boolean);
-  const pfLocs=[...(ll?ll.locations:[]),...acqs.flatMap(x=>x.locations)];
+  const pfLocs=[...(ll?ll.locations:[]),...acqs.flatMap(x=>x.locations)].filter(l=>l.lat!=null&&l.lng!=null);
   let html='';
   if(type==='prox'){
     html='<div class="tip-title">Proximity Breakdown</div>';
     let bands={5:0,15:0,25:0,50:0,100:0,far:0};
-    c.locations.forEach(loc=>{
+    c.locations.filter(l=>l.lat!=null&&l.lng!=null).forEach(loc=>{
       let minD=Infinity;
       pfLocs.forEach(pl=>{let d=haversine(loc.lat,loc.lng,pl.lat,pl.lng);if(d<minD)minD=d});
       if(minD<=5)bands[5]++;else if(minD<=15)bands[15]++;else if(minD<=25)bands[25]++;else if(minD<=50)bands[50]++;else if(minD<=100)bands[100]++;else bands.far++;
@@ -1662,7 +1662,7 @@ function hideRowPreview(){clearTimeout(rowHoverTimer);if(rowPreviewEl)rowPreview
 function op(id){try{
   let c=DATA.find(x=>x.id===id);if(!c)return;
   document.querySelectorAll('.lt tbody tr').forEach(tr=>tr.classList.toggle('sel',tr.dataset.id===id));
-  if(c.locations.length>0){let b=L.latLngBounds(c.locations.map(l=>[l.lat,l.lng]));map.fitBounds(b,{padding:[50,50],maxZoom:10})}
+  var validLocs=c.locations.filter(l=>l.lat!=null&&l.lng!=null&&isFinite(l.lat)&&isFinite(l.lng));if(validLocs.length>0){let b=L.latLngBounds(validLocs.map(l=>[l.lat,l.lng]));map.fitBounds(b,{padding:[50,50],maxZoom:10})}
   let inPF=platform.includes(c.id);let isLL=c.id===LL_ID;let canAdd=!c.excluded&&!isLL;
   let ps=proxScores[c.id]||0;let cys=countyScores[c.id]||0;let ts=totalScores[c.id]||0;
   let ms=marketShare[c.id]||{se:0,gallons:0,counties:0,states:{}};
