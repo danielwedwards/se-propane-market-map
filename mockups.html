@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>U.S. Propane Market Map — Design Concepts</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Inter,system-ui,sans-serif;background:#f0f0f0;color:#333}
+.concept-nav{position:sticky;top:0;z-index:100;display:flex;gap:0;background:#111;padding:0}
+.concept-nav button{flex:1;padding:16px 24px;border:none;font-size:14px;font-weight:600;cursor:pointer;transition:all .2s;color:#888;background:#111;border-bottom:3px solid transparent;font-family:Inter,sans-serif}
+.concept-nav button.active{color:#fff;border-bottom-color:#7C5CFC}
+.concept-nav button:hover{color:#ccc}
+.concept{display:none;height:calc(100vh - 51px);overflow:hidden}
+.concept.active{display:block}
+.label{position:absolute;top:12px;left:12px;background:rgba(0,0,0,.7);color:#fff;padding:4px 10px;border-radius:4px;font-size:11px;font-weight:600;z-index:50;letter-spacing:.03em}
+
+/* ========== CONCEPT A: PALANTIR ========== */
+.palantir{background:#0B0E11;color:#E8ECEF;font-family:Inter,sans-serif;position:relative;height:100%}
+.palantir .header{height:44px;background:#0F1318;border-bottom:1px solid #2A3441;display:flex;align-items:center;padding:0 16px;gap:12px}
+.palantir .header .logo{font-weight:700;font-size:14px;color:#E8ECEF;letter-spacing:.02em}
+.palantir .header .logo span{color:#00C9A7;font-weight:400}
+.palantir .header .sep{width:1px;height:20px;background:#2A3441}
+.palantir .header .title{font-size:11px;color:#5A6B7E;letter-spacing:.05em;text-transform:uppercase}
+.palantir .cmd-bar{height:42px;background:#0B0E11;border-bottom:1px solid #1C222D;display:flex;align-items:center;padding:0 16px;gap:10px}
+.palantir .cmd-search{background:#1C222D;border:1px solid #2A3441;border-radius:6px;padding:6px 10px 6px 32px;color:#E8ECEF;font-size:12px;width:220px;outline:none;font-family:Inter,sans-serif;position:relative}
+.palantir .cmd-search::placeholder{color:#5A6B7E}
+.palantir .cmd-filter{height:28px;padding:0 12px;background:#141820;border:1px solid #2A3441;border-radius:6px;color:#8A9BAE;font-size:11px;cursor:pointer;display:flex;align-items:center;gap:6px;font-family:Inter,sans-serif;white-space:nowrap}
+.palantir .cmd-filter:hover{border-color:#3D8BFF;color:#E8ECEF}
+.palantir .cmd-filter.active{background:rgba(61,139,255,.1);border-color:#3D8BFF;color:#3D8BFF}
+.palantir .cmd-filter .cnt{background:#3D8BFF;color:#fff;font-size:9px;padding:1px 5px;border-radius:10px;font-weight:600}
+.palantir .cmd-right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.palantir .cmd-btn{height:28px;padding:0 10px;background:transparent;border:1px solid #2A3441;border-radius:6px;color:#5A6B7E;font-size:10px;cursor:pointer;font-family:Inter,sans-serif}
+.palantir .cmd-btn:hover{color:#8A9BAE;border-color:#3D8BFF}
+.palantir .content{display:flex;height:calc(100% - 86px)}
+.palantir .left{width:480px;border-right:1px solid #2A3441;display:flex;flex-direction:column}
+.palantir .tbar{height:32px;background:#0F1318;border-bottom:1px solid #1C222D;display:flex;align-items:center;padding:0 12px;font-size:10px;color:#5A6B7E}
+.palantir .tbar .count{color:#3D8BFF;font-weight:600;margin-right:4px}
+.palantir .table-wrap{flex:1;overflow-y:auto}
+.palantir table{width:100%;border-collapse:collapse}
+.palantir th{background:#0F1318;color:#5A6B7E;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;padding:8px 8px;border-bottom:1px solid #2A3441;text-align:left;position:sticky;top:0}
+.palantir th.sorted{color:#3D8BFF;border-bottom:2px solid #3D8BFF}
+.palantir td{padding:7px 8px;font-size:11px;border-bottom:1px solid rgba(42,52,65,.4);color:#E8ECEF}
+.palantir tr:hover td{background:rgba(61,139,255,.05)}
+.palantir tr.selected td{background:rgba(61,139,255,.12);border-left:2px solid #3D8BFF}
+.palantir .cn{font-weight:500;color:#E8ECEF}
+.palantir .sub{font-size:9px;color:#5A6B7E}
+.palantir .badge{padding:1px 6px;border-radius:3px;font-size:9px;font-weight:600;display:inline-block}
+.palantir .b-family{background:rgba(0,201,167,.12);color:#00C9A7}
+.palantir .b-private{background:rgba(138,155,174,.12);color:#8A9BAE}
+.palantir .b-pe{background:rgba(167,139,250,.12);color:#A78BFA}
+.palantir .b-public{background:rgba(61,139,255,.12);color:#3D8BFF}
+.palantir .b-coop{background:rgba(255,186,51,.12);color:#FFBA33}
+.palantir .score-h{color:#00C9A7;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.palantir .score-m{color:#FFBA33;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.palantir .score-l{color:#5A6B7E;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.palantir .num{text-align:right;font-family:'IBM Plex Mono',monospace}
+.palantir .map{flex:1;background:#0B0E11;position:relative}
+.palantir .map-img{width:100%;height:100%;object-fit:cover;opacity:.8}
+.palantir .map-overlay{position:absolute;inset:0;background:linear-gradient(90deg,rgba(11,14,17,.3),transparent 30%)}
+.palantir .legend{position:absolute;bottom:16px;right:16px;background:#141820;border:1px solid #2A3441;border-radius:8px;padding:12px;width:180px}
+.palantir .legend h4{font-size:10px;color:#5A6B7E;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.palantir .legend .li{display:flex;align-items:center;gap:6px;font-size:10px;color:#8A9BAE;padding:2px 0}
+.palantir .legend .li .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+
+/* ========== CONCEPT B: BLOOMBERG ========== */
+.bloomberg{background:#FFFFFF;color:#1A1D23;font-family:'IBM Plex Sans',sans-serif;position:relative;height:100%}
+.bloomberg .header{height:40px;background:#0D1B2A;border-top:2px solid #C8A951;display:flex;align-items:center;padding:0 16px;gap:12px}
+.bloomberg .header .logo{font-weight:700;font-size:13px;color:#fff;letter-spacing:.03em}
+.bloomberg .header .logo span{color:#C8A951}
+.bloomberg .header .sep{width:1px;height:18px;background:#2A3441}
+.bloomberg .header .title{font-size:10px;color:#8899AA;letter-spacing:.06em;text-transform:uppercase}
+.bloomberg .fstrip{height:36px;background:#fff;border-bottom:1px solid #D5D9E0;display:flex;align-items:center;padding:0 16px;gap:10px}
+.bloomberg .f-search{background:#F6F7F9;border:1px solid #D5D9E0;border-radius:4px;padding:5px 10px;font-size:11px;width:200px;outline:none;font-family:'IBM Plex Sans',sans-serif;color:#1A1D23}
+.bloomberg .f-search::placeholder{color:#9CA3B0}
+.bloomberg .f-select{height:28px;padding:0 10px;border:1px solid #D5D9E0;border-radius:4px;font-size:11px;color:#1A1D23;background:#fff;cursor:pointer;display:flex;align-items:center;gap:6px;font-family:'IBM Plex Sans',sans-serif;white-space:nowrap}
+.bloomberg .f-select:hover{border-color:#0052CC}
+.bloomberg .f-select.active{background:#E9F2FF;border-color:#0052CC;color:#0052CC}
+.bloomberg .f-right{margin-left:auto;display:flex;gap:6px;align-items:center}
+.bloomberg .f-btn{height:26px;padding:0 8px;border:1px solid #D5D9E0;border-radius:4px;font-size:10px;color:#5C6370;cursor:pointer;background:#fff;font-family:'IBM Plex Sans',sans-serif}
+.bloomberg .f-btn:hover{border-color:#0052CC;color:#0052CC}
+.bloomberg .content{display:flex;height:calc(100% - 76px)}
+.bloomberg .left{width:50%;border-right:1px solid #D5D9E0;display:flex;flex-direction:column}
+.bloomberg .tbar{height:28px;background:#F6F7F9;border-bottom:1px solid #D5D9E0;display:flex;align-items:center;padding:0 10px;font-size:10px;color:#5C6370}
+.bloomberg .tbar .count{color:#0052CC;font-weight:600;margin-right:4px}
+.bloomberg .table-wrap{flex:1;overflow-y:auto}
+.bloomberg table{width:100%;border-collapse:collapse}
+.bloomberg th{background:#F6F7F9;color:#5C6370;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:6px 6px;border-bottom:2px solid #D5D9E0;text-align:left;position:sticky;top:0}
+.bloomberg th.sorted{color:#0052CC;border-bottom-color:#0052CC}
+.bloomberg td{padding:5px 6px;font-size:11px;border-bottom:1px solid #ECEEF2;color:#1A1D23}
+.bloomberg tr:hover td{background:#F6F7F9}
+.bloomberg tr.selected td{background:#E9F2FF;border-left:3px solid #0052CC}
+.bloomberg .cn{font-weight:500}
+.bloomberg .sub{font-size:9px;color:#9CA3B0}
+.bloomberg .badge{padding:1px 5px;border-radius:3px;font-size:9px;font-weight:600;display:inline-block}
+.bloomberg .b-family{background:#E3F5EC;color:#0D6E3A}
+.bloomberg .b-private{background:#F6F7F9;color:#5C6370}
+.bloomberg .b-pe{background:#EDE9FE;color:#7C3AED}
+.bloomberg .b-public{background:#E9F2FF;color:#0052CC}
+.bloomberg .b-coop{background:#FFF3E0;color:#B35C00}
+.bloomberg .score-h{color:#0D6E3A;font-family:'IBM Plex Mono',monospace;font-size:10px}
+.bloomberg .score-m{color:#B35C00;font-family:'IBM Plex Mono',monospace;font-size:10px}
+.bloomberg .score-l{color:#9CA3B0;font-family:'IBM Plex Mono',monospace;font-size:10px}
+.bloomberg .num{text-align:right;font-family:'IBM Plex Mono',monospace}
+.bloomberg .map{flex:1;background:#f0f2f4;position:relative}
+
+/* ========== CONCEPT C: MODERN SAAS ========== */
+.saas{background:#FAFBFC;color:#101828;font-family:Inter,sans-serif;position:relative;height:100%}
+.saas .header{height:52px;background:#fff;box-shadow:0 1px 3px rgba(16,24,40,.06);display:flex;align-items:center;padding:0 20px;gap:16px;z-index:10;position:relative}
+.saas .header .logo{font-family:'Instrument Serif',Georgia,serif;font-size:18px;color:#101828}
+.saas .header .logo span{color:#7C5CFC}
+.saas .header .sep{width:1px;height:24px;background:#E4E7EC}
+.saas .header .title{font-size:12px;color:#475467;font-weight:500}
+.saas .header .right{margin-left:auto;display:flex;gap:10px;align-items:center}
+.saas .header .h-btn{height:32px;padding:0 12px;border:1px solid #E4E7EC;border-radius:8px;font-size:12px;color:#475467;cursor:pointer;background:#fff;font-family:Inter,sans-serif;display:flex;align-items:center;gap:6px}
+.saas .header .h-btn:hover{border-color:#7C5CFC;color:#7C5CFC}
+.saas .header .h-btn.primary{background:#7C5CFC;color:#fff;border-color:#7C5CFC}
+.saas .content{display:flex;height:calc(100% - 52px)}
+.saas .sidebar{width:260px;background:#fff;border-right:1px solid #E4E7EC;overflow-y:auto;padding:0}
+.saas .sb-section{padding:16px;border-bottom:1px solid #F0F2F5}
+.saas .sb-title{font-size:11px;font-weight:600;color:#475467;letter-spacing:.02em;margin-bottom:10px;display:flex;justify-content:space-between;align-items:center}
+.saas .sb-title .chevron{color:#98A2B3;font-size:12px}
+.saas .sb-search{width:100%;background:#F5F6F8;border:1px solid #E4E7EC;border-radius:8px;padding:8px 12px;font-size:12px;outline:none;font-family:Inter,sans-serif;color:#101828}
+.saas .sb-search::placeholder{color:#98A2B3}
+.saas .sb-search:focus{border-color:#7C5CFC;box-shadow:0 0 0 3px rgba(124,92,252,.12)}
+.saas .filter-opt{display:flex;align-items:center;gap:8px;padding:6px 8px;border-radius:6px;font-size:12px;color:#101828;cursor:pointer}
+.saas .filter-opt:hover{background:#F5F6F8}
+.saas .filter-opt .check{width:16px;height:16px;border-radius:4px;border:1.5px solid #D0D5DD;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.saas .filter-opt .check.on{background:#7C5CFC;border-color:#7C5CFC}
+.saas .filter-opt .check.on::after{content:'✓';color:#fff;font-size:10px;font-weight:700}
+.saas .filter-opt .cnt{margin-left:auto;font-size:10px;color:#98A2B3;font-family:'IBM Plex Mono',monospace}
+.saas .main{flex:1;display:flex;flex-direction:column}
+.saas .main-header{height:44px;background:#fff;border-bottom:1px solid #E4E7EC;display:flex;align-items:center;padding:0 16px;gap:8px}
+.saas .main-header .count{font-size:13px;font-weight:600;color:#101828}
+.saas .main-header .count span{color:#7C5CFC}
+.saas .chips{display:flex;gap:6px;flex-wrap:wrap}
+.saas .chip{padding:3px 8px;border-radius:6px;font-size:11px;font-weight:500;background:#EDE9FE;color:#7C5CFC;display:flex;align-items:center;gap:4px;cursor:pointer}
+.saas .chip .x{font-size:13px;color:#A78BFA;line-height:1}
+.saas .split{flex:1;display:flex}
+.saas .table-area{width:50%;border-right:1px solid #E4E7EC;display:flex;flex-direction:column}
+.saas .table-wrap{flex:1;overflow-y:auto;background:#fff}
+.saas table{width:100%;border-collapse:collapse}
+.saas th{background:#F9FAFB;color:#475467;font-size:10px;font-weight:600;text-transform:uppercase;letter-spacing:.04em;padding:10px 12px;text-align:left;border-bottom:1px solid #E4E7EC;position:sticky;top:0}
+.saas th.sorted{color:#7C5CFC}
+.saas td{padding:10px 12px;font-size:12px;border-bottom:1px solid #F0F2F5;color:#101828}
+.saas tr:hover td{background:#FAFBFC}
+.saas tr.selected td{background:#EDE9FE}
+.saas .cn{font-weight:500;font-size:13px}
+.saas .meta{font-size:10px;color:#98A2B3;margin-top:2px}
+.saas .badge{padding:2px 8px;border-radius:999px;font-size:10px;font-weight:500;display:inline-block}
+.saas .b-family{background:#ECFDF3;color:#027A48}
+.saas .b-private{background:#F5F6F8;color:#475467}
+.saas .b-pe{background:#EDE9FE;color:#6941C6}
+.saas .b-public{background:#EFF8FF;color:#175CD3}
+.saas .b-coop{background:#FFFAEB;color:#B54708}
+.saas .pill-h{display:inline-flex;align-items:center;justify-content:center;min-width:32px;padding:2px 8px;border-radius:12px;font-weight:600;font-size:11px;font-family:'IBM Plex Mono',monospace}
+.saas .pill-h.high{background:#ECFDF3;color:#027A48}
+.saas .pill-h.med{background:#FFFAEB;color:#B54708}
+.saas .pill-h.low{background:#F5F6F8;color:#98A2B3}
+.saas .num{text-align:right;font-family:'IBM Plex Mono',monospace;font-size:11px}
+.saas .map-area{flex:1;background:#f0f2f4;position:relative}
+</style>
+</head>
+<body>
+
+<div class="concept-nav">
+  <button class="active" onclick="showConcept('a')">A — Palantir Foundry</button>
+  <button onclick="showConcept('b')">B — Bloomberg Intelligence</button>
+  <button onclick="showConcept('c')">C — Modern SaaS</button>
+</div>
+
+<!-- ========== CONCEPT A ========== -->
+<div class="concept active" id="concept-a">
+<div class="palantir">
+  <div class="header">
+    <div class="logo">ERGON <span>| Corp Dev</span></div>
+    <div class="sep"></div>
+    <div class="title">U.S. Propane Market Intelligence</div>
+  </div>
+  <div class="cmd-bar">
+    <input class="cmd-search" placeholder="⌘K  Search companies..." />
+    <div class="cmd-filter active">Ownership <span class="cnt">2</span></div>
+    <div class="cmd-filter">Biz Type ▾</div>
+    <div class="cmd-filter active">Southeast <span class="cnt">11</span></div>
+    <div class="cmd-filter">States ▾</div>
+    <div class="cmd-right">
+      <div class="cmd-btn">⊞ Cluster</div>
+      <div class="cmd-btn">◐ County</div>
+      <div class="cmd-btn">↓ Export</div>
+      <div class="cmd-btn">☾</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="left">
+      <div class="tbar"><span class="count">986</span> companies · <span style="margin-left:4px">3,328 locations</span></div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th style="width:30px"></th>
+            <th style="width:30px">#</th>
+            <th style="width:35%">Company</th>
+            <th style="width:12%">Type</th>
+            <th style="width:8%" class="sorted">Locs</th>
+            <th style="width:10%">Prox</th>
+            <th style="width:10%">Total</th>
+            <th style="width:8%">Mkt%</th>
+          </tr></thead>
+          <tbody>
+            <tr class="selected"><td>👁</td><td class="num" style="color:#5A6B7E">1</td><td><span class="cn">Suburban Propane Partners</span><br><span class="sub">Publicly Traded · Whippany, NJ</span></td><td><span class="badge b-public">Public</span></td><td class="num">384</td><td class="score-h">48</td><td class="score-h">72</td><td class="num" style="color:#3D8BFF">11.5%</td></tr>
+            <tr><td>👁</td><td class="num" style="color:#5A6B7E">2</td><td><span class="cn">Ferrellgas</span><br><span class="sub">Publicly Traded · Liberty, MO</span></td><td><span class="badge b-public">Public</span></td><td class="num">304</td><td class="score-h">42</td><td class="score-h">65</td><td class="num" style="color:#3D8BFF">9.1%</td></tr>
+            <tr><td>👁</td><td class="num" style="color:#5A6B7E">3</td><td><span class="cn">AmeriGas / UGI Corp</span><br><span class="sub">Publicly Traded · Centre, AL</span></td><td><span class="badge b-public">Public</span></td><td class="num">263</td><td class="score-h">38</td><td class="score-h">58</td><td class="num" style="color:#3D8BFF">7.9%</td></tr>
+            <tr><td>👁</td><td class="num" style="color:#5A6B7E">4</td><td><span class="cn">Thompson Gas</span><br><span class="sub">PE-Backed · Frederick, MD</span></td><td><span class="badge b-pe">PE</span></td><td class="num">211</td><td class="score-h">35</td><td class="score-m">51</td><td class="num" style="color:#3D8BFF">6.3%</td></tr>
+            <tr><td>👁</td><td class="num" style="color:#5A6B7E">5</td><td><span class="cn">Blossman Gas</span><br><span class="sub">Family-Owned · Ocean Springs, MS</span></td><td><span class="badge b-family">Family</span></td><td class="num">162</td><td class="score-h">32</td><td class="score-m">48</td><td class="num" style="color:#3D8BFF">4.9%</td></tr>
+            <tr><td>👁</td><td class="num" style="color:#5A6B7E">6</td><td><span class="cn">Superior Plus Propane</span><br><span class="sub">Private · Richmond Hill, ON</span></td><td><span class="badge b-private">Private</span></td><td class="num">155</td><td class="score-m">28</td><td class="score-m">44</td><td class="num" style="color:#3D8BFF">4.7%</td></tr>
+            <tr><td>+</td><td class="num" style="color:#5A6B7E">7</td><td><span class="cn">Scott Petroleum Corp</span><br><span class="sub">Private · Itta Bena, MS</span></td><td><span class="badge b-private">Private</span></td><td class="num">47</td><td class="score-m">22</td><td class="score-m">38</td><td class="num" style="color:#3D8BFF">1.4%</td></tr>
+            <tr><td>+</td><td class="num" style="color:#5A6B7E">8</td><td><span class="cn">Herring Gas Company</span><br><span class="sub">Family-Owned · Meadville, MS</span></td><td><span class="badge b-family">Family</span></td><td class="num">44</td><td class="score-m">20</td><td class="score-m">35</td><td class="num" style="color:#3D8BFF">1.3%</td></tr>
+            <tr><td style="color:#C8A951">★</td><td class="num" style="color:#5A6B7E">9</td><td><span class="cn" style="color:#FFBA33">Lampton Love</span><br><span class="sub" style="color:#C8A951">Ergon · Jackson, MS</span></td><td><span class="badge" style="background:rgba(200,169,81,.15);color:#C8A951">Ergon</span></td><td class="num">33</td><td class="num" style="color:#5A6B7E">—</td><td class="num" style="color:#5A6B7E">—</td><td class="num" style="color:#3D8BFF">1.0%</td></tr>
+            <tr><td>+</td><td class="num" style="color:#5A6B7E">10</td><td><span class="cn">Casey Propane Gas</span><br><span class="sub">Family-Owned · Selma, AL</span></td><td><span class="badge b-family">Family</span></td><td class="num">4</td><td class="score-m">15</td><td class="score-m">28</td><td class="num" style="color:#3D8BFF">0.1%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="map">
+      <div style="position:absolute;inset:0;background:linear-gradient(135deg,#0f1520 0%,#141e2d 40%,#1a2840 100%)">
+        <!-- Simulated dark map with dots -->
+        <div style="position:absolute;top:30%;left:55%;width:4px;height:4px;border-radius:50%;background:#00C9A7;opacity:.9"></div>
+        <div style="position:absolute;top:35%;left:58%;width:4px;height:4px;border-radius:50%;background:#3D8BFF;opacity:.8"></div>
+        <div style="position:absolute;top:40%;left:52%;width:4px;height:4px;border-radius:50%;background:#A78BFA;opacity:.8"></div>
+        <div style="position:absolute;top:45%;left:60%;width:4px;height:4px;border-radius:50%;background:#00C9A7;opacity:.9"></div>
+        <div style="position:absolute;top:50%;left:56%;width:4px;height:4px;border-radius:50%;background:#3D8BFF;opacity:.8"></div>
+        <div style="position:absolute;top:42%;left:54%;width:8px;height:8px;border-radius:50%;background:#FFBA33;border:2px solid #0B0E11;z-index:2"></div>
+        <div style="position:absolute;inset:0;background:radial-gradient(ellipse at 55% 45%,transparent 20%,rgba(11,14,17,.6) 60%)"></div>
+      </div>
+      <div class="legend">
+        <h4>By Ownership</h4>
+        <div class="li"><div class="dot" style="background:#3D8BFF"></div>Public (3)</div>
+        <div class="li"><div class="dot" style="background:#A78BFA"></div>PE-Backed (4)</div>
+        <div class="li"><div class="dot" style="background:#00C9A7"></div>Family (299)</div>
+        <div class="li"><div class="dot" style="background:#FFBA33"></div>Co-op (42)</div>
+        <div class="li"><div class="dot" style="background:#8A9BAE"></div>Private (638)</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ========== CONCEPT B ========== -->
+<div class="concept" id="concept-b">
+<div class="bloomberg">
+  <div class="header">
+    <div class="logo">ERGON <span>CORPORATE DEVELOPMENT</span></div>
+    <div class="sep"></div>
+    <div class="title">U.S. Propane Market Map</div>
+  </div>
+  <div class="fstrip">
+    <input class="f-search" placeholder="Search companies..." />
+    <div class="f-select active">Ownership: Family, PE ▾</div>
+    <div class="f-select">Biz Type: All ▾</div>
+    <div class="f-select active">Region: Southeast ▾</div>
+    <div class="f-select">States ▾</div>
+    <div class="f-right">
+      <div class="f-btn">County</div>
+      <div class="f-btn">Cluster</div>
+      <div class="f-btn">Export ▾</div>
+      <div class="f-btn">◐</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="left">
+      <div class="tbar"><span class="count">438</span> companies matched · 1,847 locations in Southeast</div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr>
+            <th style="width:25px"></th>
+            <th style="width:25px">#</th>
+            <th style="width:35%">Company</th>
+            <th style="width:10%">Ownership</th>
+            <th style="width:8%" class="sorted">Locs</th>
+            <th style="width:8%">Prox</th>
+            <th style="width:8%">County</th>
+            <th style="width:8%">Total</th>
+            <th style="width:7%">Mkt%</th>
+          </tr></thead>
+          <tbody>
+            <tr><td>+</td><td class="num" style="color:#9CA3B0">1</td><td><span class="cn">Blossman Gas</span><br><span class="sub">Family · Ocean Springs, MS</span></td><td><span class="badge b-family">Family</span></td><td class="num">162</td><td class="score-h">32</td><td class="score-h">28</td><td class="score-h">60</td><td class="num" style="color:#0052CC">8.8%</td></tr>
+            <tr><td>+</td><td class="num" style="color:#9CA3B0">2</td><td><span class="cn">Thompson Gas</span><br><span class="sub">PE-Backed · Frederick, MD</span></td><td><span class="badge b-pe">PE</span></td><td class="num">148</td><td class="score-h">35</td><td class="score-h">22</td><td class="score-h">57</td><td class="num" style="color:#0052CC">8.0%</td></tr>
+            <tr><td>+</td><td class="num" style="color:#9CA3B0">3</td><td><span class="cn">Scott Petroleum Corp</span><br><span class="sub">Private · Itta Bena, MS</span></td><td><span class="badge b-private">Private</span></td><td class="num">47</td><td class="score-m">22</td><td class="score-m">18</td><td class="score-m">40</td><td class="num" style="color:#0052CC">2.5%</td></tr>
+            <tr><td>+</td><td class="num" style="color:#9CA3B0">4</td><td><span class="cn">Herring Gas Company</span><br><span class="sub">Family · Meadville, MS</span></td><td><span class="badge b-family">Family</span></td><td class="num">44</td><td class="score-m">20</td><td class="score-m">16</td><td class="score-m">36</td><td class="num" style="color:#0052CC">2.4%</td></tr>
+            <tr class="selected"><td style="color:#C8A951">★</td><td class="num" style="color:#9CA3B0">5</td><td><span class="cn">Lampton Love</span><br><span class="sub">Ergon · Jackson, MS</span></td><td><span class="badge" style="background:#FFF3E0;color:#B35C00">Ergon</span></td><td class="num">33</td><td class="num" style="color:#9CA3B0">—</td><td class="num" style="color:#9CA3B0">—</td><td class="num" style="color:#9CA3B0">—</td><td class="num" style="color:#0052CC">1.8%</td></tr>
+            <tr><td>+</td><td class="num" style="color:#9CA3B0">6</td><td><span class="cn">United Propane Gas</span><br><span class="sub">PE-Backed · Bristol, VA</span></td><td><span class="badge b-pe">PE</span></td><td class="num">31</td><td class="score-m">18</td><td class="score-l">12</td><td class="score-m">30</td><td class="num" style="color:#0052CC">1.7%</td></tr>
+            <tr><td>+</td><td class="num" style="color:#9CA3B0">7</td><td><span class="cn">O'Neal Gas Inc.</span><br><span class="sub">Family · Choudrant, LA</span></td><td><span class="badge b-family">Family</span></td><td class="num">27</td><td class="score-m">15</td><td class="score-l">10</td><td class="score-m">25</td><td class="num" style="color:#0052CC">1.5%</td></tr>
+            <tr><td>+</td><td class="num" style="color:#9CA3B0">8</td><td><span class="cn">Holston Gases</span><br><span class="sub">Family · Knoxville, TN</span></td><td><span class="badge b-family">Family</span></td><td class="num">26</td><td class="score-m">14</td><td class="score-l">9</td><td class="score-m">23</td><td class="num" style="color:#0052CC">1.4%</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="map" style="background:linear-gradient(135deg,#e8ecf0 0%,#d5dce4 50%,#c8d0da 100%)">
+      <div style="position:absolute;top:20px;right:20px;background:#fff;border:1px solid #D5D9E0;border-radius:4px;padding:10px;width:160px;font-size:10px;color:#5C6370">
+        <div style="font-weight:600;margin-bottom:6px;text-transform:uppercase;letter-spacing:.04em">By Ownership</div>
+        <div style="display:flex;align-items:center;gap:5px;padding:2px 0"><div style="width:7px;height:7px;border-radius:50%;background:#0D6E3A"></div>Family (299)</div>
+        <div style="display:flex;align-items:center;gap:5px;padding:2px 0"><div style="width:7px;height:7px;border-radius:50%;background:#7C3AED"></div>PE (4)</div>
+        <div style="display:flex;align-items:center;gap:5px;padding:2px 0"><div style="width:7px;height:7px;border-radius:50%;background:#5C6370"></div>Private (638)</div>
+        <div style="display:flex;align-items:center;gap:5px;padding:2px 0"><div style="width:7px;height:7px;border-radius:50%;background:#0052CC"></div>Public (3)</div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<!-- ========== CONCEPT C ========== -->
+<div class="concept" id="concept-c">
+<div class="saas">
+  <div class="header">
+    <div class="logo">Ergon<span>.</span></div>
+    <div class="sep"></div>
+    <div class="title">U.S. Propane Market Map</div>
+    <div class="right">
+      <div class="h-btn">↓ Export</div>
+      <div class="h-btn">◐ Theme</div>
+      <div class="h-btn primary">+ Add to Platform</div>
+    </div>
+  </div>
+  <div class="content">
+    <div class="sidebar">
+      <div class="sb-section">
+        <input class="sb-search" placeholder="Search companies..." />
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Ownership <span class="chevron">▾</span></div>
+        <div class="filter-opt"><div class="check on"></div>All <span class="cnt">2,794</span></div>
+        <div class="filter-opt"><div class="check on"></div>Family <span class="cnt">799</span></div>
+        <div class="filter-opt"><div class="check on"></div>Private <span class="cnt">1,810</span></div>
+        <div class="filter-opt"><div class="check"></div>PE-Backed <span class="cnt">35</span></div>
+        <div class="filter-opt"><div class="check"></div>Public <span class="cnt">8</span></div>
+        <div class="filter-opt"><div class="check on"></div>Co-op <span class="cnt">131</span></div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Business Type <span class="chevron">▾</span></div>
+        <div class="filter-opt"><div class="check on"></div>Retail Dealer <span class="cnt">2,340</span></div>
+        <div class="filter-opt"><div class="check"></div>Multi-Fuel <span class="cnt">209</span></div>
+        <div class="filter-opt"><div class="check"></div>Co-op/Utility <span class="cnt">188</span></div>
+        <div class="filter-opt"><div class="check"></div>Industrial Gas <span class="cnt">31</span></div>
+        <div class="filter-opt"><div class="check"></div>Cylinder Exchange <span class="cnt">15</span></div>
+      </div>
+      <div class="sb-section">
+        <div class="sb-title">Region <span class="chevron">▾</span></div>
+        <div class="filter-opt" style="background:#EDE9FE"><div class="check on"></div>Southeast <span class="cnt">986</span></div>
+        <div class="filter-opt"><div class="check"></div>Northeast <span class="cnt">412</span></div>
+        <div class="filter-opt"><div class="check"></div>Midwest <span class="cnt">508</span></div>
+        <div class="filter-opt"><div class="check"></div>South Central <span class="cnt">471</span></div>
+        <div class="filter-opt"><div class="check"></div>West <span class="cnt">417</span></div>
+      </div>
+    </div>
+    <div class="main">
+      <div class="main-header">
+        <div class="count"><span>986</span> companies · 3,328 locations</div>
+        <div class="chips">
+          <div class="chip">Family <span class="x">×</span></div>
+          <div class="chip">Private <span class="x">×</span></div>
+          <div class="chip">Southeast <span class="x">×</span></div>
+          <div class="chip">Retail Dealer <span class="x">×</span></div>
+        </div>
+      </div>
+      <div class="split">
+        <div class="table-area">
+          <div class="table-wrap">
+            <table>
+              <thead><tr>
+                <th style="width:25px"></th>
+                <th style="width:40%">Company</th>
+                <th style="width:12%">Ownership</th>
+                <th style="width:8%" class="sorted">Locs</th>
+                <th style="width:10%">Score</th>
+                <th style="width:8%">Mkt%</th>
+                <th style="width:10%">Revenue</th>
+              </tr></thead>
+              <tbody>
+                <tr><td style="color:#7C5CFC">+</td><td><span class="cn">Blossman Gas</span><div class="meta">Family · Ocean Springs, MS · 10 states</div></td><td><span class="badge b-family">Family</span></td><td class="num">162</td><td><span class="pill-h high">60</span></td><td class="num" style="color:#7C5CFC">8.8%</td><td class="num" style="color:#12B76A">$42M</td></tr>
+                <tr><td style="color:#7C5CFC">+</td><td><span class="cn">Thompson Gas</span><div class="meta">PE-Backed · Frederick, MD · 22 states</div></td><td><span class="badge b-pe">PE</span></td><td class="num">148</td><td><span class="pill-h high">57</span></td><td class="num" style="color:#7C5CFC">8.0%</td><td class="num" style="color:#12B76A">$100M</td></tr>
+                <tr><td style="color:#7C5CFC">+</td><td><span class="cn">Scott Petroleum</span><div class="meta">Private · Itta Bena, MS · 2 states</div></td><td><span class="badge b-private">Private</span></td><td class="num">47</td><td><span class="pill-h med">40</span></td><td class="num" style="color:#7C5CFC">2.5%</td><td class="num" style="color:#12B76A">$25M</td></tr>
+                <tr><td style="color:#7C5CFC">+</td><td><span class="cn">Herring Gas Company</span><div class="meta">Family · Meadville, MS · 2 states</div></td><td><span class="badge b-family">Family</span></td><td class="num">44</td><td><span class="pill-h med">36</span></td><td class="num" style="color:#7C5CFC">2.4%</td><td class="num" style="color:#12B76A">$15M</td></tr>
+                <tr class="selected"><td style="color:#C8A951">★</td><td><span class="cn" style="color:#7C5CFC">Lampton Love</span><div class="meta">Ergon · Jackson, MS · 5 states</div></td><td><span class="badge" style="background:#EDE9FE;color:#6941C6">Ergon</span></td><td class="num">33</td><td><span class="pill-h low">—</span></td><td class="num" style="color:#7C5CFC">1.8%</td><td class="num" style="color:#12B76A">—</td></tr>
+                <tr><td style="color:#7C5CFC">+</td><td><span class="cn">United Propane Gas</span><div class="meta">PE-Backed · Bristol, VA · 4 states</div></td><td><span class="badge b-pe">PE</span></td><td class="num">31</td><td><span class="pill-h med">30</span></td><td class="num" style="color:#7C5CFC">1.7%</td><td class="num">—</td></tr>
+                <tr><td style="color:#7C5CFC">+</td><td><span class="cn">O'Neal Gas Inc.</span><div class="meta">Family · Choudrant, LA · 1 state</div></td><td><span class="badge b-family">Family</span></td><td class="num">27</td><td><span class="pill-h med">25</span></td><td class="num" style="color:#7C5CFC">1.5%</td><td class="num">—</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="map-area" style="background:linear-gradient(135deg,#f5f7fa 0%,#e8ecf0 50%,#dde3ea 100%)">
+          <div style="position:absolute;bottom:16px;right:16px;background:#fff;border-radius:12px;box-shadow:0 4px 12px rgba(16,24,40,.06);padding:12px 16px;width:170px;font-size:10px">
+            <div style="font-weight:600;color:#475467;margin-bottom:8px">By Ownership</div>
+            <div style="display:flex;align-items:center;gap:6px;padding:3px 0;color:#101828"><div style="width:8px;height:8px;border-radius:50%;background:#027A48"></div>Family (299)</div>
+            <div style="display:flex;align-items:center;gap:6px;padding:3px 0;color:#101828"><div style="width:8px;height:8px;border-radius:50%;background:#6941C6"></div>PE (4)</div>
+            <div style="display:flex;align-items:center;gap:6px;padding:3px 0;color:#101828"><div style="width:8px;height:8px;border-radius:50%;background:#475467"></div>Private (638)</div>
+            <div style="display:flex;align-items:center;gap:6px;padding:3px 0;color:#101828"><div style="width:8px;height:8px;border-radius:50%;background:#175CD3"></div>Public (3)</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+function showConcept(id){
+  document.querySelectorAll('.concept').forEach(c=>c.classList.remove('active'));
+  document.querySelectorAll('.concept-nav button').forEach(b=>b.classList.remove('active'));
+  document.getElementById('concept-'+id).classList.add('active');
+  document.querySelectorAll('.concept-nav button')[{a:0,b:1,c:2}[id]].classList.add('active');
+}
+</script>
+</body>
+</html>
