@@ -1487,21 +1487,21 @@ function buildMarkerCache(){
     let col=mapColorMode==='company'?getCompanyColor(c.id):OC[c.ownership];
     let mks=[];
     c.locations.filter(l=>l.lat!=null&&l.lng!=null&&isFinite(l.lat)&&isFinite(l.lng)).forEach(l=>{
-      /* Lampton Love: larger gold markers. Others: smaller colored dots */
+      /* Lampton Love: distinctive dark navy with gold ring. Others: colored dots */
       let mk=L.circleMarker([l.lat,l.lng],{
-        radius:isLL?8:3.5,
+        radius:isLL?7:3.5,
         fillColor:isLL?'#FFD100':col,
         color:isLL?'#0D1B2A':'#fff',
-        weight:isLL?2.5:0.5,
+        weight:isLL?2:0.5,
         fillOpacity:isLL?1:0.85,
         opacity:0.9,
         interactive:true,
         bubblingMouseEvents:false,
-        pane:isLL?'markerPane':'overlayPane' /* LL markers on top */
+        pane:isLL?'markerPane':'overlayPane'
       });
       mk.bindPopup('<div class="mp"><h3>'+esc(c.name)+'</h3><div class="sub">'+esc(l.name||c.name)+' &mdash; '+esc(l.city||'')+', '+esc(l.state||'')+'</div><button class="vf" onclick="op(\''+c.id+'\')">View Full Profile &rarr;</button></div>',{maxWidth:280,minWidth:200,autoClose:true,closeOnClick:true});
       mk.bindTooltip('<b>'+esc(c.name)+'</b><br>'+esc(l.city||'')+', '+esc(l.state||''),{direction:'top',className:'propane-tip',opacity:0.95});
-      mk._cid=c.id;mk._st=l.state||'';mk._isLL=isLL;
+      mk._cid=c.id;mk._st=l.state||'';mk._isLL=isLL;mk._col=isLL?'#FFD100':col;
       mks.push(mk);_allMarkers.push(mk);
     });
     _markerCache[c.id]=mks;
@@ -1526,8 +1526,9 @@ function updateMap(){
     let mk=_allMarkers[i];
     let show=visIds.has(mk._cid)&&(!hasSF||stateFilter.has(mk._st));
     if(show){
-      mk.setStyle({fillOpacity:mk._isLL?1:0.85,opacity:0.9,radius:mk._isLL?8:3.5,
-        fillColor:mk._isLL?'#FFD100':undefined,interactive:true});
+      mk.setStyle({fillColor:mk._col,fillOpacity:mk._isLL?1:0.85,opacity:0.9,
+        radius:mk._isLL?7:3.5,color:mk._isLL?'#0D1B2A':'#fff',
+        weight:mk._isLL?2:0.5,interactive:true});
     }else{
       mk.setStyle({fillOpacity:0,opacity:0,radius:0,interactive:false});
     }
